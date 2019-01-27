@@ -79,14 +79,6 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-      // // find the stylus loader
-      // const stylus = config.module.rules[0].options.loaders.stylus.find(
-      //   e => e.loader == 'stylus-loader'
-      // )
-      // // extend default options
-      // Object.assign(stylus.options, {
-      //   import: ['~assets/stylus/variables.styl', '~assets/stylus/mixins.styl']
-      // })
     }
   }
 }
