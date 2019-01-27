@@ -1,9 +1,11 @@
+// スマートフォン用レイアウト
 sp()
 	@media screen and (max-device-width: 480px)
 		{block}
 
+// 縦画面タブレット用レイアウト
 tablet()
-	@media screen and (max-device-width: 768px)
+	@media screen and (min-device-width: 481px) and (max-device-width: 768px)
 		{block}
 
 bold()
