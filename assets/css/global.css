@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700');
+@import url('https://fonts.googleapis.com/css?family=Hind:400,700');
+
 *,
 :after,
 :before {
@@ -35,9 +38,10 @@ body {
   height: 100%;
   overflow: hidden;
   color: hsv(0, 0%, 5%);
+  font-family: 'Hind', 'Noto Sans JP', '游ゴシック', 'Yu Gothic',
+    'Hiragino Kaku Gothic ProN', sans-serif;
+  font-weight: 400;
   letter-spacing: 0;
-  font-family: 'Josefin Sans', 'Noto Sans Japanese', '游ゴシック', 'Yu Gothic',
-    YuGothic, 'Hiragino Kaku Gothic ProN', sans-serif;
   font-smoothing: antialiased;
   font-size: 16px;
   word-spacing: 1px;
