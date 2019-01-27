@@ -65,7 +65,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['~/assets/data/config.json'],
+    vendor: ['~/assets/data/sns.json'],
     /*
     ** You can extend webpack config here
     */
@@ -79,6 +79,13 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      // autoprefixer config
+      postcss: [
+        require('autoprefixer')({
+          browsers: ['IE 11', 'last 2 versions'],
+          grid: true
+        })
+      ]
     }
   }
 }
