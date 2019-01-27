@@ -5505,6 +5505,11 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
+nuxt-stylus-resources-loader@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/nuxt-stylus-resources-loader/-/nuxt-stylus-resources-loader-2.0.0.tgz#7f2a35b0d42fbac2ba1a38f46b8ebfedd4ba5d22"
+  integrity sha512-/qr3PUUxJs9b+dWWV9XShKyndSMH4VzLphiBkzP1IiKQqWdv7RRyvIFihfVvsKMTHQzS0YCP/dN3eU+aeOO0Hg==
+
 nuxt@^2.3.4:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.3.4.tgz#61f5fe856ebbeced89f04a3734baa4ee91cc3cfa"

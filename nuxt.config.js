@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const resolve = require('path').resolve
 
 module.exports = {
   mode: 'spa',
@@ -7,11 +8,19 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: '第73回灘校文化祭',
+    titleTemplate: 'SAIL AWAY',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {
+        name: 'viewport',
+        content:
+          'width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no'
+      },
+      { hid: 'description', name: 'description', content: pkg.description },
+      {
+        name: 'keywords',
+        content: '灘校, 灘校文化祭, NADA, 文化祭, 関西, 兵庫, 高校, 私立'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -24,7 +33,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: ['~/assets/css/global.css'],
 
   /*
   ** Plugins to load before mounting the App
@@ -41,12 +50,22 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: ['@nuxtjs/pwa'],
+  modules: [
+    ['@nuxtjs/pwa'],
+    [
+      'nuxt-stylus-resources-loader',
+      [
+        resolve(__dirname, 'assets/stylus/mixins.styl'),
+        resolve(__dirname, 'assets/stylus/variables.styl')
+      ]
+    ]
+  ],
 
   /*
   ** Build configuration
   */
   build: {
+    vendor: ['~/assets/data/config.json'],
     /*
     ** You can extend webpack config here
     */
@@ -60,6 +79,14 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      // // find the stylus loader
+      // const stylus = config.module.rules[0].options.loaders.stylus.find(
+      //   e => e.loader == 'stylus-loader'
+      // )
+      // // extend default options
+      // Object.assign(stylus.options, {
+      //   import: ['~assets/stylus/variables.styl', '~assets/stylus/mixins.styl']
+      // })
     }
   }
 }
