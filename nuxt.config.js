@@ -14,7 +14,7 @@ module.exports = {
       {
         name: 'viewport',
         content:
-          'width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no'
+          'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no'
       },
       { hid: 'description', name: 'description', content: pkg.description },
       {
@@ -28,12 +28,18 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff', height: '2px' },
+  loading: { color: 'hsv(0, 0%, 60%)', height: '2px' },
 
   /*
   ** Global CSS
   */
-  css: ['~/assets/css/global.css'],
+  css: [
+    '~/assets/css/global.css',
+    '@fortawesome/fontawesome-free-webfonts',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css'
+  ],
 
   /*
   ** Plugins to load before mounting the App

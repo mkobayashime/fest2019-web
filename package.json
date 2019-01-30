@@ -19,6 +19,7 @@
     }
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "@nuxtjs/pwa": "^2.6.0",
     "cross-env": "^5.2.0",
     "lottie-web": "^5.4.3",
