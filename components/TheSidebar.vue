@@ -39,17 +39,6 @@ export default {
 	width 70px
 	height 100vh
 	transition all 200ms ease-out
-	/* &:hover
-		& .items-group
-			margin 0 0 30px 0
-		& .links
-			opacity 1
-	.items-group
-		margin 0 40px 30px 0
-		transition all 200ms ease-out
-	.links
-		opacity 0
-		transition all 200ms ease */
 	.sidebar-items
 		width 100%
 		height 100vh
