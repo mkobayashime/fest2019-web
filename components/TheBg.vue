@@ -37,14 +37,15 @@ export default {
 	position absolute
 	width 100%
 	height 100%
+	z-index -10
 	display flex
 	align-items center
 	justify-content center
-	animation float 1000ms ease-in-out 0ms infinite alternate
 	#logoLoopAnim
 		opacity 0.1
 		flex-shrink 0
 		height 90%
+		animation float 1000ms ease-in-out 0ms infinite alternate
 		+sp()
 			height auto
 			width 145%
