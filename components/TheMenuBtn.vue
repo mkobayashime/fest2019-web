@@ -1,5 +1,5 @@
 <template lang="pug">
-	a#the-menu(@click="toggle" :class="{opened:opened}")
+	a#the-menu-btn(@click="toggle" :class="{opened:opened}")
 		img.menuIcon(src="~/assets/icon/menu.svg")
 </template>
 
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#the-menu
+#the-menu-btn
 	position absolute
 	display flex
 	align-items flex-start

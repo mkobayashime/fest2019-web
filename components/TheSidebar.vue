@@ -1,6 +1,6 @@
 <template lang="pug">
 	#the-sidebar
-		the-menu
+		the-menu-btn
 		.sidebar-items
 			.items-group
 				.links
@@ -24,7 +24,7 @@
 import sns from '~/assets/data/sns.json'
 export default {
   components: {
-    TheMenu: () => import('~/components/TheMenu.vue')
+    TheMenuBtn: () => import('~/components/TheMenuBtn.vue')
   },
   data() {
     return {
