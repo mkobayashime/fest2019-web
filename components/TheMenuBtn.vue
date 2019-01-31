@@ -1,5 +1,6 @@
 <template lang="pug">
-	a#the-menu-btn(@click="toggle" :class="{opened:opened}")
+	#the-menu-btn
+		button(@click="toggle" :class="{opened:opened}")
 		img.menuIcon(src="~/assets/icon/menu.svg")
 </template>
 
@@ -21,21 +22,21 @@ export default {
 
 <style lang="stylus" scoped>
 #the-menu-btn
+	button
+		position absolute
+		width 70px
+		height 100px
+		background-color #000
+		cursor pointer
+		transition all 200ms ease-out
+		&:hover
+			height 150px
+		&.opened
+			height 100vh
+.menuIcon
 	position absolute
-	display flex
-	align-items flex-start
-	justify-content center
-	width 70px
-	height 100px
-	background-color #000
-	cursor pointer
-	transition all 200ms ease-out
-	&:hover
-		height 150px
-	.menuIcon
-		width 25px
-		height 25px
-		margin 37.5px 0 0 0
-	&.opened
-		height 100vh
+	width 25px
+	height 25px
+	margin 37.5px 22.5px
+	pointer-events none
 </style>
