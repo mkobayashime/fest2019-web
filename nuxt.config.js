@@ -64,7 +64,8 @@ module.exports = {
         resolve(__dirname, 'assets/stylus/mixins.styl'),
         resolve(__dirname, 'assets/stylus/variables.styl')
       ]
-    ]
+    ],
+    ['nuxt-device-detect']
   ],
 
   /*
