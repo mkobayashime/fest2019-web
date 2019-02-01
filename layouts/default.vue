@@ -3,7 +3,7 @@
     the-bg
     the-sidebar
     nuxt
-    the-mouse-follower
+    the-mouse-follower(v-if="$device.isDesktop")
 </template>
 
 <script>
