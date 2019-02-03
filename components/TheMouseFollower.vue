@@ -30,10 +30,11 @@ export default {
 	width 16px
 	height 16px
 	border-radius 50%
-	background-color #2962ff
+	background-color $blue
 	position absolute
 	transition all 10ms ease-out
 	pointer-events none
+	z-index 999
 #mouse-follower-secondary
 	width 50px
 	height 50px
@@ -43,4 +44,5 @@ export default {
 	position absolute
 	transition all 200ms ease-out
 	pointer-events none
+	z-index 999
 </style>

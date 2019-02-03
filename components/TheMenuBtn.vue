@@ -34,8 +34,12 @@ export default {
 		transition all 200ms ease-out
 		&:hover
 			height 120px
+			background-color $blue
 		&.opened
 			height 100vh
+			background-color #000
+			&:hover
+				background-color $blue
 
 .hamburger
 	position absolute
