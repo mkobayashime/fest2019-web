@@ -2,7 +2,8 @@
   #default
     the-bg
     the-sidebar
-    nuxt
+    #scrollArea
+      nuxt
     the-mouse-follower(v-if="$device.isDesktop")
 </template>
 
@@ -16,5 +17,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus" scoped>
+#scrollArea
+  position absolute
+  height 100%
+  width calc(100% - 70px)
+  top 0
+  left 70px
+  overflow-x hidden
+  overflow-y scroll
+  -webkit-overflow-scrolling touch
 </style>
