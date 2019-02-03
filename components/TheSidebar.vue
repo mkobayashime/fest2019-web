@@ -13,9 +13,9 @@
 				p Follow Us
 			.items-group
 				.links
-					a(:href="sns.twitter" target="_blank")
+					a(:href="sns.twitterShare" target="_blank")
 						.sidebar-item.fab.fa-twitter
-					a(:href="sns.facebook" target="_blank")
+					a(:href="sns.fbShare" target="_blank")
 						.sidebar-item.fab.fa-facebook
 				p Share On
 </template>
@@ -54,10 +54,10 @@ export default {
 			flex-direction row
 			align-items center
 			justify-content center
-			margin 0 43px 30px 0
+			margin -15px 43px 40px 0
 			transition all 200ms ease-out
 			&:hover
-				margin 0 -25px 30px 0
+				margin -15px -25px 40px 0
 				.links
 					opacity 1
 				p
