@@ -27,13 +27,13 @@ export default {
 	button
 		position absolute
 		width 70px
-		height 100px
+		height 80px
 		background-color #000
 		cursor pointer
 		outline none
 		transition all 200ms ease-out
 		&:hover
-			height 150px
+			height 120px
 		&.opened
 			height 100vh
 
@@ -49,7 +49,7 @@ export default {
 .hamburger-box
 	width 30px
 	height 24px
-	margin 38px 20px
+	margin 28px 20px
 	display block
 	position relative
 
