@@ -1,12 +1,12 @@
-const pkg = require('./package')
 const resolve = require('path').resolve
+const pkg = require('./package')
 
 module.exports = {
   mode: 'spa',
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     titleTemplate: 'SAIL AWAY',
     meta: [
@@ -26,13 +26,13 @@ module.exports = {
   },
 
   /*
-  ** Customize the progress-bar color
-  */
+   ** Customize the progress-bar color
+   */
   loading: { color: 'hsv(0, 0%, 60%)', height: '2px' },
 
   /*
-  ** Global CSS
-  */
+   ** Global CSS
+   */
   css: [
     '~/assets/css/global.css',
     '@fortawesome/fontawesome-free-webfonts',
@@ -42,20 +42,20 @@ module.exports = {
   ],
 
   /*
-  ** Plugins to load before mounting the App
-  */
+   ** Plugins to load before mounting the App
+   */
   plugins: [],
 
   /*
-  ** Router config
-  */
+   ** Router config
+   */
   router: {
     base: '/2019/'
   },
 
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [
     ['@nuxtjs/pwa'],
     [
@@ -69,13 +69,13 @@ module.exports = {
   ],
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     vendor: ['~/assets/data/sns.json'],
     /*
-    ** You can extend webpack config here
-    */
+     ** You can extend webpack config here
+     */
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
@@ -86,13 +86,6 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-      // autoprefixer config
-      postcss: [
-        require('autoprefixer')({
-          browsers: ['IE 11', 'last 2 versions'],
-          grid: true
-        })
-      ]
     }
   }
 }
