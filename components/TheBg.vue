@@ -1,7 +1,7 @@
 <template lang="pug">
 	#the-bg
 		#logoLoopAnim
-			lottie(:options="lottieOptions" @animCreated="handleAnimation" :container="LogoLoopAnimContainer")
+			lottie(:options="lottieOptions" @animCreated="handleAnimation")
 		.bg-dummy.bg-dummy1(:class="{opened:opened}")
 		.bg-dummy.bg-dummy2(:class="{opened:opened}")
 		.bg-dummy.bg-dummy3(:class="{opened:opened}")
@@ -22,8 +22,7 @@ export default {
         loop: true,
         autoplay: true,
         anmationSpeed: 1
-      },
-      LogoLoopAnimContainer: null
+      }
     }
   },
   computed: {
@@ -56,7 +55,7 @@ export default {
 	align-items center
 	justify-content center
 	#logoLoopAnim
-		opacity 0.1
+		opacity 0.07
 		flex-shrink 0
 		height 90%
 		animation float 1000ms ease-in-out 0ms infinite alternate
