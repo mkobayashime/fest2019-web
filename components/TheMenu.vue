@@ -1,5 +1,31 @@
 <template lang="pug">
 	#the-menu
+		transition(:css="false" @enter="itemsEnter" @leave="itemsLeave")
+			.menu-items(v-if="opened")
+				nuxt-link.menu-item(to="/" @click.native="toggle")
+					p.en home
+					p.jp ホーム
+				.menu-item.disabled(to="circles" @click.native="toggle")
+					p.en circles
+					p.jp 近日公開予定
+				.menu-item.disabled(to="map" @click.native="toggle")
+					p.en map
+					p.jp 近日公開予定
+				.menu-item.disabled(to="timetable" @click.native="toggle")
+					p.en timetable
+					p.jp 近日公開予定
+				.menu-item.disabled(to="goods" @click.native="toggle")
+					p.en goods
+					p.jp 近日公開予定
+				.menu-item.disabled(to="foods" @click.native="toggle")
+					p.en foods
+					p.jp 近日公開予定
+				nuxt-link.menu-item(to="about" @click.native="toggle")
+					p.en about
+					p.jp 文化委員会について
+				nuxt-link.menu-item(to="design" @click.native="toggle")
+					p.en design
+					p.jp デザイン
 		.bg-dummy.bg-dummy1(:class="{opened:opened}")
 		.bg-dummy.bg-dummy2(:class="{opened:opened}")
 		.bg-dummy.bg-dummy3(:class="{opened:opened}")
@@ -7,18 +33,120 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
+import anime from 'animejs'
 export default {
   computed: {
     ...mapGetters({
       opened: 'menu/opened'
     })
+  },
+  methods: {
+    ...mapMutations({
+      toggle: 'menu/toggle'
+    }),
+    itemsEnter: (el, done) => {
+      anime({
+        targets: '#the-menu .menu-item',
+        translateX: ['-3em', 0],
+        opacity: [0, 1],
+        delay: (el, i) => i * 50 + 500,
+        duration: 1000,
+        easing: 'easeOutQuint',
+        complete: done
+      })
+    },
+    itemsLeave: (el, done) => {
+      anime({
+        targets: '#the-menu .menu-item',
+        opacity: [1, 0],
+        duration: 800,
+        easing: 'easeOutQuint',
+        complete: done
+      })
+    }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 #the-menu
+	position absolute
+	width calc(100% - 70px)
+	left 70px
+	height 100%
+	top 0
+	.menu-items
+		display flex
+		flex-direction column
+		align-items flex-start
+		justify-content center
+		width 100%
+		height 100%
+		color #fff
+		.menu-item
+			display flex
+			flex-direction row
+			align-items center
+			justify-content space-between
+			width 30em
+			margin-left 20vw
+			position relative
+			z-index 910
+			outline none
+			&:hover
+				.en
+					margin-left .5em
+				.jp
+					color #fff
+				&::after
+					background-color #fff
+			.en
+				margin-right 1rem
+				font-size 2.5rem
+				letter-spacing .05em
+				bold()
+				text-transform lowercase
+				flex-shrink 0
+				order 1
+				transition all 200ms ease-out
+			.jp
+				margin-left 1rem
+				letter-spacing .1em
+				color hsl(0, 0%, 50%)
+				flex-shrink 0
+				order 3
+				transition all 200ms
+			&::before
+				content ''
+				position absolute
+				width 3em
+				height 1em
+				left -3em
+				background-color $blue-10
+				transform scaleX(0)
+				transform-origin left center
+				transition all 200ms ease-out
+			&::after
+				content ''
+				width 100%
+				height 1px
+				background-color hsl(0, 0%, 50%)
+				order 2
+				transition all 200ms
+		& .disabled
+			.en, .jp
+				color hsl(0, 0%, 20%)
+			&:hover .jp
+				color hsl(0, 0%, 20%)
+			&:hover::after
+				background-color hsl(0, 0%, 50%)
+		& .nuxt-link-exact-active
+			.en
+				margin-left .5em
+			&::before
+				transform scaleX(1)
+
 	.bg-dummy
 		position absolute
 		background-color #000
