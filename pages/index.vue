@@ -23,7 +23,10 @@
 
 <script>
 export default {
-  components: {}
+  components: {},
+  head: {
+    title: 'SAIL AWAY'
+  }
 }
 </script>
 

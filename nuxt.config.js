@@ -8,7 +8,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    titleTemplate: 'SAIL AWAY',
+    titleTemplate: '%s | 第73回灘校文化祭',
     meta: [
       { charset: 'utf-8' },
       {
@@ -16,7 +16,11 @@ module.exports = {
         content:
           'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no'
       },
-      { hid: 'description', name: 'description', content: pkg.description },
+      {
+        hid: 'description',
+        name: 'description',
+        content: '第73回灘校文化祭は2019年5月2–3日に開催されます'
+      },
       {
         name: 'keywords',
         content: '灘校, 灘校文化祭, NADA, 文化祭, 関西, 兵庫, 高校, 私立'
