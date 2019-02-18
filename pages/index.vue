@@ -46,7 +46,7 @@ export default {
     .date
       margin 50px auto 0
       text-align center
-      font-size 30px
+      font-size 2rem
       bold()
     .button-container
       margin 50px auto
@@ -65,6 +65,5 @@ export default {
       margin 0 100px
     p
       bold()
-      font-size 16px
       margin-top 20px
 </style>
