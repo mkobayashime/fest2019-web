@@ -2,8 +2,9 @@
   #default
     the-bg
     the-sidebar
-    #scrollArea
+    #scroll-area
       nuxt
+    the-menu
     the-mouse-follower(v-if="$device.isDesktop")
 </template>
 
@@ -12,13 +13,14 @@ export default {
   components: {
     TheBg: () => import('~/components/TheBg.vue'),
     TheSidebar: () => import('~/components/TheSidebar.vue'),
-    TheMouseFollower: () => import('~/components/TheMouseFollower.vue')
+    TheMouseFollower: () => import('~/components/TheMouseFollower.vue'),
+    TheMenu: () => import('~/components/TheMenu.vue')
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-#scrollArea
+#scroll-area
   position absolute
   height 100%
   width calc(100% - 70px)
@@ -27,4 +29,5 @@ export default {
   overflow-x hidden
   overflow-y scroll
   -webkit-overflow-scrolling touch
+  z-index 10
 </style>

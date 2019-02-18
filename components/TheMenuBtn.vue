@@ -32,6 +32,7 @@ export default {
 		cursor pointer
 		outline none
 		transition all 200ms ease-out
+		z-index 990
 		&:hover
 			height 120px
 			background-color $blue
@@ -49,6 +50,7 @@ export default {
 	border 0
 	margin 0
 	pointer-events none
+	z-index 999
 
 .hamburger-box
 	width 30px
