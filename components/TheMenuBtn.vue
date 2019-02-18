@@ -40,7 +40,7 @@ export default {
 			height 100vh
 			background-color #000
 			&:hover
-				background-color $blue
+				background-color $blue-10
 
 .hamburger
 	position absolute

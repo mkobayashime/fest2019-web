@@ -24,13 +24,12 @@ export default {
 }
 </script>
 
-
 <style lang="stylus">
 #mouse-follower-primary
 	width 16px
 	height 16px
 	border-radius 50%
-	background-color $blue
+	background-color $blue-10
 	position absolute
 	transition all 10ms ease-out
 	pointer-events none
