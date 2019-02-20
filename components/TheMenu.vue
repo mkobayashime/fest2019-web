@@ -26,10 +26,12 @@
 				nuxt-link.menu-item(to="design" @click.native="toggle")
 					p.en design
 					p.jp デザイン
-		.bg-dummy.bg-dummy1(:class="{opened:opened}")
-		.bg-dummy.bg-dummy2(:class="{opened:opened}")
-		.bg-dummy.bg-dummy3(:class="{opened:opened}")
-		.bg-dummy.bg-dummy4(:class="{opened:opened}")
+		.bg-container
+			.bg-dummy.bg-dummy1(:class="{opened:opened}")
+			.bg-dummy.bg-dummy2(:class="{opened:opened}")
+			.bg-dummy.bg-dummy3(:class="{opened:opened}")
+			.bg-dummy.bg-dummy4(:class="{opened:opened}")
+			.bg-dummy.bg-dummy5(:class="{opened:opened}")
 </template>
 
 <script>
@@ -50,7 +52,7 @@ export default {
         targets: '#the-menu .menu-item',
         translateX: ['-3em', 0],
         opacity: [0, 1],
-        delay: (el, i) => i * 50 + 500,
+        delay: anime.stagger(50, { start: 400 }),
         duration: 1000,
         easing: 'easeOutQuint',
         complete: done
@@ -59,8 +61,10 @@ export default {
     itemsLeave: (el, done) => {
       anime({
         targets: '#the-menu .menu-item',
+        translateX: [0, '3em'],
         opacity: [1, 0],
-        duration: 800,
+        delay: anime.stagger(50),
+        duration: 1000,
         easing: 'easeOutQuint',
         complete: done
       })
@@ -126,7 +130,7 @@ export default {
 				background-color $blue-10
 				transform scaleX(0)
 				transform-origin left center
-				transition all 200ms ease-out
+				transition all 200ms ease-in-out
 			&::after
 				content ''
 				width 100%
@@ -147,16 +151,28 @@ export default {
 			&::before
 				transform scaleX(1)
 
-	.bg-dummy
+	.bg-container
 		position absolute
-		background-color #000
+		width 100%
+		height 100%
 		top 0
-		height 0
-		transition all 300ms ease-out
-		z-index 900
-		&.opened
-			height 100vh
-	.bg-dummy1
+		display flex
+		flex-direction row
+		.bg-dummy
+			background-color #000
+			width 100%
+			top 0
+			height 0
+			transition all 300ms ease-out
+			z-index 900
+			&.opened
+				height 100vh
+		for i in (1..5)
+			.bg-dummy{i}
+				transition-delay (i*100+100)ms
+				&.opened
+					transition-delay (i*100)ms
+	/* .bg-dummy1
 		width 25%
 		left 0%
 		transition-delay 200ms
@@ -171,5 +187,5 @@ export default {
 	.bg-dummy4
 		width 25%
 		left 75%
-		transition-delay 100ms
+		transition-delay 100ms */
 </style>
