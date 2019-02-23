@@ -4,7 +4,7 @@
 <script>
 export default {
   head: {
-    title: '開催概要'
+    title: '文化委員会について'
   }
 }
 </script>
