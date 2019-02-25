@@ -14,12 +14,12 @@
   margin: 0;
 }
 ::selection {
-  background: rgba(0, 0, 0, 0.4) /* Safari */;
-  color: #fff;
+  background: rgba(0, 0, 0, 0.2) /* Safari */;
+  color: #000;
 }
 ::-moz-selection {
-  background: rgba(0, 0, 0, 0.4) /* Firefox */;
-  color: #fff;
+  background: rgba(0, 0, 0, 0.2) /* Firefox */;
+  color: #000;
 }
 html {
   position: relative;
