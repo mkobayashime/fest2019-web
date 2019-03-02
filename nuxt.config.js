@@ -1,5 +1,4 @@
 const resolve = require('path').resolve
-const pkg = require('./package')
 
 module.exports = {
   mode: 'spa',
@@ -48,7 +47,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/youtube.js'],
 
   /*
    ** Router config

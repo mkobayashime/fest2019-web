@@ -25,7 +25,8 @@
     "cross-env": "^5.2.0",
     "lottie-web": "^5.4.3",
     "nuxt": "^2.4.3",
-    "nuxt-device-detect": "^1.1.3"
+    "nuxt-device-detect": "^1.1.3",
+    "vue-youtube": "^1.3.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
