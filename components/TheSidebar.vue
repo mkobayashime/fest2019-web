@@ -5,19 +5,19 @@
 			.items-container
 				.items-group
 					.links
-						a(:href="sns.twitter" target="_blank")
+						a(:href="sns.twitter" target="_blank" rel="noopener" aria-label="Twitter")
 							.sidebar-item.fab.fa-twitter
-						a(:href="sns.ig" target="_blank")
+						a(:href="sns.ig" target="_blank" rel="noopener" aria-label="Instagram")
 							.sidebar-item.fab.fa-instagram
-						a(:href="sns.fb" target="_blank")
+						a(:href="sns.fb" target="_blank" rel="noopener" aria-label="Facebook")
 							.sidebar-item.fab.fa-facebook
 					p Follow Us
 			.items-container
 				.items-group
 					.links
-						a(:href="sns.twitterShare" target="_blank")
+						a(:href="sns.twitterShare" target="_blank" rel="noopener" aria-label="Share on Twitter")
 							.sidebar-item.fab.fa-twitter
-						a(:href="sns.fbShare" target="_blank")
+						a(:href="sns.fbShare" target="_blank" rel="noopener" aria-label="Share on Facebook")
 							.sidebar-item.fab.fa-facebook
 					p Share On
 </template>

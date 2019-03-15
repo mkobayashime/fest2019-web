@@ -1,6 +1,6 @@
 <template lang="pug">
 	#the-menu-btn
-		button(@click="toggle" type="button" :class="{opened:opened}")
+		button(@click="toggle" type="button" aria-label="Menu" :class="{opened:opened}")
 		.hamburger.hamburger--elastic(:class="{active:opened}")
 			.hamburger-box
 				.hamburger-inner

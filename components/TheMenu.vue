@@ -36,9 +36,9 @@
           p.el 2018.05.02&ndash;03
           .spacer.el
           .links
-            a.el(:href="sns.twitter" target="_blank") Tw
-            a.el(:href="sns.ig" target="_blank") IG
-            a.el(:href="sns.fb" target="_blank") Fb
+            a.el(:href="sns.twitter" target="_blank" rel="noopener" aria-label="Twitter") Tw
+            a.el(:href="sns.ig" target="_blank" rel="noopener" aria-label="Instagram") IG
+            a.el(:href="sns.fb" target="_blank" rel="noopener" aria-label="Facebook") Fb
           .spacer.el
           p.el Design Team © 2019
     .bg-container

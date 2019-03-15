@@ -7,10 +7,10 @@
         img(src="~/assets/logo/black/logotype.svg" alt="SAIL AWAY")
       p.date 2018.05.02&ndash;03
       .button-container
-        nuxt-link.button(to="/about")
+        nuxt-link.button(to="/about" aria-label="開催概要")
           span 開催概要
     .concept
-      img.logo(src="~/assets/logo/black/vertical-b.svg")
+      img.logo(src="~/assets/logo/black/vertical-b.svg" alt="文化祭ロゴ")
       .paragraph
         p 文化祭を航海になぞらえたこのテーマは、
         p 世界という大海へ懸命に漕ぎ出す灘校生と、
