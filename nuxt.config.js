@@ -73,6 +73,26 @@ module.exports = {
   ],
 
   /*
+   ** PWA
+   */
+  manifest: {
+    name: '第73回灘校文化祭',
+    short_name: '灘校文化祭',
+    lang: 'ja',
+    theme_color: '#3d81ff',
+    display: 'browser',
+    orientation: 'portrait',
+    start_url: 'http://fest.nada-sc.jp/2019',
+    icons: [
+      {
+        src: 'static/icon-512x512.png',
+        sizes: '512x512',
+        type: 'image/png'
+      }
+    ]
+  },
+
+  /*
    ** Build configuration
    */
   build: {
