@@ -1,53 +1,67 @@
 // スマートフォン用レイアウト
 sp()
-	@media screen and (max-device-width: 480px)
-		{block}
+  @media screen and (max-device-width: 480px)
+    {block}
 
 // 縦画面タブレット用レイアウト
 tablet()
-	@media screen and (min-device-width: 481px) and (max-device-width: 768px)
-		{block}
+  @media screen and (min-device-width: 481px) and (max-device-width: 768px)
+    {block}
+
+// スマートフォン/縦画面タブレット用レイアウト
+touch()
+  @media screen and (max-device-width: 768px)
+    {block}
+
+tabDesk()
+  @media screen and (min-device-width: 481px)
+    {block}
+
+// デスクトップ用レイアウト
+desktop()
+  @media screen and (min-device-width: 769px)
+    {block}
 
 bold()
-	font-weight 700
+  font-weight 700
 
 btn-primary()
-	position absolute
-	display block
-	padding .5em 1.5em
-	background-color #000
-	color #fff
-	transition background-color 225ms cubic-bezier(.7,.15,.3,.95)
-	&::before
-		content ''
-		position absolute
-		width 50%
-		height 100%
-		top 0
-		left 0
-		background-color #000
-		z-index -1
-		transition background-color 225ms cubic-bezier(.4,.25,.3,1),transform 225ms cubic-bezier(.4,.25,.3,1)
-	&::after
-		content ''
-		position absolute
-		width 50%
-		height 100%
-		top 0
-		right 0
-		background-color #000
-		z-index -1
-		transition background-color 225ms cubic-bezier(.4,.25,.3,1),transform 225ms cubic-bezier(.4,.25,.3,1)
-	&:hover
-		background-color $blue-10
-		&::before
-			background-color $blue-10
-			transform translateY(-.35em)
-		&::after
-			background-color $blue-10
-			transform translateY(.35em)
-	span
-		display block
-		margin-right -.2em
-		font-size 20px
-		letter-spacing .2em
+  position absolute
+  display block
+  padding .5em 1.5em
+  background-color #000
+  color #fff
+  transition background-color 225ms cubic-bezier(.7,.15,.3,.95)
+  &::before
+    content ''
+    position absolute
+    width 50%
+    height 100%
+    top 0
+    left 0
+    background-color #000
+    z-index -1
+    transition background-color 225ms cubic-bezier(.4,.25,.3,1),transform 225ms cubic-bezier(.4,.25,.3,1)
+  &::after
+    content ''
+    position absolute
+    width 50%
+    height 100%
+    top 0
+    right 0
+    background-color #000
+    z-index -1
+    transition background-color 225ms cubic-bezier(.4,.25,.3,1),transform 225ms cubic-bezier(.4,.25,.3,1)
+  &:hover
+    background-color $blue-10
+    &::before
+      background-color $blue-10
+      transform translateY(-.35em)
+    &::after
+      background-color $blue-10
+      transform translateY(.35em)
+  span
+    display block
+    margin-right -.2em
+    font-size 20px
+    letter-spacing .2em

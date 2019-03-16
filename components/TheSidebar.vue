@@ -1,7 +1,7 @@
 <template lang="pug">
 	#the-sidebar
 		the-menu-btn
-		.sidebar-items
+		.sidebar-items(v-if="$device.isDesktop || $device.isTablet")
 			.items-container
 				.items-group
 					.links

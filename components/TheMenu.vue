@@ -27,9 +27,9 @@
           nuxt-link.menu-item(to="design" @click.native="toggle")
             p.en design
             p.jp デザイン
-      .spacer
+      .spacer(v-if="$device.isDesktop")
       transition(:css="false" @enter="infoEnter" @leave="infoLeave")
-        .info(:class="{opened:opened}" v-if="opened")
+        .info(:class="{opened:opened}" v-if="opened && $device.isDesktop")
           p.el 73rd Nada School Festival
           p.el SAIL AWAY
           .spacer.el
@@ -45,8 +45,8 @@
       .bg-dummy.bg-dummy1(:class="{opened:opened}")
       .bg-dummy.bg-dummy2(:class="{opened:opened}")
       .bg-dummy.bg-dummy3(:class="{opened:opened}")
-      .bg-dummy.bg-dummy4(:class="{opened:opened}")
-      .bg-dummy.bg-dummy5(:class="{opened:opened}")
+      .bg-dummy.bg-dummy4(:class="{opened:opened}" v-if="$device.isDesktop")
+      .bg-dummy.bg-dummy5(:class="{opened:opened}" v-if="$device.isDesktop")
 </template>
 
 <script>
@@ -124,6 +124,9 @@ export default {
   left 70px
   height 100%
   top 0
+  +sp()
+    width 100%
+    left 0
   .menu-container
     display flex
     align-items flex-end
@@ -144,17 +147,21 @@ export default {
         position relative
         z-index 910
         outline none
+        +sp()
+          width 75vw
+          margin .3rem 0
         &:nth-child(1)
           margin-top -1rem
         &:nth-last-child(1)
           margin-bottom -1rem
-        &:hover
-          .en
-            margin-left .5em
-          .jp
-            color #fff
-          &::after
-            background-color #fff
+        +desktop()
+          &:hover
+            .en
+              margin-left .5em
+            .jp
+              color #fff
+            &::after
+              background-color #fff
         .en
           margin-right 1rem
           font-size 2.5rem
@@ -164,6 +171,11 @@ export default {
           flex-shrink 0
           order 1
           transition all 200ms ease-out
+          +sp()
+            font-size 1.5rem
+            letter-spacing .02em
+          @media screen and (max-device-width: 360px)
+            font-size 1.3rem
         .jp
           margin-left 1rem
           letter-spacing .1em
@@ -171,12 +183,18 @@ export default {
           flex-shrink 0
           order 3
           transition all 200ms
+          +sp()
+            font-size .9rem
+            letter-spacing .05em
+          @media screen and (max-device-width: 360px)
+            font-size .8rem
+            letter-spacing 0
         &::before
           content ''
           position absolute
-          width 3em
+          width 2em
           height 1em
-          left -3em
+          left -2em
           background-color $blue-10
           transform scaleX(0)
           transform-origin left center
@@ -198,8 +216,12 @@ export default {
       & .nuxt-link-exact-active
         .en
           margin-left .5em
+        .jp
+          color #fff
         &::before
           transform scaleX(1)
+        &::after
+          background-color #fff
     .spacer
       width 20vw
     .info

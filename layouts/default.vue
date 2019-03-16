@@ -30,4 +30,8 @@ export default {
   overflow-y scroll
   -webkit-overflow-scrolling touch
   z-index 10
+  +sp() {
+    width 100%
+    left 0
+  }
 </style>
