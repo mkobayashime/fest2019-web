@@ -38,6 +38,9 @@ export default {
 	display flex
 	align-items center
 	justify-content center
+	+sp()
+		width 100%
+		left 0
 	#logoLoopAnim
 		opacity 0.07
 		flex-shrink 0
