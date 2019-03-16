@@ -56,7 +56,7 @@ export default {
 			width 100%
 			overflow hidden
 			&:hover .items-group
-				margin 0px -25px 10px 0
+				transform translateX(34px)
 				.links
 					opacity 1
 				p
