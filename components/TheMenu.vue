@@ -199,6 +199,11 @@ export default {
           transform scaleX(0)
           transform-origin left center
           transition all 200ms ease-in-out
+          z-index -1
+          +sp()
+            width 2.5em
+            height 2.5em
+            left -1em
         &::after
           content ''
           width 100%
@@ -216,6 +221,8 @@ export default {
       & .nuxt-link-exact-active
         .en
           margin-left .5em
+          +sp()
+            margin-left 0
         .jp
           color #fff
         &::before

@@ -1,7 +1,7 @@
 <template lang="pug">
 	#the-sidebar
 		the-menu-btn
-		.sidebar-items(v-if="$device.isDesktop || $device.isTablet")
+		.sidebar-items-desktop(v-if="$device.isDesktop")
 			.items-container
 				.items-group
 					.links
@@ -20,6 +20,14 @@
 						a(:href="sns.fbShare" target="_blank" rel="noopener" aria-label="Share on Facebook")
 							.sidebar-item.fab.fa-facebook
 					p Share On
+		.sidebar-items-tablet(v-if="$device.isTablet")
+			.links
+				a(:href="sns.twitter" target="_blank" rel="noopener" aria-label="Twitter")
+					.sidebar-item.fab.fa-twitter
+				a(:href="sns.ig" target="_blank" rel="noopener" aria-label="Instagram")
+					.sidebar-item.fab.fa-instagram
+				a(:href="sns.fb" target="_blank" rel="noopener" aria-label="Facebook")
+					.sidebar-item.fab.fa-facebook
 </template>
 
 <script>
@@ -41,7 +49,7 @@ export default {
 	width 70px
 	height 100vh
 	transition all 200ms ease-out
-	.sidebar-items
+	.sidebar-items-desktop
 		width 100%
 		height 100vh
 		background-color hsl(0, 0%, 90%)
@@ -77,15 +85,36 @@ export default {
 					justify-content center
 					width 40px
 					height 40px
-					font-size 20px
+					font-size 1.3rem
 					transition all 200ms ease
 					&:hover
 						background-color hsl(0, 0%, 80%)
-						font-size 23px
+						font-size 1.5rem
 				p
 					opacity 1
 					bold()
 					writing-mode vertical-rl
 					text-orientation mixed
 					transition all 200ms linear
+	.sidebar-items-tablet
+		width 100%
+		height 100vh
+		background-color hsl(0, 0%, 90%)
+		display flex
+		flex-direction column
+		justify-content flex-end
+		padding-bottom 30px
+		color hsl(0, 0%, 0%)
+		.links
+			display flex
+			flex-direction column
+			align-items center
+			justify-content center
+			a
+				display flex
+				align-items center
+				justify-content center
+				width 40px
+				height 40px
+				font-size 1.5rem
 </style>
