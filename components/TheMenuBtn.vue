@@ -1,6 +1,6 @@
 <template lang="pug">
 	#the-menu-btn
-		button(@click="toggle" type="button" aria-label="Menu" :class="{opened:opened}")
+		button(@click="toggle" type="button" aria-label="Menu"  :class="{opened:opened}")
 		.hamburger.hamburger--elastic(:class="{active:opened}")
 			.hamburger-box
 				.hamburger-inner
@@ -33,14 +33,17 @@ export default {
 		outline none
 		transition all 200ms ease-out
 		z-index 990
-		&:hover
-			height 120px
-			background-color $blue
-		&.opened
-			height 100vh
-			background-color #000
+		+desktop()
 			&:hover
-				background-color $blue-10
+				height 120px
+				background-color $blue
+		+tabDesk()
+			&.opened
+				height 100vh
+				background-color #000
+				+desktop()
+					&:hover
+						background-color $blue-10
 
 .hamburger
 	position absolute
