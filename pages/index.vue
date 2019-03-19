@@ -108,9 +108,10 @@ export default {
     image.y = renderer.height / 2
     slide.addChild(image)
 
-    const displacementSprite = PIXI.Sprite.fromImage(
-      '/_nuxt/assets/img/clouds-512.jpg'
-    )
+    const displacementImageSrc = document
+      .querySelector('.d-pixi')
+      .getAttribute('src')
+    const displacementSprite = PIXI.Sprite.fromImage(displacementImageSrc)
     const displacementFilter = new PIXI.filters.DisplacementFilter(
       displacementSprite
     )
