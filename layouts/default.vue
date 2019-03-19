@@ -4,6 +4,7 @@
     the-sidebar
     #scroll-area
       nuxt
+      the-footer
     the-menu
     the-mouse-follower(v-if="$device.isDesktop")
 </template>
@@ -14,7 +15,8 @@ export default {
     TheBg: () => import('~/components/TheBg.vue'),
     TheSidebar: () => import('~/components/TheSidebar.vue'),
     TheMouseFollower: () => import('~/components/TheMouseFollower.vue'),
-    TheMenu: () => import('~/components/TheMenu.vue')
+    TheMenu: () => import('~/components/TheMenu.vue'),
+    TheFooter: () => import('~/components/TheFooter')
   }
 }
 </script>
