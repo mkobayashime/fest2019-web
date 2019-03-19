@@ -85,3 +85,6 @@ sw.*
 
 # VSCode config
 .vscode/
+
+# Binary files
+binary/
