@@ -7,6 +7,9 @@
 export default {
   head: {
     title: 'Design'
+  },
+  mounted() {
+    document.getElementById('scroll-area').scrollTop = 0
   }
 }
 </script>

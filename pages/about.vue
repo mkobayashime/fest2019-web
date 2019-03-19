@@ -7,6 +7,9 @@
 export default {
   head: {
     title: '文化委員会について'
+  },
+  mounted() {
+    document.getElementById('scroll-area').scrollTop = 0
   }
 }
 </script>
