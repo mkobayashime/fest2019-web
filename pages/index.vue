@@ -5,7 +5,7 @@
         img.bg-pixi(src="~/assets/img/hero1.jpg" alt="背景画像")
         img.d-pixi(src="~/assets/img/clouds-512.jpg" alt="displacement map")
       .left
-      h1
+        h1
           img.logotype(src="~/assets/logo/white/tagline-jp.svg" alt="第73回灘校文化祭")
         button.about(type="button" @click="goToDetail()") 開催要項
           .arrow
@@ -13,26 +13,79 @@
       button(type="button" @click="scroll()").arrow-container
         .arrow
     .concept
-      img.logo(src="~/assets/logo/black/vertical-b.svg" alt="文化祭ロゴ")
-      .paragraph
-        p 文化祭を航海になぞらえたこのテーマは、
-        p 世界という大海へ懸命に漕ぎ出す灘校生と、
-        p その出発点となるコミュニティとしての灘校を表しています
-        p 停泊していた船は、動き始めるときにいかりを上げます
-        p 水面から上がる瞬間のいかりを切り取ったロゴは、
-        p 文化祭をきっかけとして始まる、
-        p 壮大な航海を暗示しています
+      .bg
+        .logotype-container
+          img.logotype(src="~/assets/logo/white/logotype.svg" alt="文化祭ロゴ")
+          img.logotype(src="~/assets/logo/white/logotype.svg" alt="文化祭ロゴ")
+        .paragraph-container
+          .paragraph
+            h2 concept
+            p 文化祭を航海になぞらえたこのテーマは、
+            p 世界という大海へ懸命に漕ぎ出す灘校生と、
+            p その出発点となるコミュニティとしての灘校を表しています
+            p 停泊していた船は、動き始めるときにいかりを上げます
+            p 水面から上がる瞬間のいかりを切り取ったロゴは、
+            p 文化祭をきっかけとして始まる、
+            p 壮大な航海を暗示しています
+          nuxt-link.to-about(to="/about")
+            span.label 文化委員会について
+            .arrow-container
+              .arrow
+    .detail
+      h2.title 開催要項
+      .columns
+        .column
+          .sidebar
+          ul
+            li
+              p.sub-title.narrow day 1
+              p.main 2019/05/02
+                span.jp (木・祝)
+            li
+              p.sub-title.narrow day 2
+              p.main 2019/05/03
+                span.jp (金・祝)
+            li
+              p.sub-title time
+              p.main 9:00&ndash;15:30
+              p.sub 開場 9:00
+            li
+              p.sub-title theme
+              p.main SAIL AWAY
+              p.sub 第73回灘校文化祭
+        .column
+          .sidebar
+          ul
+            li
+              p.sub-title place
+              p.main 灘中学校・高等学校
+              p.sub 〒658-0082
+              p.sub 兵庫県神戸市東灘区魚崎北町8丁目5番1号
+              a(href="http://www.nada.ac.jp/index.html" target="_blank" rel="noopener").sub 学校公式Webサイト
+            li
+              p.sub-title sns
+              .line
+                a(:href="sns.twitter" target="_blank" rel="noopener").main Twitter
+              .line
+                a(:href="sns.ig" target="_blank" rel="noopener").main Instagram
+              .line
+                a(:href="sns.fb" target="_blank" rel="noopener").main Facebook
 </template>
 
 <script>
 /* eslint new-cap: 0 */
 import * as PIXI from 'pixi.js'
 import anime from 'animejs'
+import sns from '~/assets/data/sns.json'
 export default {
   components: {},
   head: {
     title: 'SAIL AWAY'
-  }
+  },
+  data() {
+    return {
+      sns: sns
+    }
   },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0
@@ -78,7 +131,7 @@ export default {
         return widthRatio * 1.2
       } else {
         return heightRaio * 1.2
-}
+      }
     }
 
     container.appendChild(renderer.view)
@@ -153,7 +206,7 @@ export default {
         left 0
         top 60%
         align-items center
-    h1
+      h1
         width 100%
         +sp()
           width 75%
@@ -167,7 +220,7 @@ export default {
         color #fff
         padding 0.2em 1em
         border solid 2px #fff
-      display flex
+        display flex
         outline none
         +sp()
           font-size 1.2rem
@@ -265,15 +318,230 @@ export default {
           transform-origin left bottom
           transform rotate(-45deg)
   .concept
-    height 90vh
-    display flex
-    flex-direction row
-    align-items center
-    justify-content center
-    .logo
-      width 30%
-      margin 0 100px
-    p
-      bold()
-      margin-top 20px
+    position relative
+    width 100%
+    &::before
+      content ''
+      display block
+      padding-top 30%
+      +sp()
+        padding-top 50%
+    .bg
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      background-color $gray-1
+      z-index 100
+      .logotype-container
+        position absolute
+        width 100%
+        height 100%
+        left 0
+        top 0
+        overflow hidden
+        .logotype
+          position absolute
+          width 150%
+          transform translate(-50%, -50%)
+          z-index -1
+          +sp()
+            width 180%
+          &:first-of-type
+            top 10%
+            left 1%
+            +sp()
+              top 10%
+          &:last-of-type
+            top 95%
+            left 120%
+            +sp()
+              top 80%
+              left 125%
+      .paragraph-container
+        position absolute
+        bottom -25em
+        left 50%
+        transform translateX(-50%)
+        display flex
+        align-items flex-end
+        +sp()
+          width 100%
+          left 50%
+          top 75%
+          bottom auto
+          align-items center
+          justify-content flex-start
+          flex-wrap wrap
+        .paragraph
+          width 40em
+          bottom -50%
+          left 20%
+          padding 3em
+          background-color $gray-7
+          +sp()
+            width 95%
+            padding 2em
+            padding-bottom 5em
+          h2
+            margin -.3em 0 -.2em -0.05em
+            margin-top -.3em
+            margin-bottom -.2em
+            color $gray-9
+            bold()
+            letter-spacing .05em
+            font-size 4rem
+            text-transform uppercase
+            +sp()
+              font-size 3rem
+              margin-top 0
+          p
+            color #fff
+            margin-top 20px
+            +sp()
+              margin-top 10px
+        .to-about
+          background-color $gray-9
+          padding 3rem
+          width 35em
+          height 20em
+          margin-left -5rem
+          margin-bottom -5rem
+          color #fff
+          display flex
+          justify-content flex-end
+          align-items flex-end
+          transition all 200ms ease-out
+          +sp()
+            width 16em
+            height 10em
+            margin-top -3em
+            margin-bottom auto
+            margin-left auto
+            padding 2em
+            background-color $blue-10
+            flex-direction column
+          &:hover
+            background-color $blue-10
+            .arrow-container
+              .arrow
+                width 50px
+          .label
+            bold()
+            font-size 1.2rem
+            letter-spacing .05em
+            +sp()
+              margin-bottom 1em
+          .arrow-container
+            position relative
+            height 1.2rem
+            margin-left 1rem
+            .arrow
+              position relative
+              width 30px
+              height 3px
+              background-color #fff
+              transition all 200ms ease-out
+              &::before, &::after
+                content ''
+                position absolute
+                width 3px
+                height 12px
+                right -2px
+                background-color #fff
+              &::before
+                bottom 1.5px
+                transform-origin right bottom
+                transform rotate(-45deg)
+              &::after
+                top 1.5px
+                transform-origin right top
+                transform rotate(45deg)
+  .detail
+    width 800px
+    margin 600px auto 200px
+    bold()
+    +sp()
+      width 85%
+      margin 750px auto 100px
+    .title
+      letter-spacing .05em
+      font-size 3rem
+      margin-bottom .5em
+      margin-left -.05em
+    .sub-title
+      color $blue-10
+      text-transform uppercase
+      letter-spacing .05em
+    .narrow
+      letter-spacing -.05em
+    .columns
+      display flex
+      +sp()
+        flex-direction column
+      .column
+        width 50%
+        display flex
+        +sp()
+          width 100%
+          margin-bottom 2rem
+        .sidebar
+          width 2px
+          margin-right 30px
+          height 100%
+          background-color $gray-6
+          +sp()
+            display none
+        ul
+          width 90%
+          +sp()
+            width 100%
+          li
+            margin-bottom 2rem
+            &:last-of-type
+              margin-bottom 0
+          .main
+            font-size 2rem
+            letter-spacing .05em
+            margin-bottom -.2rem
+            +sp()
+              font-size 1.7rem
+            .jp
+              display inline-block
+              margin-left .5em
+              transform translateY(-.1em)
+              font-size 1.5rem
+              font-weight 700
+              color $gray-6
+              +sp()
+                font-size 1.2rem
+          .sub
+            font-size 1rem
+            color $gray-6
+          .line
+            height 4rem
+          a
+            position relative
+            &::after
+              content ''
+              position absolute
+              width 100%
+              height 2px
+              bottom 0
+              left 0
+              transform-origin center center
+              transform scaleX(1)
+              transition all 200ms ease-out
+            &:hover
+              &::after
+                transform scaleX(.8)
+                +sp()
+                  transform scaleX(1)
+          a.main
+            &::after
+              background-color #000
+          a.sub
+            &::after
+              background-color $gray-6
 </style>
