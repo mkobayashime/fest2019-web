@@ -35,15 +35,25 @@ export default {
   flex-direction row
   justify-content space-between
   align-items center
+  +sp()
+    height auto
+    padding 5rem 10%
+    flex-direction column
+    align-items  flex-start
   .logo
     height 40%
-    opacity .6
+    opacity .5
+    +sp()
+      width 100%
+      margin-bottom 3rem
   .info
     display flex
     flex-direction column
     align-items flex-end
     justify-content flex-end
     flex-shrink 0
+    +sp()
+      align-items flex-start
     p
       color $gray-4
       letter-spacing .02em
@@ -62,6 +72,9 @@ export default {
         color $gray-4
         z-index 910
         transition color 200ms ease
+        +sp()
+          margin-right 10px
+          margin-left 0
         &::after
           content ''
           position absolute
