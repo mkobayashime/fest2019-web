@@ -2,31 +2,39 @@
   #the-menu
     .menu-container
       transition.menu-container(:css="false" @enter="itemsEnter" @leave="itemsLeave")
-        .menu-items(v-if="opened")
-          nuxt-link.menu-item(to="/" @click.native="toggle")
-            p.en home
-            p.jp ホーム
-          .menu-item.disabled(to="circles" @click.native="toggle")
-            p.en circles
-            p.jp 近日公開予定
-          .menu-item.disabled(to="map" @click.native="toggle")
-            p.en map
-            p.jp 近日公開予定
-          .menu-item.disabled(to="timetable" @click.native="toggle")
-            p.en timetable
-            p.jp 近日公開予定
-          .menu-item.disabled(to="goods" @click.native="toggle")
-            p.en goods
-            p.jp 近日公開予定
-          .menu-item.disabled(to="foods" @click.native="toggle")
-            p.en foods
-            p.jp 近日公開予定
-          nuxt-link.menu-item(to="about" @click.native="toggle")
-            p.en about
-            p.jp 文化委員会について
-          nuxt-link.menu-item(to="design" @click.native="toggle")
-            p.en design
-            p.jp デザイン
+        ul.menu-items(v-if="opened")
+          li
+            nuxt-link.menu-item(to="/" @click.native="toggle")
+              p.en home
+              p.jp ホーム
+          li
+            .menu-item.disabled(to="circles" @click.native="toggle")
+              p.en circles
+              p.jp 近日公開予定
+          li
+            .menu-item.disabled(to="map" @click.native="toggle")
+              p.en map
+              p.jp 近日公開予定
+          li
+            .menu-item.disabled(to="timetable" @click.native="toggle")
+              p.en timetable
+              p.jp 近日公開予定
+          li
+            .menu-item.disabled(to="goods" @click.native="toggle")
+              p.en goods
+              p.jp 近日公開予定
+          li
+            .menu-item.disabled(to="foods" @click.native="toggle")
+              p.en foods
+              p.jp 近日公開予定
+          li
+            nuxt-link.menu-item(to="about" @click.native="toggle")
+              p.en about
+              p.jp 文化委員会について
+          li
+            nuxt-link.menu-item(to="design" @click.native="toggle")
+              p.en design
+              p.jp デザイン
       .spacer(v-if="$device.isDesktop")
       transition(:css="false" @enter="infoEnter" @leave="infoLeave")
         .info(:class="{opened:opened}" v-if="opened && $device.isDesktop")
@@ -138,6 +146,10 @@ export default {
       justify-content center
       flex-shrink 0
       color #fff
+      li
+        height 4rem
+        &:last-of-type
+          height 3rem
       .menu-item
         display flex
         flex-direction row
@@ -150,10 +162,6 @@ export default {
         +sp()
           width 75vw
           margin .3rem 0
-        &:nth-child(1)
-          margin-top -1rem
-        &:nth-last-child(1)
-          margin-bottom -1rem
         +desktop()
           &:hover
             .en
