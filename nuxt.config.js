@@ -96,7 +96,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    vendor: ['~/assets/data/sns.json'],
+    vendor: [['~/assets/data/sns.json'], ['pixi.js']],
     /*
      ** You can extend webpack config here
      */

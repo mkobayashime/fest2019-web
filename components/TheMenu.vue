@@ -243,9 +243,9 @@ export default {
         z-index 910
       .spacer
         width 15px
-        height 1px
+        height 3px
         margin 12px 0
-        background-color $gray-4
+        background-color $gray-8
         z-index 910
       .links
         display flex
@@ -262,14 +262,15 @@ export default {
             height 1px
             bottom 0
             left 0
-            background-color #fff
+            background-color $gray-4
             transform-origin center center
-            transform scaleX(0)
+            transform scaleX(1)
             transition all 200ms ease-out
           &:hover
             color #fff
             &::after
-              transform scaleX(1)
+              background-color #fff
+              transform scaleX(.8)
 
   .bg-container
     position absolute
