@@ -89,69 +89,16 @@ export default {
   },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0
-    const container = document.getElementById('pixi')
-    const width = container.clientWidth
-    const height = container.clientHeight
-
-    const renderer = new PIXI.autoDetectRenderer(1280, 720, {
-      transparent: true
-    })
-    const stage = new PIXI.Container()
-    const slide = new PIXI.Container()
-
-    const spriteImage = document.querySelector('.bg-pixi')
-    const spriteImageSrc = spriteImage.getAttribute('src')
-    const texture = new PIXI.Texture.fromImage(spriteImageSrc)
-    const image = new PIXI.Sprite(texture)
-    image.anchor.set(0.5)
-    image.x = renderer.width / 2
-    image.y = renderer.height / 2
-    slide.addChild(image)
-
-    const displacementImageSrc = document
-      .querySelector('.d-pixi')
-      .getAttribute('src')
-    const displacementSprite = PIXI.Sprite.fromImage(displacementImageSrc)
-    const displacementFilter = new PIXI.filters.DisplacementFilter(
-      displacementSprite
-    )
-
-    displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT
-    stage.filters = [displacementFilter]
-    displacementSprite.scale.x = 2
-    displacementSprite.scale.y = 2
-
-    displacementFilter.autoFit = true
-
-    stage.addChild(displacementSprite)
-
-    const calcScale = () => {
-      const widthRatio = width / 1280
-      const heightRaio = height / 720
-      if (widthRatio > heightRaio) {
-        return widthRatio * 1.2
-      } else {
-        return heightRaio * 1.2
-      }
-    }
-
-    container.appendChild(renderer.view)
-    stage.addChild(slide)
-    const canvas = document.querySelector('#pixi canvas')
-    canvas.style.position = 'absolute'
-    canvas.style.top = '50%'
-    canvas.style.left = '50%'
-    canvas.style.transform = `translate(-50%, -50%) scale(${calcScale()})`
-    canvas.style.zIndex = '-1'
-
-    const ticker = new PIXI.ticker.Ticker()
-    ticker.autoStart = true
-    ticker.add(delta => {
-      displacementSprite.x += 1 * delta
-      displacementSprite.y += 3
-
-      renderer.render(stage)
-    })
+    this.pixiContainer = document.getElementById('pixi')
+    this.pixiInit()
+  },
+  destroyed() {
+    this.renderer.destroy()
+    this.stage.destroy()
+    this.slide.destroy()
+    this.image.destroy()
+    this.displacementSprite.destroy()
+    this.ticker.destroy()
   },
   methods: {
     goNext() {
@@ -173,6 +120,69 @@ export default {
         duration: 500,
         easing: 'easeOutQuint'
       })
+    },
+    pixiInit() {
+      this.renderer = new PIXI.autoDetectRenderer(1280, 720, {
+        transparent: true
+      })
+      this.stage = new PIXI.Container()
+      this.slide = new PIXI.Container()
+
+      const spriteImage = document.querySelector('.bg-pixi')
+      const spriteImageSrc = spriteImage.getAttribute('src')
+      const texture = new PIXI.Texture.fromImage(spriteImageSrc)
+      this.image = new PIXI.Sprite(texture)
+      this.image.anchor.set(0.5)
+      this.image.x = this.renderer.width / 2
+      this.image.y = this.renderer.height / 2
+      this.slide.addChild(this.image)
+
+      const displacementImageSrc = document
+        .querySelector('.d-pixi')
+        .getAttribute('src')
+      this.displacementSprite = PIXI.Sprite.fromImage(displacementImageSrc)
+      this.displacementFilter = new PIXI.filters.DisplacementFilter(
+        this.displacementSprite
+      )
+
+      this.displacementSprite.texture.baseTexture.wrapMode =
+        PIXI.WRAP_MODES.REPEAT
+      this.stage.filters = [this.displacementFilter]
+      this.displacementSprite.scale.x = 2
+      this.displacementSprite.scale.y = 2
+
+      this.displacementFilter.autoFit = true
+
+      this.stage.addChild(this.displacementSprite)
+
+      this.pixiContainer.appendChild(this.renderer.view)
+      this.stage.addChild(this.slide)
+      const canvas = document.querySelector('#pixi canvas')
+      canvas.style.position = 'absolute'
+      canvas.style.top = '50%'
+      canvas.style.left = '50%'
+      canvas.style.transform = `translate(-50%, -50%) scale(${this.calcScale()})`
+      canvas.style.zIndex = '-1'
+
+      this.ticker = new PIXI.ticker.Ticker()
+      this.ticker.autoStart = true
+      this.ticker.add(delta => {
+        this.displacementSprite.x += 1 * delta
+        this.displacementSprite.y += 3
+
+        this.renderer.render(this.stage)
+      })
+    },
+    calcScale() {
+      const width = this.pixiContainer.clientWidth
+      const height = this.pixiContainer.clientHeight
+      const widthRatio = width / 1280
+      const heightRatio = height / 720
+      if (widthRatio > heightRatio) {
+        return widthRatio * 1.2
+      } else {
+        return heightRatio * 1.2
+      }
     }
   }
 }
