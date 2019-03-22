@@ -148,6 +148,8 @@ export default {
       color #fff
       li
         height 4rem
+        +sp()
+          height 3rem
         &:last-of-type
           height 3rem
       .menu-item
