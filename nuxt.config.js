@@ -82,10 +82,10 @@ module.exports = {
     theme_color: '#3d81ff',
     display: 'browser',
     orientation: 'portrait',
-    start_url: 'http://fest.nada-sc.jp/2019',
+    start_url: '/2019/',
     icons: [
       {
-        src: 'icon-512x512.png',
+        src: 'https://fest.nada-sc.jp/2019/icon-512x512.png',
         sizes: '512x512',
         type: 'image/png'
       }
