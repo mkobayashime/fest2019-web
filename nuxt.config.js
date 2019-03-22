@@ -85,7 +85,7 @@ module.exports = {
     start_url: 'http://fest.nada-sc.jp/2019',
     icons: [
       {
-        src: 'static/icon-512x512.png',
+        src: 'icon-512x512.png',
         sizes: '512x512',
         type: 'image/png'
       }
@@ -97,6 +97,14 @@ module.exports = {
    */
   build: {
     vendor: [['~/assets/data/sns.json'], ['pixi.js']],
+    filenames: {
+      app: () => '[name].js',
+      chunk: () => '[name].js',
+      css: () => '[name].js',
+      img: () => '[path][name].[ext]',
+      font: () => '[path][name].[ext]',
+      video: () => '[path][name].[ext]'
+    },
     /*
      ** You can extend webpack config here
      */
