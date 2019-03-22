@@ -10,7 +10,7 @@
         button.about(type="button" @click="goToDetail()") 開催要項
           .arrow
       img.logo(src="~/assets/logo/white/vertical-b.svg" alt="SAIL AWAY")
-      button(type="button" @click="scroll()").arrow-container
+      button(type="button" @click="goNext()").arrow-container
         .arrow
     .concept
       .bg
@@ -154,7 +154,7 @@ export default {
     })
   },
   methods: {
-    scroll() {
+    goNext() {
       const height = window.innerHeight
       anime({
         targets: document.getElementById('scroll-area'),
@@ -165,7 +165,8 @@ export default {
     },
     goToDetail() {
       const el = document.querySelector('.detail')
-      const height = el.getBoundingClientRect().top
+      const offset = document.getElementById('scroll-area').scrollTop
+      const height = el.getBoundingClientRect().top + offset
       anime({
         targets: document.getElementById('scroll-area'),
         scrollTop: height,
