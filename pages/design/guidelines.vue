@@ -6,7 +6,7 @@
 <script>
 export default {
   head: {
-    title: '文化委員会について'
+    title: 'ブランドガイドライン'
   }
 }
 </script>
@@ -24,4 +24,6 @@ export default {
     bold()
     font-size 2rem
     letter-spacing .05em
+    +sp()
+      font-size 1.2rem
 </style>
