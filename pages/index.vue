@@ -102,7 +102,9 @@ export default {
   },
   methods: {
     goNext() {
-      const height = window.innerHeight
+      const el = document.querySelector('.concept .paragraph-container')
+      const offset = document.getElementById('scroll-area').scrollTop
+      const height = el.getBoundingClientRect().top + offset
       anime({
         targets: document.getElementById('scroll-area'),
         scrollTop: height,
