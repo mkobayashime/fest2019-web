@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "analyze": "nuxt build --analyze",
     "start": "nuxt start",
-    "generate": "npx cross-env BASE_URL='/2019/' nuxt generate --analyze",
+    "generate": "cross-env NODE_ENV=production nuxt generate --analyze",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
     "precommit": "npm run lint"
   },
