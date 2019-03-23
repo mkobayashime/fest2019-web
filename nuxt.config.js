@@ -1,5 +1,4 @@
 const resolve = require('path').resolve
-const baseUrl = process.env.BASE_URL || '/'
 
 module.exports = {
   mode: 'spa',
@@ -54,7 +53,7 @@ module.exports = {
    ** Router config
    */
   router: {
-    base: baseUrl
+    base: process.env.NODE_ENV === 'production'? '/2019/': '/'
   },
 
   /*
