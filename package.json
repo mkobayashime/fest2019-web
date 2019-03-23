@@ -22,6 +22,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "@nuxtjs/pwa": "^3.0.0-beta.6",
+    "@nuxtjs/sitemap": "^0.2.2",
     "cross-env": "^5.2.0",
     "lottie-web": "^5.4.3",
     "nuxt": "^2.4.3",

@@ -62,6 +62,7 @@ module.exports = {
    */
   modules: [
     ['@nuxtjs/pwa'],
+    ['@nuxtjs/sitemap'],
     [
       'nuxt-stylus-resources-loader',
       [
@@ -90,6 +91,17 @@ module.exports = {
         type: 'image/png'
       }
     ]
+  },
+
+  /*
+   ** Generate sitemap.xml
+   */
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://fest.nada-sc.jp/2019',
+    cacheTime: 1000 * 60 * 15,
+    gzip: false,
+    generate: true // Enable me when using nuxt generate
   },
 
   /*
