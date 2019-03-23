@@ -77,6 +77,7 @@
 import * as PIXI from 'pixi.js'
 import anime from 'animejs'
 import sns from '~/assets/data/sns.json'
+PIXI.utils.skipHello()
 export default {
   components: {},
   head: {
