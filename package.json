@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
+    "@nuxtjs/google-gtag": "^1.0.4",
     "@nuxtjs/pwa": "^3.0.0-beta.6",
     "@nuxtjs/sitemap": "^0.2.2",
     "cross-env": "^5.2.0",

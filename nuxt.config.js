@@ -53,7 +53,7 @@ module.exports = {
    ** Router config
    */
   router: {
-    base: process.env.NODE_ENV === 'production'? '/2019/': '/'
+    base: process.env.NODE_ENV === 'production' ? '/2019/' : '/'
   },
 
   /*
@@ -62,6 +62,13 @@ module.exports = {
   modules: [
     ['@nuxtjs/pwa'],
     ['@nuxtjs/sitemap'],
+    [
+      '@nuxtjs/google-gtag',
+      {
+        id: 'UA-136514592-1',
+        debug: false
+      }
+    ],
     [
       'nuxt-stylus-resources-loader',
       [
