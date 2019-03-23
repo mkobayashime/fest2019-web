@@ -88,3 +88,6 @@ sw.*
 
 # Binary files
 binary/
+
+# Generated sitemap
+static/sitemap.xml
