@@ -8,13 +8,15 @@ jobs:
       - checkout
       - restore_cache:
           name: Restore yarn package cache
-          keys: - v1-yarn-packages-{{ checksum "yarn.lock" }}
+          keys:
+            - v1-yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn install --frozen-lockfile
       - save_cache:
           name: Save yarn package cache
           paths:
             - ~/.cache/yarn
-          keys: - v1-yarn-packages-{{ checksum "yarn.lock" }}
+          keys:
+            - v1-yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn run lint
       - run: yarn run generate
       - persist_to_workspace:
