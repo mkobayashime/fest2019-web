@@ -1,7 +1,7 @@
 {
   "name": "fest2019-web",
   "version": "1.0.0",
-  "description": "Website for 73rd Nada School Festival",
+  "description": "第73回灘校文化祭は2019年5月2–3日に開催されます 是非お越しください!",
   "author": "mkobayashime",
   "private": true,
   "scripts": {
@@ -21,7 +21,10 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
+    "@nuxtjs/google-gtag": "^1.0.4",
     "@nuxtjs/pwa": "^3.0.0-beta.6",
+    "@nuxtjs/sitemap": "^0.2.2",
+    "animejs": "^3.0.1",
     "cross-env": "^5.2.0",
     "lottie-web": "^5.4.3",
     "nuxt": "^2.4.3",
@@ -31,7 +34,6 @@
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
-    "animejs": "^3.0.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.13.0",
     "eslint-config-prettier": "^4.0.0",
@@ -51,7 +53,6 @@
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "vue-lottie": "^0.2.1"
+    "stylus-loader": "^3.0.2"
   }
 }

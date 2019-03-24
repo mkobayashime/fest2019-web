@@ -18,14 +18,29 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: '第73回灘校文化祭は2019年5月2–3日に開催されます'
+        content:
+          '第73回灘校文化祭は2019年5月2–3日に開催されます 是非お越しください!'
       },
       {
-        name: 'keywords',
-        content: '灘校, 灘校文化祭, NADA, 文化祭, 関西, 兵庫, 高校, 私立'
+        name: 'google-site-verification',
+        content: 'OngPbsdP5hQtEl6qvBgMLdck8_fElTgN7rB-Dk9C03s'
+      },
+      {
+        name: 'msapplication-TileImage',
+        content: 'https://fest.nada-sc.jp/2019/icon-512x512.png'
+      },
+      {
+        name: 'msapplication-TileColor',
+        content: '#3D81FF'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'apple-touch-icon-precomposed',
+        href: 'https://fest.nada-sc.jp/2019/icon-512x512.png'
+      }
+    ]
   },
 
   /*
@@ -53,7 +68,7 @@ module.exports = {
    ** Router config
    */
   router: {
-    base: process.env.NODE_ENV === 'production'? '/2019/': '/'
+    base: process.env.NODE_ENV === 'production' ? '/2019/' : '/'
   },
 
   /*
@@ -61,6 +76,14 @@ module.exports = {
    */
   modules: [
     ['@nuxtjs/pwa'],
+    ['@nuxtjs/sitemap'],
+    [
+      '@nuxtjs/google-gtag',
+      {
+        id: 'UA-136514592-1',
+        debug: false
+      }
+    ],
     [
       'nuxt-stylus-resources-loader',
       [
@@ -89,6 +112,17 @@ module.exports = {
         type: 'image/png'
       }
     ]
+  },
+
+  /*
+   ** Generate sitemap.xml
+   */
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://fest.nada-sc.jp/2019',
+    cacheTime: 1000 * 60 * 15,
+    gzip: false,
+    generate: true // Enable me when using nuxt generate
   },
 
   /*

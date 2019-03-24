@@ -77,6 +77,7 @@
 import * as PIXI from 'pixi.js'
 import anime from 'animejs'
 import sns from '~/assets/data/sns.json'
+PIXI.utils.skipHello()
 export default {
   components: {},
   head: {
@@ -102,7 +103,9 @@ export default {
   },
   methods: {
     goNext() {
-      const height = window.innerHeight
+      const el = document.querySelector('.concept .paragraph-container')
+      const offset = document.getElementById('scroll-area').scrollTop
+      const height = el.getBoundingClientRect().top + offset
       anime({
         targets: document.getElementById('scroll-area'),
         scrollTop: height,
