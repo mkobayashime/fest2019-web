@@ -6,7 +6,17 @@
 <script>
 export default {
   head: {
-    title: '文化委員会について'
+    title: '文化委員会について',
+    meta: [
+      {
+        property: 'og:title',
+        content: '文化委員会 | 第73回灘校文化祭'
+      },
+      {
+        property: 'og:description',
+        content: '文化祭を企画・運営する委員会をご紹介します'
+      }
+    ]
   },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0

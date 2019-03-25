@@ -6,7 +6,17 @@
 <script>
 export default {
   head: {
-    title: 'ブランドガイドライン'
+    title: 'ブランドガイドライン',
+    meta: [
+      {
+        property: 'og:title',
+        content: 'ブランドガイドライン | 第73回灘校文化祭'
+      },
+      {
+        property: 'og:description',
+        content: 'ブランドガイドラインをご覧いただけます'
+      }
+    ]
   }
 }
 </script>

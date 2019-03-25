@@ -6,7 +6,17 @@
 <script>
 export default {
   head: {
-    title: 'Design'
+    title: 'Design',
+    meta: [
+      {
+        property: 'og:title',
+        content: 'Design | 第73回灘校文化祭'
+      },
+      {
+        property: 'og:description',
+        content: 'ロゴキットやブランドガイドラインを配布しています'
+      }
+    ]
   },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0
