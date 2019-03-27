@@ -6,7 +6,7 @@
       .spacer
       ul
         li Google Chrome / Mozilla Firefox
-        li Microsoft Edge / Safari
+        li Microsoft Edge / Safari / Opera / Vivaldi
       .spacer
       img.tagline-jp(src="~/assets/logo/black/tagline-jp.svg" alt="SAIL AWAY")
     the-footer

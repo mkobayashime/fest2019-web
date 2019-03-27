@@ -22,8 +22,7 @@ export default {
     const userAgent = window.navigator.userAgent.toLowerCase()
     if (
       userAgent.indexOf('msie') !== -1 ||
-      userAgent.indexOf('trident') !== -1 ||
-      userAgent.indexOf('opera') !== -1
+      userAgent.indexOf('trident') !== -1
     ) {
       this.$router.replace({ path: 'sorry' })
     }
