@@ -32,9 +32,15 @@
             .arrow-container
               .arrow
     .movie
+      .bg
       img.logotype(src="~/assets/logo/white/logotype.svg" alt="文化祭ロゴタイプ")
-      .container
-        youtube(:video-id="videoId" ref="youtube")
+      .outer
+        button.inner(@click="showPv")
+          .image.image-pc(v-if="$device.isDesktop")
+          .image.image-touch(v-if="$device.isMobileOrTablet")
+          .message
+            p PVを再生
+          youtube#video(:video-id="pvOption.videoId" :fitParent="pvOption.fitParent" ref="youtube")
     .detail
       h2.title 開催要項
       .columns
@@ -96,11 +102,20 @@ export default {
   data() {
     return {
       sns: sns,
-      videoId: 'MDf4mm3C4ww'
+      pvOption: {
+        fitParent: true,
+        videoId: 'MDf4mm3C4ww'
+      }
+    }
+  },
+  computed: {
+    player() {
+      return this.$refs.youtube.player
     }
   },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0
+    document.getElementById('video').style.verticalAlign = 'bottom'
     this.pixiContainer = document.getElementById('pixi')
     this.pixiInit()
   },
@@ -134,6 +149,11 @@ export default {
         duration: 500,
         easing: 'easeOutQuint'
       })
+    },
+    showPv() {
+      document.querySelector('.movie .image').classList.add('hidden')
+      document.querySelector('.movie .message').classList.add('hidden')
+      this.player.playVideo()
     },
     pixiInit() {
       this.renderer = new PIXI.autoDetectRenderer(1280, 720, {
@@ -414,7 +434,7 @@ export default {
             margin -.3em 0 -.2em -0.05em
             margin-top -.3em
             margin-bottom -.2em
-            color $gray-9
+            color $gray-4
             bold()
             letter-spacing .05em
             font-size 4rem
@@ -487,33 +507,107 @@ export default {
   .movie
     position relative
     width 100%
-    height 800px
-    margin-top 700px
-    background-color $gray-8
+    margin-top 800px
+    &::before
+      content ''
+      display block
+      padding-top 60%
+      background-color $gray-8
+      +minWidth(1500)
+        padding-top 850px
+      +touch()
+        padding-top 100%
+    .bg
+      width 100%
+      height 100%
+      top 0
+      left 0
+      background-color $gray-8
+      &::before, &::after
+        content ''
+        position absolute
+        width 50%
+        height 100px
+        background-color inherit
+        +touch()
+          height 50px
+      &::before
+        top 0
+        left 0
+        transform translateY(-100%)
+      &::after
+        bottom 0
+        right 0
+        transform translateY(100%)
     .logotype
       position absolute
       top 50%
       left 50%
-      height 50%
       width 105%
       transform translate(-50%, -50%)
       opacity .1
-    .container
+    .outer
       position absolute
-      top 0
-      left 0
-      width 100%
-      height 100%
-      display flex
-      justify-content center
-      align-items center
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+      width 65%
+      max-width 1280px
+      margin 0
+      +touch()
+        width 85%
+      .inner
+        position relative
+        width 100%
+        height 100%
+        padding 0
+        margin 0
+        cursor pointer
+        overflow hidden
+        outline none
+        &:hover
+          .image-pc
+            transform scale(1.05)
+        .image
+          position absolute
+          top 0
+          right 0
+          bottom 0
+          left 0
+          background-image url('../assets/img/Thumbnail.jpg')
+          background-size cover
+          z-index 1
+          transform scale(1)
+          transition transform 300ms ease-in-out, opacity 200ms linear
+        .message
+          position absolute
+          top 0
+          right 0
+          bottom 0
+          left 0
+          z-index 2
+          display flex
+          align-items center
+          justify-content center
+          transition opacity 200ms linear
+          p
+            opacity 1
+            color #fff
+            font-size 3rem
+            bold()
+            z-index 3
+            +touch()
+              font-size 2rem
+        .hidden
+          opacity 0
+          pointer-events none
   .detail
     width 800px
     margin 200px auto 200px
     bold()
     +sp()
       width 85%
-      margin 750px auto 100px
+      margin 150px auto 100px
     .title
       letter-spacing .05em
       font-size 3rem
