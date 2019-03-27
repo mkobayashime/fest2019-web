@@ -17,6 +17,16 @@ export default {
     TheMouseFollower: () => import('~/components/TheMouseFollower.vue'),
     TheMenu: () => import('~/components/TheMenu.vue'),
     TheFooter: () => import('~/components/TheFooter')
+  },
+  mounted() {
+    const userAgent = window.navigator.userAgent.toLowerCase()
+    if (
+      userAgent.indexOf('msie') !== -1 ||
+      userAgent.indexOf('trident') !== -1 ||
+      userAgent.indexOf('opera') !== -1
+    ) {
+      this.$router.replace({ path: 'sorry' })
+    }
   }
 }
 </script>
