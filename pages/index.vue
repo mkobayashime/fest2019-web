@@ -91,7 +91,7 @@ PIXI.utils.skipHello()
 export default {
   components: {},
   head: {
-    title: 'SAIL AWAY',
+    title: 'SAIL AWAY | 第73回灘校文化祭',
     meta: [
       // {
       //   property: 'og:title',

@@ -6,7 +6,7 @@
 <script>
 export default {
   head: {
-    title: '文化委員会について',
+    title: '文化委員会について | 第73回灘校文化祭',
     meta: [
       {
         property: 'og:title',

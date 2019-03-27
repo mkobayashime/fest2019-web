@@ -7,7 +7,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s | 第73回灘校文化祭',
+    titleTemplate: '%s',
     meta: [
       { charset: 'utf-8' },
       {
