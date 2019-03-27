@@ -1,25 +1,34 @@
+maxWidth(n)
+  @media screen and (max-width: unit(n, 'px'))
+    {block}
+
+minWidth(n)
+  @media screen and (min-width: unit(n, 'px'))
+    {block}
+
 // スマートフォン用レイアウト
 sp()
-  @media screen and (max-device-width: 480px)
+  +maxWidth(480)
     {block}
 
 // 縦画面タブレット用レイアウト
 tablet()
-  @media screen and (min-device-width: 481px) and (max-device-width: 768px)
+  @media screen and (min-width: 481px) and (max-width: 768px)
     {block}
 
 // スマートフォン/縦画面タブレット用レイアウト
 touch()
-  @media screen and (max-device-width: 768px)
+  +maxWidth(768)
     {block}
 
+// 縦画面タブレット/デスクトップ用レイアウト
 tabDesk()
-  @media screen and (min-device-width: 481px)
+  +minWidth(481)
     {block}
 
 // デスクトップ用レイアウト
 desktop()
-  @media screen and (min-device-width: 769px)
+  +minWidth(769)
     {block}
 
 bold()
