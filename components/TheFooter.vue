@@ -1,5 +1,5 @@
 <template lang="pug">
-  #the-footer
+  footer#the-footer
     img.logo(src="~/assets/logo/white/horizontal-tagline.svg" alt="SAIL AWAY")
     .info
       p.el 73rd Nada School Festival

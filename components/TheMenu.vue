@@ -1,5 +1,5 @@
 <template lang="pug">
-  #the-menu
+  nav#the-menu
     .menu-container
       transition.menu-container(:css="false" @enter="itemsEnter" @leave="itemsLeave")
         ul.menu-items(v-if="opened")

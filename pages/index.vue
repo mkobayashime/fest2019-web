@@ -1,6 +1,6 @@
 <template lang="pug">
   .index
-    .hero
+    section.hero
       #pixi
         img.bg-pixi(src="~/assets/img/hero1.jpg" alt="背景画像")
         img.d-pixi(src="~/assets/img/clouds-512.jpg" alt="displacement map")
@@ -12,7 +12,7 @@
       img.logo(src="~/assets/logo/white/vertical-b.svg" alt="SAIL AWAY")
       button(type="button" @click="goNext()").arrow-container
         .arrow
-    .concept
+    section.concept
       .bg
         .logotype-container
           img.logotype(src="~/assets/logo/white/logotype.svg" alt="文化祭ロゴタイプ")
@@ -31,7 +31,7 @@
             span.label 文化委員会について
             .arrow-container
               .arrow
-    .movie
+    section.movie
       .bg
       img.logotype(src="~/assets/logo/white/logotype.svg" alt="文化祭ロゴタイプ")
       .outer
@@ -41,7 +41,7 @@
           .message
             p PVを再生
           youtube#video(:video-id="pvOption.videoId" :fitParent="pvOption.fitParent" ref="youtube")
-    .detail
+    section.detail
       h2.title 開催要項
       .columns
         .column
