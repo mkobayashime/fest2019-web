@@ -46,7 +46,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 #the-mouse-follower
   position absolute
   width 100%
