@@ -2,7 +2,7 @@
   #default
     the-bg
     the-sidebar
-    #scroll-area
+    main#scroll-area
       nuxt
       the-footer
     the-menu
@@ -42,8 +42,7 @@ export default {
   overflow-y scroll
   -webkit-overflow-scrolling touch
   z-index 10
-  +sp() {
+  +sp()
     width 100%
     left 0
-  }
 </style>
