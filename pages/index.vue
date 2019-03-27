@@ -15,8 +15,8 @@
     .concept
       .bg
         .logotype-container
-          img.logotype(src="~/assets/logo/white/logotype.svg" alt="文化祭ロゴ")
-          img.logotype(src="~/assets/logo/white/logotype.svg" alt="文化祭ロゴ")
+          img.logotype(src="~/assets/logo/white/logotype.svg" alt="文化祭ロゴタイプ")
+          img.logotype(src="~/assets/logo/white/logotype.svg" alt="文化祭ロゴタイプ")
         .paragraph-container
           .paragraph
             h2 concept
@@ -31,6 +31,10 @@
             span.label 文化委員会について
             .arrow-container
               .arrow
+    .movie
+      img.logotype(src="~/assets/logo/white/logotype.svg" alt="文化祭ロゴタイプ")
+      .container
+        youtube(:video-id="videoId" ref="youtube")
     .detail
       h2.title 開催要項
       .columns
@@ -81,11 +85,18 @@ PIXI.utils.skipHello()
 export default {
   components: {},
   head: {
-    title: 'SAIL AWAY'
+    title: 'SAIL AWAY',
+    meta: [
+      // {
+      //   property: 'og:title',
+      //   content: ''
+      // }
+    ]
   },
   data() {
     return {
-      sns: sns
+      sns: sns,
+      videoId: 'MDf4mm3C4ww'
     }
   },
   mounted() {
@@ -473,9 +484,32 @@ export default {
                 top 1.5px
                 transform-origin right top
                 transform rotate(45deg)
+  .movie
+    position relative
+    width 100%
+    height 800px
+    margin-top 700px
+    background-color $gray-8
+    .logotype
+      position absolute
+      top 50%
+      left 50%
+      height 50%
+      width 105%
+      transform translate(-50%, -50%)
+      opacity .1
+    .container
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      display flex
+      justify-content center
+      align-items center
   .detail
     width 800px
-    margin 600px auto 200px
+    margin 200px auto 200px
     bold()
     +sp()
       width 85%
