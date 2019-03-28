@@ -6,6 +6,10 @@ minWidth(n)
   @media screen and (min-width: unit(n, 'px'))
     {block}
 
+minMaxWidth(n, m)
+  @media screen and (min-width: unit(n, 'px')) and (max-width: unit(m, 'px'))
+    {block}
+
 // スマートフォン用レイアウト
 sp()
   +maxWidth(480)
@@ -13,7 +17,7 @@ sp()
 
 // 縦画面タブレット用レイアウト
 tablet()
-  @media screen and (min-width: 481px) and (max-width: 768px)
+  +minMaxWidth(481, 768)
     {block}
 
 // スマートフォン/縦画面タブレット用レイアウト
@@ -31,46 +35,69 @@ desktop()
   +minWidth(769)
     {block}
 
+// デスクトップ(1200px未満)用レイアウト
+deskSmall()
+  +minMaxWidth(769, 1199)
+    {block}
+
+// デスクトップ(1200px以上)用レイアウト
+deskLarge()
+  +minWidth(1200)
+    {block}
+
+// 各ページレスポンシブコンテナ幅
+mainContainer()
+  margin 0 auto
+  +sp()
+    margin 0 1.5rem
+  +tablet()
+    margin 0 3rem
+  +deskSmall()
+    width 600px
+  +deskLarge()
+    width 1000px
+
+// テキストBold指定
 bold()
   font-weight 700
 
-btn-primary()
-  position absolute
-  display block
-  padding .5em 1.5em
-  background-color #000
-  color #fff
-  transition background-color 225ms cubic-bezier(.7,.15,.3,.95)
-  &::before
-    content ''
-    position absolute
-    width 50%
-    height 100%
-    top 0
-    left 0
-    background-color #000
-    z-index -1
-    transition background-color 225ms cubic-bezier(.4,.25,.3,1),transform 225ms cubic-bezier(.4,.25,.3,1)
-  &::after
-    content ''
-    position absolute
-    width 50%
-    height 100%
-    top 0
-    right 0
-    background-color #000
-    z-index -1
-    transition background-color 225ms cubic-bezier(.4,.25,.3,1),transform 225ms cubic-bezier(.4,.25,.3,1)
-  &:hover
-    background-color $blue-10
-    &::before
-      background-color $blue-10
-      transform translateY(-.35em)
-    &::after
-      background-color $blue-10
-      transform translateY(.35em)
-  span
-    display block
-    margin-right -.2em
-    font-size 20px
-    letter-spacing .2em
+// btn-primary()
+//   position absolute
+//   display block
+//   padding .5em 1.5em
+//   background-color #000
+//   color #fff
+//   transition background-color 225ms cubic-bezier(.7,.15,.3,.95)
+//   &::before
+//     content ''
+//     position absolute
+//     width 50%
+//     height 100%
+//     top 0
+//     left 0
+//     background-color #000
+//     z-index -1
+//     transition background-color 225ms cubic-bezier(.4,.25,.3,1),transform 225ms cubic-bezier(.4,.25,.3,1)
+//   &::after
+//     content ''
+//     position absolute
+//     width 50%
+//     height 100%
+//     top 0
+//     right 0
+//     background-color #000
+//     z-index -1
+//     transition background-color 225ms cubic-bezier(.4,.25,.3,1),transform 225ms cubic-bezier(.4,.25,.3,1)
+//   &:hover
+//     background-color $blue-10
+//     &::before
+//       background-color $blue-10
+//       transform translateY(-.35em)
+//     &::after
+//       background-color $blue-10
+//       transform translateY(.35em)
+//   span
+//     display block
+//     margin-right -.2em
+//     font-size 20px
+//     letter-spacing .2em
