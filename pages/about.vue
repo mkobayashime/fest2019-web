@@ -10,8 +10,7 @@
     section.dept-container.decoration
       h2
         img(src="~/assets/icon/DeptIconName-Decoration.svg" alt="装飾課")
-      p この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。
-      p 掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。
+      p 我々装飾課は、この文化祭を彩る仕事をします。模造紙や画用紙、ボール紙や木などを用いて作品を作りました。中庭の垂れ幕、中学棟や高校棟の階段装飾、ステージの背景、窓ガラスのステンドグラスなど、様々な場所で我々の作った作品が展示されています。我々の約半年間の作業の集大成、ぜひじっくりご鑑賞ください。
       h3 Decoration
       .image
     section.dept-container.stages
@@ -24,7 +23,7 @@
     section.dept-container.design
       h2
         img(src="~/assets/icon/DeptIconName-Design.svg" alt="デザイン課")
-      p 文化祭をデザインする課です。文化委員会で最も人的規模の小さい課ですが担当する領域は広く、文化祭ロゴの制作からパンフレット・灘校グッズや文化祭PVなどの動画、部活ポスターやサインシステム、今ご覧頂いているこのWebサイトのデザイン/実装まで全てを一貫して実施しています。
+      p 文化祭をデザインしています。文化委員会で最も人的規模の小さい課ですが担当する領域は広く、文化祭ロゴの制作からパンフレット・灘校グッズや文化祭PVなどの動画、部活ポスターやサインシステム、今ご覧頂いているこのWebサイトのデザイン/実装まで全てを一貫して実施しています。
       p 校内各所に点在するデザイン課の制作物にもご注目ください!
       h3 Design
       .image
@@ -144,6 +143,11 @@ export default {
       align-items flex-start
       .image
         right -2rem
+  +deskLarge()
+    section:nth-of-type(2n)
+      left -2rem
+    section:nth-of-type(2n+1)
+      right -2rem
   .management
     .image
       background-image url('../assets/img/about/management.jpg')
