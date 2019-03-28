@@ -20,13 +20,9 @@
         .paragraph-container
           .paragraph
             h2 concept
-            p 文化祭を航海になぞらえたこのテーマは、
-            p 世界という大海へ懸命に漕ぎ出す灘校生と、
-            p その出発点となるコミュニティとしての灘校を表しています
+            p 文化祭を航海になぞらえたこのテーマは、世界という大海へ懸命に漕ぎ出す灘校生と、その出発点となるコミュニティとしての灘校を表しています
             p 停泊していた船は、動き始めるときにいかりを上げます
-            p 水面から上がる瞬間のいかりを切り取ったロゴは、
-            p 文化祭をきっかけとして始まる、
-            p 壮大な航海を暗示しています
+            p 水面から上がる瞬間のいかりを切り取ったロゴは、文化祭をきっかけとして始まる壮大な航海を暗示しています
           nuxt-link.to-about(to="/about")
             span.label 文化委員会について
             .arrow-container
@@ -91,13 +87,7 @@ PIXI.utils.skipHello()
 export default {
   components: {},
   head: {
-    title: 'SAIL AWAY | 第73回灘校文化祭',
-    meta: [
-      // {
-      //   property: 'og:title',
-      //   content: ''
-      // }
-    ]
+    title: 'SAIL AWAY | 第73回灘校文化祭'
   },
   data() {
     return {
@@ -246,15 +236,17 @@ export default {
       flex-direction column
       justify-content center
       align-items flex-start
-      +sp()
+      +touch()
         width 100%
         height 30%
         left 0
         top 60%
         align-items center
+      +deskSmall()
+        left 15%
       h1
         width 100%
-        +sp()
+        +touch()
           width 75%
         .logotype
           width 100%
@@ -286,11 +278,11 @@ export default {
           cursor pointer
           &::before
             transform scaleX(1)
-            +sp()
+            +touch()
               transform scaleX(0)
           .arrow
             width 70px
-            +sp()
+            +touch()
               width 30px
         .arrow
           position relative
@@ -300,7 +292,7 @@ export default {
           width 50px
           height 2px
           transition all 200ms ease-out
-          +sp()
+          +touch()
             width 30px
             margin auto 0 auto 15px
           &::before, &::after
@@ -324,11 +316,13 @@ export default {
       top 50%
       left 70%
       transform translate(-50%, -50%)
-      +sp()
+      +touch()
         height 45%
         left 50%
         top 12%
         transform translateX(-50%)
+      +deskSmall()
+        height 60%
     .arrow-container
       position absolute
       width 120px
@@ -407,12 +401,14 @@ export default {
               left 125%
       .paragraph-container
         position absolute
-        bottom -25em
+        bottom -20em
         left 50%
         transform translateX(-50%)
         display flex
         align-items flex-end
-        +sp()
+        +deskSmall()
+          bottom -25em
+        +touch()
           width 100%
           left 50%
           top 75%
@@ -426,6 +422,15 @@ export default {
           left 20%
           padding 3em
           background-color $gray-7
+          +desktop()
+            padding-right 7em
+          +deskSmall()
+            width 32em
+          +tablet()
+            width 32em
+            padding-bottom 5em
+          +maxWidth(625)
+            width 25em
           +sp()
             width 95%
             padding 2em
@@ -445,6 +450,7 @@ export default {
           p
             color #fff
             margin-top 20px
+            line-height 2em
             +sp()
               margin-top 10px
         .to-about
@@ -452,13 +458,24 @@ export default {
           padding 3rem
           width 35em
           height 20em
-          margin-left -5rem
+          margin-left -4rem
           margin-bottom -5rem
           color #fff
           display flex
           justify-content flex-end
           align-items flex-end
           transition all 200ms ease-out
+          +deskSmall()
+            width 22em
+            height 15em
+          +tablet()
+            width 22em
+            height 10em
+            margin-top -3em
+            margin-bottom auto
+            margin-left auto
+            flex-direction column
+            background-color $blue-10
           +sp()
             width 16em
             height 10em
@@ -477,7 +494,7 @@ export default {
             bold()
             font-size 1.2rem
             letter-spacing .05em
-            +sp()
+            +touch()
               margin-bottom 1em
           .arrow-container
             position relative
@@ -508,6 +525,10 @@ export default {
     position relative
     width 100%
     margin-top 800px
+    +deskSmall()
+      margin-top 750px
+    +touch()
+      margin-top 750px
     &::before
       content ''
       display block
@@ -605,6 +626,10 @@ export default {
     width 800px
     margin 200px auto 200px
     bold()
+    +minMaxWidth(700, 1199)
+      width 600px
+    +maxWidth(699)
+      width 400px
     +sp()
       width 85%
       margin 150px auto 100px
@@ -621,12 +646,12 @@ export default {
       letter-spacing -.05em
     .columns
       display flex
-      +sp()
+      +maxWidth(699)
         flex-direction column
       .column
         width 50%
         display flex
-        +sp()
+        +maxWidth(699)
           width 100%
           margin-bottom 2rem
         .sidebar
@@ -634,7 +659,9 @@ export default {
           margin-right 30px
           height 100%
           background-color $gray-6
-          +sp()
+          +minMaxWidth(700, 1199)
+            margin-right 20px
+          +maxWidth(699)
             display none
         ul
           width 90%
@@ -648,6 +675,10 @@ export default {
             font-size 2rem
             letter-spacing .05em
             margin-bottom -.2rem
+            +minMaxWidth(700, 1199)
+              font-size 1.7rem
+            +maxWidth(699)
+              font-size 2rem
             +sp()
               font-size 1.7rem
             .jp
@@ -657,7 +688,7 @@ export default {
               font-size 1.5rem
               font-weight 700
               color $gray-6
-              +sp()
+              +maxWidth(1199)
                 font-size 1.2rem
           .sub
             font-size 1rem
