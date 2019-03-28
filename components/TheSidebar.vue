@@ -23,11 +23,11 @@
     .sidebar-items-tablet(v-if="$device.isTablet")
       .links
         a(:href="sns.twitter" target="_blank" rel="noopener" aria-label="Twitter")
-          .sidebar-item.fab.fa-twitter
+          img(src="~/assets/icon/fa-twitter.svg")
         a(:href="sns.ig" target="_blank" rel="noopener" aria-label="Instagram")
-          .sidebar-item.fab.fa-instagram
+          img(src="~/assets/icon/fa-instagram.svg")
         a(:href="sns.fb" target="_blank" rel="noopener" aria-label="Facebook")
-          .sidebar-item.fab.fa-facebook
+          img(src="~/assets/icon/fa-facebook.svg")
 </template>
 
 <script>
@@ -120,4 +120,7 @@ export default {
         width 40px
         height 40px
         font-size 1.5rem
+        img
+          width 60%
+          height 60%
 </style>
