@@ -30,7 +30,7 @@ jobs:
     steps:
       - attach_workspace:
           at: '.'
-      - run: rsync -e "ssh -o StrictHostKeyChecking=no" -ahv --delete ./dist/* ${DEPLOY_DEST}
+      - run: rsync -e "ssh -o StrictHostKeyChecking=no" -ahv --delete ./dist/ ${DEPLOY_DEST}
 workflows:
   version: 2
   deploy:
