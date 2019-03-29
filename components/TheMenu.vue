@@ -8,9 +8,9 @@
               p.en home
               p.jp ホーム
           li
-            .menu-item.disabled(to="circles" @click.native="toggle")
+            nuxt-link.menu-item(to="circles" @click.native="toggle")
               p.en circles
-              p.jp 近日公開予定
+              p.jp 出展サークル
           li
             .menu-item.disabled(to="map" @click.native="toggle")
               p.en map
