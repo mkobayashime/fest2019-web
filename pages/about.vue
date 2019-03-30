@@ -73,10 +73,16 @@ export default {
     margin-bottom 10rem
     display flex
     flex-direction column
-    +touch()
-      margin-bottom 20rem
     +tablet()
       margin-bottom 25rem
+    +sp()
+      margin-bottom 20rem
+    &:nth-last-of-type(1)
+      margin-bottom 20rem
+      +deskSmall()
+        margin-bottom 15rem
+      +tablet()
+        margin-bottom 25rem
     &::before
       content ''
       position absolute
