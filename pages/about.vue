@@ -94,6 +94,8 @@ export default {
       margin-bottom 2rem
       img
         height 4rem
+        +deskSmall()
+          height 3.5rem
         +sp()
           height 3rem
           margin-left -.2rem
@@ -156,12 +158,12 @@ export default {
   .stages
     .image
       background-image url('../assets/img/about/stages.jpg')
-      +tablet()
-        background-position top center
   .design
     .image
       background-image url('../assets/img/about/design.jpg')
   .general-affairs
     .image
       background-image url('../assets/img/about/generalaffairs.jpg')
+      +deskSmall()
+        background-position center left
 </style>
