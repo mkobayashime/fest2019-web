@@ -5,15 +5,15 @@
     "src": [
       {
         "format": "png",
-        "url": "_nuxt/assets/logo/black/png/logo.png"
+        "url": "../_nuxt/assets/logo/black/png/logo.png"
       },
       {
         "format": "jpg",
-        "url": "_nuxt/assets/logo/black/jpg/logo.jpg"
+        "url": "../_nuxt/assets/logo/black/jpg/logo.jpg"
       },
       {
         "format": "svg",
-        "url": "_nuxt/assets/logo/black/logo.svg"
+        "url": "../_nuxt/assets/logo/black/logo.svg"
       }
     ]
   },
@@ -23,15 +23,15 @@
     "src": [
       {
         "format": "png",
-        "url": "_nuxt/assets/logo/black/png/logotype.png"
+        "url": "../_nuxt/assets/logo/black/png/logotype.png"
       },
       {
         "format": "jpg",
-        "url": "_nuxt/assets/logo/black/jpg/logotype.jpg"
+        "url": "../_nuxt/assets/logo/black/jpg/logotype.jpg"
       },
       {
         "format": "svg",
-        "url": "_nuxt/assets/logo/black/logotype.svg"
+        "url": "../_nuxt/assets/logo/black/logotype.svg"
       }
     ]
   },
@@ -41,15 +41,15 @@
     "src": [
       {
         "format": "png",
-        "url": "_nuxt/assets/logo/black/png/vertical-a.png"
+        "url": "../_nuxt/assets/logo/black/png/vertical-a.png"
       },
       {
         "format": "jpg",
-        "url": "_nuxt/assets/logo/black/jpg/vertical-a.jpg"
+        "url": "../_nuxt/assets/logo/black/jpg/vertical-a.jpg"
       },
       {
         "format": "svg",
-        "url": "_nuxt/assets/logo/black/vertical-a.svg"
+        "url": "../_nuxt/assets/logo/black/vertical-a.svg"
       }
     ]
   },
@@ -59,15 +59,15 @@
     "src": [
       {
         "format": "png",
-        "url": "_nuxt/assets/logo/black/png/vertical-b.png"
+        "url": "../_nuxt/assets/logo/black/png/vertical-b.png"
       },
       {
         "format": "jpg",
-        "url": "_nuxt/assets/logo/black/jpg/vertical-b.jpg"
+        "url": "../_nuxt/assets/logo/black/jpg/vertical-b.jpg"
       },
       {
         "format": "svg",
-        "url": "_nuxt/assets/logo/black/vertical-b.svg"
+        "url": "../_nuxt/assets/logo/black/vertical-b.svg"
       }
     ]
   },
@@ -77,15 +77,15 @@
     "src": [
       {
         "format": "png",
-        "url": "_nuxt/assets/logo/black/png/horizontal.png"
+        "url": "../_nuxt/assets/logo/black/png/horizontal.png"
       },
       {
         "format": "jpg",
-        "url": "_nuxt/assets/logo/black/jpg/horizontal.jpg"
+        "url": "../_nuxt/assets/logo/black/jpg/horizontal.jpg"
       },
       {
         "format": "svg",
-        "url": "_nuxt/assets/logo/black/horizontal.svg"
+        "url": "../_nuxt/assets/logo/black/horizontal.svg"
       }
     ]
   },
@@ -95,15 +95,15 @@
     "src": [
       {
         "format": "png",
-        "url": "_nuxt/assets/logo/black/png/horizontal-tagline.png"
+        "url": "../_nuxt/assets/logo/black/png/horizontal-tagline.png"
       },
       {
         "format": "jpg",
-        "url": "_nuxt/assets/logo/black/jpg/horizontal-tagline.jpg"
+        "url": "../_nuxt/assets/logo/black/jpg/horizontal-tagline.jpg"
       },
       {
         "format": "svg",
-        "url": "_nuxt/assets/logo/black/horizontal-tagline.svg"
+        "url": "../_nuxt/assets/logo/black/horizontal-tagline.svg"
       }
     ]
   },
@@ -113,15 +113,15 @@
     "src": [
       {
         "format": "png",
-        "url": "_nuxt/assets/logo/black/png/logotype-tagline.png"
+        "url": "../_nuxt/assets/logo/black/png/logotype-tagline.png"
       },
       {
         "format": "jpg",
-        "url": "_nuxt/assets/logo/black/jpg/logotype-tagline.jpg"
+        "url": "../_nuxt/assets/logo/black/jpg/logotype-tagline.jpg"
       },
       {
         "format": "svg",
-        "url": "_nuxt/assets/logo/black/logotype-tagline.svg"
+        "url": "../_nuxt/assets/logo/black/logotype-tagline.svg"
       }
     ]
   },
@@ -131,15 +131,15 @@
     "src": [
       {
         "format": "png",
-        "url": "_nuxt/assets/logo/black/png/tagline-jp.png"
+        "url": "../_nuxt/assets/logo/black/png/tagline-jp.png"
       },
       {
         "format": "jpg",
-        "url": "_nuxt/assets/logo/black/jpg/tagline-jp.jpg"
+        "url": "../_nuxt/assets/logo/black/jpg/tagline-jp.jpg"
       },
       {
         "format": "svg",
-        "url": "_nuxt/assets/logo/black/tagline-jp.svg"
+        "url": "../_nuxt/assets/logo/black/tagline-jp.svg"
       }
     ]
   },
@@ -149,15 +149,15 @@
     "src": [
       {
         "format": "png",
-        "url": "_nuxt/assets/logo/black/png/tagline-en-a.png"
+        "url": "../_nuxt/assets/logo/black/png/tagline-en-a.png"
       },
       {
         "format": "jpg",
-        "url": "_nuxt/assets/logo/black/jpg/tagline-en-a.jpg"
+        "url": "../_nuxt/assets/logo/black/jpg/tagline-en-a.jpg"
       },
       {
         "format": "svg",
-        "url": "_nuxt/assets/logo/black/tagline-en-a.svg"
+        "url": "../_nuxt/assets/logo/black/tagline-en-a.svg"
       }
     ]
   },
@@ -167,15 +167,15 @@
     "src": [
       {
         "format": "png",
-        "url": "_nuxt/assets/logo/black/png/tagline-en-b.png"
+        "url": "../_nuxt/assets/logo/black/png/tagline-en-b.png"
       },
       {
         "format": "jpg",
-        "url": "_nuxt/assets/logo/black/jpg/tagline-en-b.jpg"
+        "url": "../_nuxt/assets/logo/black/jpg/tagline-en-b.jpg"
       },
       {
         "format": "svg",
-        "url": "_nuxt/assets/logo/black/tagline-en-b.svg"
+        "url": "../_nuxt/assets/logo/black/tagline-en-b.svg"
       }
     ]
   },
@@ -185,15 +185,15 @@
     "src": [
       {
         "format": "png",
-        "url": "_nuxt/assets/logo/black/png/nada.png"
+        "url": "../_nuxt/assets/logo/black/png/nada.png"
       },
       {
         "format": "jpg",
-        "url": "_nuxt/assets/logo/black/jpg/nada.jpg"
+        "url": "../_nuxt/assets/logo/black/jpg/nada.jpg"
       },
       {
         "format": "svg",
-        "url": "_nuxt/assets/logo/black/nada.svg"
+        "url": "../_nuxt/assets/logo/black/nada.svg"
       }
     ]
   }
