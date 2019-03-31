@@ -1,0 +1,200 @@
+[
+  {
+    "name": "logo",
+    "horizontal": false,
+    "src": [
+      {
+        "format": "png",
+        "url": "_nuxt/assets/logo/black/png/logo.png"
+      },
+      {
+        "format": "jpg",
+        "url": "_nuxt/assets/logo/black/jpg/logo.jpg"
+      },
+      {
+        "format": "svg",
+        "url": "_nuxt/assets/logo/black/logo.svg"
+      }
+    ]
+  },
+  {
+    "name": "logotype",
+    "horizontal": true,
+    "src": [
+      {
+        "format": "png",
+        "url": "_nuxt/assets/logo/black/png/logotype.png"
+      },
+      {
+        "format": "jpg",
+        "url": "_nuxt/assets/logo/black/jpg/logotype.jpg"
+      },
+      {
+        "format": "svg",
+        "url": "_nuxt/assets/logo/black/logotype.svg"
+      }
+    ]
+  },
+  {
+    "name": "vertical-a",
+    "horizontal": false,
+    "src": [
+      {
+        "format": "png",
+        "url": "_nuxt/assets/logo/black/png/vertical-a.png"
+      },
+      {
+        "format": "jpg",
+        "url": "_nuxt/assets/logo/black/jpg/vertical-a.jpg"
+      },
+      {
+        "format": "svg",
+        "url": "_nuxt/assets/logo/black/vertical-a.svg"
+      }
+    ]
+  },
+  {
+    "name": "vertical-b",
+    "horizontal": false,
+    "src": [
+      {
+        "format": "png",
+        "url": "_nuxt/assets/logo/black/png/vertical-b.png"
+      },
+      {
+        "format": "jpg",
+        "url": "_nuxt/assets/logo/black/jpg/vertical-b.jpg"
+      },
+      {
+        "format": "svg",
+        "url": "_nuxt/assets/logo/black/vertical-b.svg"
+      }
+    ]
+  },
+  {
+    "name": "horizontal",
+    "horizontal": true,
+    "src": [
+      {
+        "format": "png",
+        "url": "_nuxt/assets/logo/black/png/horizontal.png"
+      },
+      {
+        "format": "jpg",
+        "url": "_nuxt/assets/logo/black/jpg/horizontal.jpg"
+      },
+      {
+        "format": "svg",
+        "url": "_nuxt/assets/logo/black/horizontal.svg"
+      }
+    ]
+  },
+  {
+    "name": "horizontal-tagline",
+    "horizontal": true,
+    "src": [
+      {
+        "format": "png",
+        "url": "_nuxt/assets/logo/black/png/horizontal-tagline.png"
+      },
+      {
+        "format": "jpg",
+        "url": "_nuxt/assets/logo/black/jpg/horizontal-tagline.jpg"
+      },
+      {
+        "format": "svg",
+        "url": "_nuxt/assets/logo/black/horizontal-tagline.svg"
+      }
+    ]
+  },
+  {
+    "name": "logotype-tagline",
+    "horizontal": true,
+    "src": [
+      {
+        "format": "png",
+        "url": "_nuxt/assets/logo/black/png/logotype-tagline.png"
+      },
+      {
+        "format": "jpg",
+        "url": "_nuxt/assets/logo/black/jpg/logotype-tagline.jpg"
+      },
+      {
+        "format": "svg",
+        "url": "_nuxt/assets/logo/black/logotype-tagline.svg"
+      }
+    ]
+  },
+  {
+    "name": "tagline-jp",
+    "horizontal": true,
+    "src": [
+      {
+        "format": "png",
+        "url": "_nuxt/assets/logo/black/png/tagline-jp.png"
+      },
+      {
+        "format": "jpg",
+        "url": "_nuxt/assets/logo/black/jpg/tagline-jp.jpg"
+      },
+      {
+        "format": "svg",
+        "url": "_nuxt/assets/logo/black/tagline-jp.svg"
+      }
+    ]
+  },
+  {
+    "name": "tagline-en-a",
+    "horizontal": true,
+    "src": [
+      {
+        "format": "png",
+        "url": "_nuxt/assets/logo/black/png/tagline-en-a.png"
+      },
+      {
+        "format": "jpg",
+        "url": "_nuxt/assets/logo/black/jpg/tagline-en-a.jpg"
+      },
+      {
+        "format": "svg",
+        "url": "_nuxt/assets/logo/black/tagline-en-a.svg"
+      }
+    ]
+  },
+  {
+    "name": "tagline-en-b",
+    "horizontal": true,
+    "src": [
+      {
+        "format": "png",
+        "url": "_nuxt/assets/logo/black/png/tagline-en-b.png"
+      },
+      {
+        "format": "jpg",
+        "url": "_nuxt/assets/logo/black/jpg/tagline-en-b.jpg"
+      },
+      {
+        "format": "svg",
+        "url": "_nuxt/assets/logo/black/tagline-en-b.svg"
+      }
+    ]
+  },
+  {
+    "name": "nada",
+    "horizontal": true,
+    "src": [
+      {
+        "format": "png",
+        "url": "_nuxt/assets/logo/black/png/nada.png"
+      },
+      {
+        "format": "jpg",
+        "url": "_nuxt/assets/logo/black/jpg/nada.jpg"
+      },
+      {
+        "format": "svg",
+        "url": "_nuxt/assets/logo/black/nada.svg"
+      }
+    ]
+  }
+]

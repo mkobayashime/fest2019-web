@@ -1,9 +1,25 @@
 <template lang="pug">
-  #about
-    p.sorry 現在準備中です...( *・ω・)*_ _))
+  #design
+    h1 Design
+    h2
+      p 各種ロゴ・ロゴタイプをダウンロードいただけます。PNGは背景透過、JPGは白背景です。
+      p ご利用の際にはブランドガイドラインを遵守してください。
+    nuxt-link.guidelines(to="/design/guidelines") Brand Guidelines
+    ul.logos
+      li.logo-container(v-for="logo in logos")
+        p.name {{logo.name}}
+        .logo-inner
+          .img-container(:class="{vertical: !logo.horizontal}")
+            img(:src="logo.src[2].url")
+          .btn-container
+            a(v-for="src in logo.src" :href="src.url" target="_blank" rel="noopener")
+              img(src="~/assets/icon/fa-download.svg")
+              p {{src.format}}
 </template>
 
 <script>
+import designDist from '~/assets/data/design-dist.json'
+require('~/assets/data/design-require.js')
 export default {
   head: {
     title: 'Design | 第73回灘校文化祭',
@@ -18,6 +34,11 @@ export default {
       }
     ]
   },
+  data() {
+    return {
+      logos: designDist
+    }
+  },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0
   }
@@ -25,18 +46,110 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#about
-  width 100%
-  height 100%
+#design
+  mainContainer()
   top 0
   left 0
-  display flex
-  justify-content center
-  align-items center
-  .sorry
-    bold()
-    font-size 2rem
-    letter-spacing .05em
+  h1
+    font-size 4rem
+    margin 10rem 0 2rem
     +sp()
-      font-size 1.2rem
+      font-size 3rem
+      margin 8rem 0 2rem
+    +tablet()
+      font-size 3rem
+      margin 8rem 0 2rem
+  h2
+    p
+      font-size 1rem
+      font-weight 400
+      line-height 2em
+  .guidelines
+    display inline-block
+    font-size 1.2rem
+    letter-spacing .05em
+    color #fff
+    background-color $blue-10
+    padding .5em 2rem
+    margin 2rem 0 6rem
+    transition all 200ms
+    &:hover
+      background-color #000
+  .logos
+    display flex
+    justify-content center
+    align-items center
+    flex-wrap wrap
+    margin-bottom 10rem
+    +touch()
+      margin-bottom 5rem
+    .logo-container
+      margin-bottom 3rem
+      +desktop()
+        width 45%
+        flex-grow 1
+        &:nth-of-type(2n+1)
+          margin-right 3rem
+      +touch()
+        width 100%
+      +desktop()
+        &:nth-last-of-type(1)
+          margin-right 0
+          .img-container
+            width 50%
+            margin-left 25%
+      .name
+        color $gray-7
+      .logo-inner
+        border solid $gray-2 2px
+        .img-container
+          height 15rem
+          padding 1.5rem
+          display flex
+          +deskSmall()
+            height 12rem
+          +tablet()
+            height 18rem
+            padding 1.5rem 3rem
+          +sp()
+            height 12rem
+          img
+            width 100%
+        .vertical
+          img
+            height 100%
+        .btn-container
+          height 4rem
+          width 100%
+          display flex
+          align-items center
+          justify-content center
+          border-top solid $gray-2 2px
+          a
+            position relative
+            width 20%
+            height 100%
+            flex-grow 2
+            background-color $gray-1
+            transition all 200ms
+            img, p
+              position absolute
+              left 50%
+              top 50%
+              transform translate(-50%, -50%)
+            img
+              opacity .8
+              height 1.5rem
+              opacity 0
+              transition all 300ms
+            p
+              text-transform uppercase
+              opacity 1
+              transition all 300ms
+            &:hover
+              background-color $gray-2
+              img
+                opacity 1
+              p
+                opacity 0
 </style>
