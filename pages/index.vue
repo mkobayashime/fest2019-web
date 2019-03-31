@@ -46,7 +46,7 @@
             li
               p.sub-title.narrow day 1
               p.main 2019/05/02
-                span.jp (木・祝)
+                span.jp (木・休)
             li
               p.sub-title.narrow day 2
               p.main 2019/05/03
