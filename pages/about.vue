@@ -4,7 +4,7 @@
     section.dept-container.management
       h2
         img(src="~/assets/icon/DeptIconName-Management.svg" alt="総務課")
-      p 吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。
+      p 総務課は、文化委員会の管理運営を担当しています。①各課の活動を記録し、今回の文化祭の運営はもちろん、次回以降への引継ぎにも役立てます。②委員の管理を担い、連絡網の整備や、準備期間の作業シフト作成、当日の委員配置の計画などを行います。③校内で文化委員会への相談を受け付け、生徒と委員会が共働して文化祭を作り上げる手助けをしています。
       h3 Management
       .image
     section.dept-container.decoration
@@ -23,8 +23,7 @@
     section.dept-container.design
       h2
         img(src="~/assets/icon/DeptIconName-Design.svg" alt="デザイン課")
-      p 文化祭をデザインしています。文化委員会で最も人的規模の小さい課ですが担当する領域は広く、文化祭ロゴの制作からパンフレット・灘校グッズや文化祭PVなどの動画、部活ポスターやサインシステム、今ご覧頂いているこのWebサイトのデザイン/実装まで全てを一貫して実施しています。
-      p 校内各所に点在するデザイン課の制作物にもご注目ください!
+      p 文化祭をデザインしています。文化委員会で最も人的規模の小さい課ですが担当する領域は広く、文化祭ロゴの制作からパンフレット・灘校グッズや文化祭PVなどの動画、部活ポスターやサインシステム、今ご覧頂いているこのWebサイトのデザイン/実装まで全てを一貫して実施しています。校内各所に点在するデザイン課の制作物にもご注目ください!
       h3 Design
       .image
     section.dept-container.general-affairs
@@ -74,10 +73,16 @@ export default {
     margin-bottom 10rem
     display flex
     flex-direction column
-    +touch()
-      margin-bottom 20rem
     +tablet()
       margin-bottom 25rem
+    +sp()
+      margin-bottom 20rem
+    &:nth-last-of-type(1)
+      margin-bottom 20rem
+      +deskSmall()
+        margin-bottom 15rem
+      +tablet()
+        margin-bottom 25rem
     &::before
       content ''
       position absolute
@@ -95,6 +100,8 @@ export default {
       margin-bottom 2rem
       img
         height 4rem
+        +deskSmall()
+          height 3.5rem
         +sp()
           height 3rem
           margin-left -.2rem
@@ -157,12 +164,12 @@ export default {
   .stages
     .image
       background-image url('../assets/img/about/stages.jpg')
-      +tablet()
-        background-position top center
   .design
     .image
       background-image url('../assets/img/about/design.jpg')
   .general-affairs
     .image
       background-image url('../assets/img/about/generalaffairs.jpg')
+      +deskSmall()
+        background-position center left
 </style>
