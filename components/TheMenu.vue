@@ -8,31 +8,31 @@
               p.en home
               p.jp ホーム
           li
-            .menu-item.disabled(to="/circles" @click.native="toggle")
+            .menu-item.disabled(to="/circles/" @click.native="toggle")
               p.en circles
               p.jp 近日公開予定
           li
-            .menu-item.disabled(to="/map" @click.native="toggle")
+            .menu-item.disabled(to="/map/" @click.native="toggle")
               p.en map
               p.jp 近日公開予定
           li
-            .menu-item.disabled(to="/timetable" @click.native="toggle")
+            .menu-item.disabled(to="/timetable/" @click.native="toggle")
               p.en timetable
               p.jp 近日公開予定
           li
-            .menu-item.disabled(to="/goods" @click.native="toggle")
+            .menu-item.disabled(to="/goods/" @click.native="toggle")
               p.en goods
               p.jp 近日公開予定
           li
-            .menu-item.disabled(to="/foods" @click.native="toggle")
+            .menu-item.disabled(to="/foods/" @click.native="toggle")
               p.en foods
               p.jp 近日公開予定
           li
-            nuxt-link.menu-item(to="/about" @click.native="toggle")
+            nuxt-link.menu-item(to="/about/" @click.native="toggle")
               p.en about
               p.jp 文化委員会について
           li
-            nuxt-link.menu-item(to="/design" @click.native="toggle")
+            nuxt-link.menu-item(to="/design/" @click.native="toggle")
               p.en design
               p.jp デザイン
       .spacer(v-if="$device.isDesktop")
