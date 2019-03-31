@@ -5,7 +5,7 @@
       p.el 73rd Nada School Festival
       p.el SAIL AWAY
       .spacer.el
-      p.el 2018.05.02&ndash;03
+      p.el 2019.05.02&ndash;03
       .spacer.el
       .links
         a.el(:href="sns.twitter" target="_blank" rel="noopener" aria-label="Twitter") Tw
