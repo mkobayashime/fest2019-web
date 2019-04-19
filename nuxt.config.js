@@ -116,7 +116,10 @@ module.exports = {
     hostname: 'https://fest.nada-sc.jp/2019',
     cacheTime: 1000 * 60 * 15,
     gzip: false,
-    generate: true // Enable me when using nuxt generate
+    generate: true, // Enable me when using nuxt generate
+    filter({ routes }) {
+      return routes.map(route => (route.url = `${route.url}/`))
+    }
   },
 
   /*
