@@ -11,7 +11,8 @@
     "start": "nuxt start",
     "generate": "cross-env NODE_ENV=production nuxt generate --analyze",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "blog": "processmd ./assets/articles/md/*.md --stdout --outputDir ./assets/articles/json > ./assets/articles/summary.json"
   },
   "config": {
     "nuxt": {
@@ -49,6 +50,7 @@
     "nodemon": "^1.18.10",
     "nuxt-stylus-resources-loader": "^2.0.0",
     "prettier": "1.16.4",
+    "processmd": "^4.4.2",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "stylus": "^0.54.5",
