@@ -10,7 +10,7 @@
           li
             nuxt-link.menu-item(to="circles" @click.native="toggle")
               p.en circles
-              p.jp 出展サークル
+              p.jp 参加サークル
           li
             .menu-item.disabled(to="map" @click.native="toggle")
               p.en map
