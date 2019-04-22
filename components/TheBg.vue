@@ -1,7 +1,7 @@
 <template lang="pug">
   #the-bg
     .logo-svg
-      img(src="~/assets/logo/black/logo.svg")
+      img(src="~/assets/logo/black/logo.svg" alt="背景ロゴ")
 </template>
 
 <script>
