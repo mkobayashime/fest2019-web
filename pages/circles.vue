@@ -4,8 +4,8 @@
     .textbox
       input.search(v-model="keyword" type="text" placeholder=" ")
       label Search
-    transition-group(name="aaa" tag="div").circles
-      section.circle(v-for="circle in filtered(keyword)" key="circle.name" @click="toggle(circle)")
+    transition-group(name="circles-anim" tag="div").circles
+      section.circle(v-for="circle in filtered(keyword)" :key="circle.name" @click="toggle(circle)")
         .main
           h2.name {{circle.name}}
           p.place {{circle.place}}
@@ -162,9 +162,9 @@ export default {
         transition opacity 200ms linear
       .descs-fade-enter, .descs-fade-leave-to
         opacity 0
-  .aaa-encter-active, .aaa-leave-active
+  .circles-anim-encter-active, .circles-anim-leave-active
     transition all 500ms
-  .aaa-enter, .aaa-leave-to
+  .circles-anim-enter, .circles-anim-leave-to
     opacity 0
     transform translateY(1rem)
 </style>
