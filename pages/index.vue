@@ -35,7 +35,7 @@
           .image.image-pc(v-if="$device.isDesktop")
           .image.image-touch(v-if="$device.isMobileOrTablet")
           .message
-            img.icon(src="~/assets/icon/fab-youtube.svg")
+            img.icon(src="~/assets/icon/fab-youtube.svg" alt="PVを再生")
           youtube#video(:video-id="pvOption.videoId" :fitParent="pvOption.fitParent" ref="youtube")
     section.detail
       h2.title 開催要項

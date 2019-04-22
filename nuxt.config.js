@@ -111,11 +111,14 @@ module.exports = {
    ** PWA
    */
   manifest: {
-    name: '第73回灘校文化祭',
+    name: 'SAIL AWAY | 第73回灘校文化祭',
     short_name: '灘校文化祭',
+    description:
+      '第73回灘校文化祭は2019年5月2–3日に開催されます 是非お越しください!',
     lang: 'ja',
     theme_color: '#3d81ff',
-    display: 'browser',
+    background_color: '#fff',
+    display: 'standalone',
     orientation: 'portrait',
     start_url: '/2019/',
     icons: [
