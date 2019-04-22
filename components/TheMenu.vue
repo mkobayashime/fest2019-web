@@ -8,7 +8,7 @@
               p.en home
               p.jp ホーム
           li
-            nuxt-link.menu-item(to="circles" @click.native="toggle")
+            nuxt-link.menu-item(to="/circles/" @click.native="toggle")
               p.en circles
               p.jp 参加サークル
           li
