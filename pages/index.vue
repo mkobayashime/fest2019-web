@@ -35,7 +35,7 @@
           .image.image-pc(v-if="$device.isDesktop")
           .image.image-touch(v-if="$device.isMobileOrTablet")
           .message
-            p PVを再生
+            img.icon(src="~/assets/icon/fab-youtube.svg")
           youtube#video(:video-id="pvOption.videoId" :fitParent="pvOption.fitParent" ref="youtube")
     section.detail
       h2.title 開催要項
@@ -575,8 +575,10 @@ export default {
       width 65%
       max-width 1280px
       margin 0
-      +touch()
+      +tablet()
         width 85%
+      +sp()
+        width 100%
       .inner
         position relative
         width 100%
@@ -611,14 +613,10 @@ export default {
           align-items center
           justify-content center
           transition opacity 200ms linear
-          p
-            opacity 1
-            color #fff
-            font-size 3rem
-            bold()
-            z-index 3
-            +touch()
-              font-size 2rem
+          .icon
+            width 6rem
+            +sp()
+              width 4rem
         .hidden
           opacity 0
           pointer-events none
