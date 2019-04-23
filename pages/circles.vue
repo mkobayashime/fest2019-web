@@ -15,7 +15,6 @@
 </template>
 
 <script>
-/* eslint no-console: 0 */
 import circles from '~/assets/data/circles.json'
 export default {
   head: {
