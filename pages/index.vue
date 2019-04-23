@@ -55,10 +55,24 @@
               p.sub-title time
               p.main 9:00&ndash;15:30
               p.sub 開場 9:00
+        .column
+          .sidebar
+          ul
             li
               p.sub-title theme
               p.main SAIL AWAY
-              p.sub 第73回灘校文化祭
+            li
+              p.sub-title sns
+              p.sub 最新情報をチェック!
+              .line
+                a(:href="sns.twitter" target="_blank" rel="noopener").main Twitter
+              .line
+                a(:href="sns.ig" target="_blank" rel="noopener").main Instagram
+              .line
+                a(:href="sns.fb" target="_blank" rel="noopener").main Facebook
+    section.access
+      h2.title アクセス
+      .columns
         .column
           .sidebar
           ul
@@ -67,15 +81,22 @@
               p.main 灘中学校・高等学校
               p.sub 〒658-0082
               p.sub 兵庫県神戸市東灘区魚崎北町8丁目5番1号
+              p.sub 公共交通機関をご利用ください
               a(href="http://www.nada.ac.jp/index.html" target="_blank" rel="noopener").sub 学校公式Webサイト
+        .column
+          .sidebar
+          ul
             li
-              p.sub-title sns
+              p.sub-title access
               .line
-                a(:href="sns.twitter" target="_blank" rel="noopener").main Twitter
+                p.main JR住吉駅
+                  span.jp 徒歩10分
               .line
-                a(:href="sns.ig" target="_blank" rel="noopener").main Instagram
+                p.main 阪神魚崎駅
+                  span.jp 徒歩10分
               .line
-                a(:href="sns.fb" target="_blank" rel="noopener").main Facebook
+                p.main 阪急岡本駅
+                  span.jp 徒歩20分
 </template>
 
 <script>
@@ -335,8 +356,11 @@ export default {
       align-items center
       cursor pointer
       outline none
+      transition background-color 200ms linear
       +sp()
         display none
+      &:hover
+        background-color $gray-8
       .arrow
         position absolute
         width 5px
@@ -621,8 +645,11 @@ export default {
           opacity 0
           pointer-events none
   .detail
+    margin 200px auto 0
+  .access
+    margin 70px auto 200px
+  .detail, .access
     width 800px
-    margin 200px auto 200px
     bold()
     +minMaxWidth(700, 1199)
       width 600px
@@ -692,7 +719,7 @@ export default {
             font-size 1rem
             color $gray-6
           .line
-            height 4rem
+            height 3.5rem
           a
             position relative
             &::after
@@ -700,7 +727,7 @@ export default {
               position absolute
               width 100%
               height 2px
-              bottom 0
+              bottom .1em
               left 0
               transform-origin center center
               transform scaleX(1)

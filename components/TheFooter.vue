@@ -12,6 +12,8 @@
         a.el(:href="sns.ig" target="_blank" rel="noopener" aria-label="Instagram") IG
         a.el(:href="sns.fb" target="_blank" rel="noopener" aria-label="Facebook") Fb
       .spacer.el
+      nuxt-link.el(to="/privacy/") Privacy Policy
+      .spacer.el
       p.el Design Team © 2019
 </template>
 
@@ -28,7 +30,7 @@ export default {
 
 <style lang="stylus" scoped>
 #the-footer
-  height 400px
+  height 450px
   background-color #000
   padding 0 10%
   display flex
@@ -52,10 +54,10 @@ export default {
     align-items flex-end
     justify-content flex-end
     flex-shrink 0
+    color $gray-4
     +sp()
       align-items flex-start
     p
-      color $gray-4
       letter-spacing .02em
       z-index 910
     .spacer
@@ -66,29 +68,29 @@ export default {
       z-index 910
     .links
       display flex
-      a
-        margin-left 10px
-        position relative
-        color $gray-4
-        z-index 910
-        transition color 200ms ease
-        +sp()
-          margin-right 10px
-          margin-left 0
+    a
+      margin-left 10px
+      position relative
+      color $gray-4
+      z-index 910
+      transition color 200ms ease
+      +sp()
+        margin-right 10px
+        margin-left 0
+      &::after
+        content ''
+        position absolute
+        width 100%
+        height 1px
+        bottom 0
+        left 0
+        background-color $gray-4
+        transform-origin center center
+        transform scaleX(1)
+        transition all 200ms ease-out
+      &:hover
+        color #fff
         &::after
-          content ''
-          position absolute
-          width 100%
-          height 1px
-          bottom 0
-          left 0
-          background-color $gray-4
-          transform-origin center center
-          transform scaleX(1)
-          transition all 200ms ease-out
-        &:hover
-          color #fff
-          &::after
-            background-color #fff
-            transform scaleX(.8)
+          background-color #fff
+          transform scaleX(.8)
 </style>
