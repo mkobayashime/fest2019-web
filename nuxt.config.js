@@ -26,7 +26,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s',
+    title: 'SAIL AWAY | 第73回灘校文化祭',
     meta: [
       { charset: 'utf-8' },
       {
