@@ -356,8 +356,11 @@ export default {
       align-items center
       cursor pointer
       outline none
+      transition background-color 200ms linear
       +sp()
         display none
+      &:hover
+        background-color $gray-8
       .arrow
         position absolute
         width 5px
