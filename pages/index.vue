@@ -96,7 +96,7 @@
                   span.jp 徒歩10分
               .line
                 p.main 阪急岡本駅
-                  span.jp 徒歩20分
+                  span.jp 徒歩25分
 </template>
 
 <script>
