@@ -37,7 +37,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  color: hsv(0, 0%, 5%);
+  color: hsl(0, 0%, 15%);
   font-family: 'Hind', 'Noto Sans JP', '游ゴシック', 'Yu Gothic',
     'Hiragino Kaku Gothic ProN', sans-serif;
   font-weight: 400;

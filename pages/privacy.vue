@@ -27,7 +27,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head: {
+    title: 'プライバシーポリシー | 第73回灘校文化祭'
+  },
+  mounted() {
+    document.getElementById('scroll-area').scrollTop = 0
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
@@ -47,16 +54,16 @@ export default {}
     margin 10rem 0 3rem -.1em
     +sp()
       font-size 1.7rem
-      margin 8rem 0 1rem 0
+      margin 8rem 0 3rem 0
     +tablet()
       font-size 3rem
-      margin 8rem 0 1rem 0
+      margin 8rem 0 3rem 0
   h2
     display inline-block
     color #fff
     background-color black
     text-transform uppercase
-    font-size 1.5rem
+    font-size 1.2rem
     padding .1em 1.5em 0
     margin-bottom 2rem
   p
