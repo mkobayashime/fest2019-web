@@ -646,8 +646,12 @@ export default {
           pointer-events none
   .detail
     margin 200px auto 0
+    +sp()
+      margin 150px auto 0px
   .access
-    margin 70px auto 200px
+    margin 70px auto 150px
+    +sp()
+      margin 50px auto 50px
   .detail, .access
     width 800px
     bold()
@@ -657,7 +661,6 @@ export default {
       width 400px
     +sp()
       width 85%
-      margin 150px auto 100px
     .title
       letter-spacing .05em
       font-size 3rem
