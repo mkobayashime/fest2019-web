@@ -127,19 +127,26 @@ export default {
     section:nth-of-type(2n+1)
       background-color $gray-1
     .circle
+      position relative
       padding 1rem 3rem
       transition all 200ms ease-out
       cursor pointer
+      &::before
+        content ''
+        position absolute
+        width 10px
+        height 100%
+        left 0
+        top 0
+        background-color $blue-10
+        transition all 200ms ease-out
+        transform scaleX(0)
+        transform-origin left center
       +desktop()
         &:hover
-          background-color $blue-10
-          color #fff
-          .main
-            .place
-              color #fff
-              opacity .8
-          .descs
-            opacity .9
+          &::before
+            content ''
+            transform scaleX(1)
       +tablet()
         padding 1rem 2rem
       +sp()
@@ -151,12 +158,14 @@ export default {
         h2
           bold()
           font-size 1.2rem
+          color $gray-8
         .place
           color $gray-7
           transition all 200ms ease-out
           +sp()
             font-size .8rem
       .descs
+        color $gray-7
         margin-top 1rem
         transition opacity 200ms linear
       .descs-fade-enter, .descs-fade-leave-to
