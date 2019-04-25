@@ -61,9 +61,7 @@ export default {
 
 <style lang="stylus" scoped>
 #privacy
-  min-height 100vh
-  width 100%
-  max-width 800px
+  articleWidth()
   margin 5rem auto 10rem
   +sp()
     padding 0 1.5rem
