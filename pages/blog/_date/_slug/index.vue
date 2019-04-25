@@ -185,11 +185,7 @@ header
         }
       }
 article
-  margin 5rem auto 10rem
-  max-width 48rem
-  padding 0 1.5rem
-  +tablet()
-    padding 0 3rem
+  articleWidth()
   +touch()
     margin 3rem auto 5rem
   >>> h2
