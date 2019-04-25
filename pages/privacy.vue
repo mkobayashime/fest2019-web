@@ -27,12 +27,34 @@
 </template>
 
 <script>
+import anime from 'animejs'
 export default {
   head: {
     title: 'プライバシーポリシー | 第73回灘校文化祭'
   },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0
+  },
+  transition: {
+    appear: true,
+    enter(el, done) {
+      anime({
+        targets: document.getElementById('privacy'),
+        opacity: [0, 1],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+    },
+    leave(el, done) {
+      anime({
+        targets: document.getElementById('privacy'),
+        opacity: [1, 0],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+    }
   }
 }
 </script>

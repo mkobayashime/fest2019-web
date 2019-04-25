@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import anime from 'animejs'
 export default {
   head: {
     title: '文化委員会について | 第73回灘校文化祭',
@@ -51,6 +52,27 @@ export default {
   },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0
+  },
+  transition: {
+    appear: true,
+    enter(el, done) {
+      anime({
+        targets: document.getElementById('about'),
+        opacity: [0, 1],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+    },
+    leave(el, done) {
+      anime({
+        targets: document.getElementById('about'),
+        opacity: [1, 0],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+    }
   }
 }
 </script>
