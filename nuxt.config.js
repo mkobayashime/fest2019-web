@@ -141,7 +141,8 @@ module.exports = {
     generate: true, // Enable me when using nuxt generate
     filter({ routes }) {
       return routes.map(route => (route.url = `${route.url}/`))
-    }
+    },
+    routes: generateDynamicRoutes
   },
 
   /*
