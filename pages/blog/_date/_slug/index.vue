@@ -90,6 +90,10 @@ header
   justify-content center
   position relative
   z-index -2
+  +tablet()
+    padding 7rem 0
+  +sp()
+    padding 8rem 0 5rem
   h1
     display inline-block
     position relative
@@ -99,7 +103,7 @@ header
     +tablet()
       font-size 2.5rem
     +sp()
-      font-size 2rem
+      font-size 1.5rem
     p
       opacity 0
       animation h1Enter 300ms linear 1000ms 1 normal forwards
@@ -151,11 +155,15 @@ header
         font-size 1.2rem
         bold()
         color $gray-6
+        +sp()
+          font-size .8rem
       .author::after
         content '/'
         margin 0 .5em
       time
         font-size 1.4rem
+        +sp()
+          font-size .95rem
     .bg
       content ''
       position absolute
@@ -183,7 +191,7 @@ article
   +tablet()
     padding 0 3rem
   +touch()
-    margin 5rem auto 7rem
+    margin 3rem auto 5rem
   >>> h2
     bold()
     font-size 2rem
