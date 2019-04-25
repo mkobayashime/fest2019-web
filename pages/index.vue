@@ -1,5 +1,5 @@
 <template lang="pug">
-  .index
+  #index
     section.hero
       #pixi
         img.bg-pixi(src="~/assets/img/hero1.jpg" alt="背景画像")
@@ -130,6 +130,27 @@ export default {
     this.pixiContainer = document.getElementById('pixi')
     this.pixiInit()
   },
+  transition: {
+    appear: true,
+    enter(el, done) {
+      anime({
+        targets: document.getElementById('index'),
+        opacity: [0, 1],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+    },
+    leave(el, done) {
+      anime({
+        targets: document.getElementById('index'),
+        opacity: [1, 0],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+    }
+  },
   destroyed() {
     this.renderer.destroy()
     this.stage.destroy()
@@ -234,7 +255,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.index
+#index
   width 100%
   margin 0 auto
   .hero

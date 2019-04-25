@@ -4,39 +4,39 @@
       transition.menu-container(:css="false" @enter="itemsEnter" @leave="itemsLeave")
         ul.menu-items(v-if="opened")
           li
-            nuxt-link.menu-item(to="/" @click.native="toggle")
+            nuxt-link.menu-item(to="/" @click.native="toggleWait")
               p.en home
               p.jp ホーム
           li
-            nuxt-link.menu-item(to="/circles/" @click.native="toggle")
+            nuxt-link.menu-item(to="/circles/" @click.native="toggleWait")
               p.en circles
               p.jp 参加サークル
           li
-            .menu-item.disabled(to="/map/" @click.native="toggle")
+            .menu-item.disabled(to="/map/" @click.native="toggleWait")
               p.en map
               p.jp 近日公開予定
           li
-            .menu-item.disabled(to="/timetable/" @click.native="toggle")
+            .menu-item.disabled(to="/timetable/" @click.native="toggleWait")
               p.en timetable
               p.jp 近日公開予定
           li
-            .menu-item.disabled(to="/goods/" @click.native="toggle")
+            .menu-item.disabled(to="/goods/" @click.native="toggleWait")
               p.en goods
               p.jp 近日公開予定
           li
-            .menu-item.disabled(to="/foods/" @click.native="toggle")
+            .menu-item.disabled(to="/foods/" @click.native="toggleWait")
               p.en foods
               p.jp 近日公開予定
           li
-            nuxt-link.menu-item(to="/about/" @click.native="toggle")
+            nuxt-link.menu-item(to="/about/" @click.native="toggleWait")
               p.en about
               p.jp 文化委員会について
           li
-            nuxt-link.menu-item(to="/design/" @click.native="toggle")
+            nuxt-link.menu-item(to="/design/" @click.native="toggleWait")
               p.en design
               p.jp デザイン
           li
-            nuxt-link(to="/privacy/" @click.native="toggle" v-if="$device.isMobileOrTablet").privacy.menu-item Privacy Policy
+            nuxt-link(to="/privacy/" @click.native="toggleWait" v-if="$device.isMobileOrTablet").privacy.menu-item Privacy Policy
       .spacer(v-if="$device.isDesktop")
       transition(:css="false" @enter="infoEnter" @leave="infoLeave")
         .info(:class="{opened:opened}" v-if="opened && $device.isDesktop")
@@ -50,7 +50,7 @@
             a.el(:href="sns.ig" target="_blank" rel="noopener" aria-label="Instagram") IG
             a.el(:href="sns.fb" target="_blank" rel="noopener" aria-label="Facebook") Fb
           .spacer.el
-          nuxt-link.el(to="/privacy/" @click.native="toggle") Privacy Policy
+          nuxt-link.el(to="/privacy/" @click.native="toggleWait") Privacy Policy
           .spacer.el
           p.el Design Team © 2019
     .bg-container
@@ -80,6 +80,11 @@ export default {
     ...mapMutations({
       toggle: 'menu/toggle'
     }),
+    toggleWait() {
+      window.setTimeout(() => {
+        this.toggle()
+      }, 300)
+    },
     itemsEnter: (el, done) => {
       anime({
         targets: '#the-menu .menu-item',

@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import anime from 'animejs'
 import designDist from '~/assets/data/design-dist.json'
 require('~/assets/data/design-require.js')
 export default {
@@ -41,6 +42,27 @@ export default {
   },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0
+  },
+  transition: {
+    appear: true,
+    enter(el, done) {
+      anime({
+        targets: document.getElementById('design'),
+        opacity: [0, 1],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+    },
+    leave(el, done) {
+      anime({
+        targets: document.getElementById('design'),
+        opacity: [1, 0],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+    }
   }
 }
 </script>

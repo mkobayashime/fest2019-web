@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  #blog-article
     header#header
       h1
         p {{ title }}
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-/* eslint no-console: 0 */
+import anime from 'animejs'
 import { sourceFileArray } from '~/assets/articles/summary.json'
 export default {
   components: {},
@@ -54,6 +54,27 @@ export default {
     getDate(sourceDate) {
       return sourceDate.replace(/-/g, ' ')
     }
+  },
+  transition: {
+    appear: true,
+    enter(el, done) {
+      anime({
+        targets: document.getElementById('blog-article'),
+        opacity: [0, 1],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+    },
+    leave(el, done) {
+      anime({
+        targets: document.getElementById('blog-article'),
+        opacity: [1, 0],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+    }
   }
 }
 </script>
@@ -81,7 +102,7 @@ header
       font-size 2rem
     p
       opacity 0
-      animation h1Enter 300ms linear 1300ms 1 normal forwards
+      animation h1Enter 300ms linear 1000ms 1 normal forwards
       @keyframes h1Enter {
         0% {
           opacity 0
@@ -101,7 +122,7 @@ header
       z-index -1
       transform-origin left center
       transform scaleX(0)
-      animation h1BgEnter 500ms ease-in-out 1000ms 1 normal forwards
+      animation h1BgEnter 500ms ease-in-out 700ms 1 normal forwards
       @keyframes h1BgEnter {
         0% {
           transform scaleX(0)
@@ -112,12 +133,12 @@ header
       }
   .meta
     margin-top 1em
-    padding 0 1em
+    padding .2em 1em 0
     position relative
     .txt
       opacity 0
-      animation h1Enter 300ms linear 1500ms 1 normal forwards
-      @keyframes h1Enter {
+      animation metaEnter 300ms linear 1000ms 1 normal forwards
+      @keyframes metaEnter {
         0% {
           opacity 0
         }
@@ -144,10 +165,10 @@ header
       left 0
       background-color #fff
       z-index -1
-      transform-origin left center
+      transform-origin right center
       transform scaleX(0)
-      animation metaEnter 500ms ease-in-out 1200ms 1 normal forwards
-      @keyframes metaEnter {
+      animation metaBgEnter 500ms ease-in-out 700ms 1 normal forwards
+      @keyframes metaBgEnter {
         0% {
           transform scaleX(0)
         }

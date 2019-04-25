@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import anime from 'animejs'
 import circles from '~/assets/data/circles.json'
 export default {
   head: {
@@ -44,6 +45,27 @@ export default {
     },
     toggle(circle) {
       circle.opened = !circle.opened
+    }
+  },
+  transition: {
+    appear: true,
+    enter(el, done) {
+      anime({
+        targets: document.getElementById('circles'),
+        opacity: [0, 1],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+    },
+    leave(el, done) {
+      anime({
+        targets: document.getElementById('circles'),
+        opacity: [1, 0],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
     }
   }
 }
