@@ -55,7 +55,7 @@ export default {
         .join('-')}/`
     },
     getThumbnailStyle(article) {
-      return `background: url(../../_nuxt/assets/img/blog/${
+      return `background: url(../_nuxt/assets/img/blog/${
         article.thumbnail
       }) center center / cover;`
     },
