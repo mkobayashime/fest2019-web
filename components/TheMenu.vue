@@ -8,10 +8,6 @@
               p.en home
               p.jp ホーム
           li
-            nuxt-link.menu-item(to="/circles/" @click.native="toggleWait")
-              p.en circles
-              p.jp 参加サークル
-          li
             .menu-item.disabled(to="/map/" @click.native="toggleWait")
               p.en map
               p.jp 近日公開予定
@@ -20,12 +16,12 @@
               p.en timetable
               p.jp 近日公開予定
           li
+            nuxt-link.menu-item(to="/circles/" @click.native="toggleWait")
+              p.en circles
+              p.jp 参加サークル
+          li
             .menu-item.disabled(to="/goods/" @click.native="toggleWait")
               p.en goods
-              p.jp 近日公開予定
-          li
-            .menu-item.disabled(to="/foods/" @click.native="toggleWait")
-              p.en foods
               p.jp 近日公開予定
           li
             nuxt-link.menu-item(to="/about/" @click.native="toggleWait")
@@ -35,6 +31,10 @@
             nuxt-link.menu-item(to="/design/" @click.native="toggleWait")
               p.en design
               p.jp デザイン
+          li
+            nuxt-link.menu-item(to="/blog/" @click.native="toggleWait")
+              p.en blog
+              p.jp ブログ
           li
             nuxt-link(to="/privacy/" @click.native="toggleWait" v-if="$device.isMobileOrTablet").privacy.menu-item Privacy Policy
       .spacer(v-if="$device.isDesktop")
