@@ -225,6 +225,18 @@ article
         margin-right .5em
         bold()
         color $blue-10
+  >>> ul
+    padding-left 2em
+    li
+      position relative
+      &::before
+        content ''
+        position absolute
+        width 5px
+        height 5px
+        left -15px
+        top .65em
+        background-color $blue-10
   >>> img
     width 100%
     margin 2rem 0
