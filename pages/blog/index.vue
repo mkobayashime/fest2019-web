@@ -11,7 +11,7 @@
           h2 {{ article.title }}
           .meta
             p.author {{ article.author }}
-            time(:datetime="getDate(article.base)") {{ getDate(article.base) }}
+            time(:datetime="getDatetime(article.base)") {{ getDate(article.base) }}
 </template>
 
 <script>
@@ -62,6 +62,10 @@ export default {
     getDate(base) {
       const splitArray = base.split('-')
       return `${splitArray[0]} ${splitArray[1]} ${splitArray[2]}`
+    },
+    getDatetime(base) {
+      const splitArray = base.split('-')
+      return `${splitArray[0]}-${splitArray[1]}-${splitArray[2]}`
     }
   },
   transition: {
