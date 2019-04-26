@@ -63,10 +63,24 @@ export default {
         easing: 'linear',
         complete: done
       })
+      anime({
+        targets: document.getElementById('the-footer'),
+        opacity: [0, 1],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
     },
     leave(el, done) {
       anime({
         targets: document.getElementById('about'),
+        opacity: [1, 0],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+      anime({
+        targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
