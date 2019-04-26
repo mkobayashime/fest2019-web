@@ -66,10 +66,24 @@ export default {
         easing: 'linear',
         complete: done
       })
+      anime({
+        targets: document.getElementById('the-footer'),
+        opacity: [0, 1],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
     },
     leave(el, done) {
       anime({
         targets: document.getElementById('blog-article'),
+        opacity: [1, 0],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+      anime({
+        targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
@@ -194,10 +208,14 @@ article
     font-size 2rem
     margin 3rem 0 1rem
     border-bottom 2px solid $gray-2
+    +sp()
+      font-size 1.5rem
   >>> h3
     bold()
     font-size 1.3rem
     margin 1.5rem 0 .5rem
+    +sp()
+      font-size 1.2rem
   >>> h4
     bold()
     font-size 1rem

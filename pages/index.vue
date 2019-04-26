@@ -140,10 +140,24 @@ export default {
         easing: 'linear',
         complete: done
       })
+      anime({
+        targets: document.getElementById('the-footer'),
+        opacity: [0, 1],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
     },
     leave(el, done) {
       anime({
         targets: document.getElementById('index'),
+        opacity: [1, 0],
+        duration: 300,
+        easing: 'linear',
+        complete: done
+      })
+      anime({
+        targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
@@ -178,7 +192,7 @@ export default {
       anime({
         targets: document.getElementById('scroll-area'),
         scrollTop: height,
-        duration: 500,
+        duration: 800,
         easing: 'easeOutQuint'
       })
     },
