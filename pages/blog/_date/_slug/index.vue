@@ -186,10 +186,14 @@ article
     font-size 2rem
     margin 3rem 0 1rem
     border-bottom 2px solid $gray-2
+    +sp()
+      font-size 1.5rem
   >>> h3
     bold()
     font-size 1.3rem
     margin 1.5rem 0 .5rem
+    +sp()
+      font-size 1.2rem
   >>> h4
     bold()
     font-size 1rem
