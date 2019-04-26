@@ -8,31 +8,31 @@
               p.en home
               p.jp ホーム
           li
-            .menu-item.disabled(to="/map/" @click.native="toggleWait")
+            .menu-item.disabled.non-exact(to="/map/" @click.native="toggleWait")
               p.en map
               p.jp 近日公開予定
           li
-            .menu-item.disabled(to="/timetable/" @click.native="toggleWait")
+            .menu-item.disabled.non-exact(to="/timetable/" @click.native="toggleWait")
               p.en timetable
               p.jp 近日公開予定
           li
-            nuxt-link.menu-item(to="/circles/" @click.native="toggleWait")
+            nuxt-link.menu-item.non-exact(to="/circles/" @click.native="toggleWait")
               p.en circles
               p.jp 参加サークル
           li
-            .menu-item.disabled(to="/goods/" @click.native="toggleWait")
+            .menu-item.disabled.non-exact(to="/goods/" @click.native="toggleWait")
               p.en goods
               p.jp 近日公開予定
           li
-            nuxt-link.menu-item(to="/about/" @click.native="toggleWait")
+            nuxt-link.menu-item.non-exact(to="/about/" @click.native="toggleWait")
               p.en about
               p.jp 文化委員会について
           li
-            nuxt-link.menu-item(to="/design/" @click.native="toggleWait")
+            nuxt-link.menu-item.non-exact(to="/design/" @click.native="toggleWait")
               p.en design
               p.jp デザイン
           li
-            nuxt-link.menu-item(to="/blog/" @click.native="toggleWait")
+            nuxt-link.menu-item.non-exact(to="/blog/" @click.native="toggleWait")
               p.en blog
               p.jp ブログ
           li
@@ -242,7 +242,18 @@ export default {
           color $gray-8
         &:hover::after
           background-color $gray-5
-      & .nuxt-link-exact-active:not(.privacy)
+      & .nuxt-link-active:not(.privacy).non-exact
+        .en
+          margin-left .5em
+          +sp()
+            margin-left 0
+        .jp
+          color #fff
+        &::before
+          transform scaleX(1)
+        &::after
+          background-color #fff
+      & .nuxt-link-exact-active
         .en
           margin-left .5em
           +sp()
