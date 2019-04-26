@@ -86,6 +86,7 @@ export default {
       font-size 1rem
       font-weight 400
       line-height 2em
+      color $gray-6
   .guidelines
     display inline-block
     font-size 1.2rem
