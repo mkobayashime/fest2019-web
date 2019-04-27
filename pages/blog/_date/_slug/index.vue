@@ -221,19 +221,57 @@ article
     font-size 1rem
     margin 1rem 0 0
   >>> p
+    color $gray-7
     line-height 2em
   >>> ol
+    margin 1rem auto
     padding-left 2em
     list-style-type none
     counter-reset item
     li
+      color $gray-7
       &::before
         counter-increment item
         content counter(item)'.'
+        display inline-block
         margin-right .5em
+        width 1em
         bold()
         color $blue-10
+  >>> ul
+    margin 1rem auto
+    padding-left 2em
+    li
+      position relative
+      color $gray-7
+      &::before
+        content ''
+        position absolute
+        width 5px
+        height 5px
+        left -15px
+        top .65em
+        background-color $blue-10
   >>> img
     width 100%
     margin 2rem 0
+  >>> a
+    position relative
+    &:hover
+      &::after
+        transform scaleX(.8)
+    &::after
+      content ''
+      position absolute
+      bottom 1px
+      left 0
+      width 100%
+      height 2px
+      background-color $gray-3
+      transform scaleX(1)
+      transform-origin center center
+      transition transform 200ms ease-out
+  >>> hr
+    opacity 0
+    height 1rem
 </style>
