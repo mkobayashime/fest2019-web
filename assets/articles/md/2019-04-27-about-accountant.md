@@ -5,6 +5,7 @@ author: 会計担当副会長
 images: [
   2019-04-27-about-accountant/1.jpg
 ]
+thumbnail: /default/thumbnail.jpg
 
 ---
 
