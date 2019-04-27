@@ -162,6 +162,8 @@ export default {
         bold()
         font-size 2rem
         margin-bottom .5rem
+        +sp()
+          font-size 1.5rem
       .meta
         display flex
         flex-direction row
