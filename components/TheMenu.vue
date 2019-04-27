@@ -242,7 +242,7 @@ export default {
           color $gray-8
         &:hover::after
           background-color $gray-5
-      & .nuxt-link-active:not(.privacy).non-exact
+      & .nuxt-link-active.non-exact
         .en
           margin-left .5em
           +sp()
@@ -271,6 +271,11 @@ export default {
         z-index 910
         color $gray-4
         text-align center
+        transition color 300ms
+        &::before
+          display none
+        &.nuxt-link-exact-active
+          color #fff
     .spacer
       width 20vw
     .info
