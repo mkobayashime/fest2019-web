@@ -20,7 +20,7 @@ const generateDynamicRoutes = callback => {
 }
 
 module.exports = {
-  mode: 'spa',
+  mode: 'universal',
 
   /*
    ** Headers of the page
@@ -103,8 +103,7 @@ module.exports = {
         resolve(__dirname, 'assets/stylus/mixins.styl'),
         resolve(__dirname, 'assets/stylus/variables.styl')
       ]
-    ],
-    ['nuxt-device-detect']
+    ]
   ],
 
   /*

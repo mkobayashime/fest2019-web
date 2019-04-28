@@ -32,8 +32,7 @@
       img.logotype(src="~/assets/logo/white/logotype.svg" alt="文化祭ロゴタイプ")
       .outer
         button.inner(@click="showPv")
-          .image.image-pc(v-if="$device.isDesktop")
-          .image.image-touch(v-if="$device.isMobileOrTablet")
+          .image.
           .message
             img.icon(src="~/assets/icon/fab-youtube.svg" alt="PVを再生")
           youtube#video(:video-id="pvOption.videoId" :fitParent="pvOption.fitParent" ref="youtube")
@@ -101,10 +100,8 @@
 
 <script>
 /* eslint new-cap: 0 */
-import * as PIXI from 'pixi.js'
 import anime from 'animejs'
 import sns from '~/assets/data/sns.json'
-PIXI.utils.skipHello()
 export default {
   components: {},
   head: {
@@ -202,56 +199,61 @@ export default {
       this.player.playVideo()
     },
     pixiInit() {
-      this.renderer = new PIXI.autoDetectRenderer(1280, 720, {
-        transparent: true
-      })
-      this.stage = new PIXI.Container()
-      this.slide = new PIXI.Container()
+      if (process.browser) {
+        const PIXI = require('pixi.js')
+        PIXI.utils.skipHello()
 
-      const spriteImage = document.querySelector('.bg-pixi')
-      const spriteImageSrc = spriteImage.getAttribute('src')
-      const texture = new PIXI.Texture.fromImage(spriteImageSrc)
-      this.image = new PIXI.Sprite(texture)
-      this.image.anchor.set(0.5)
-      this.image.x = this.renderer.width / 2
-      this.image.y = this.renderer.height / 2
-      this.slide.addChild(this.image)
+        this.renderer = new PIXI.autoDetectRenderer(1280, 720, {
+          transparent: true
+        })
+        this.stage = new PIXI.Container()
+        this.slide = new PIXI.Container()
 
-      const displacementImageSrc = document
-        .querySelector('.d-pixi')
-        .getAttribute('src')
-      this.displacementSprite = PIXI.Sprite.fromImage(displacementImageSrc)
-      this.displacementFilter = new PIXI.filters.DisplacementFilter(
-        this.displacementSprite
-      )
+        const spriteImage = document.querySelector('.bg-pixi')
+        const spriteImageSrc = spriteImage.getAttribute('src')
+        const texture = new PIXI.Texture.fromImage(spriteImageSrc)
+        this.image = new PIXI.Sprite(texture)
+        this.image.anchor.set(0.5)
+        this.image.x = this.renderer.width / 2
+        this.image.y = this.renderer.height / 2
+        this.slide.addChild(this.image)
 
-      this.displacementSprite.texture.baseTexture.wrapMode =
-        PIXI.WRAP_MODES.REPEAT
-      this.stage.filters = [this.displacementFilter]
-      this.displacementSprite.scale.x = 2
-      this.displacementSprite.scale.y = 2
+        const displacementImageSrc = document
+          .querySelector('.d-pixi')
+          .getAttribute('src')
+        this.displacementSprite = PIXI.Sprite.fromImage(displacementImageSrc)
+        this.displacementFilter = new PIXI.filters.DisplacementFilter(
+          this.displacementSprite
+        )
 
-      this.displacementFilter.autoFit = true
+        this.displacementSprite.texture.baseTexture.wrapMode =
+          PIXI.WRAP_MODES.REPEAT
+        this.stage.filters = [this.displacementFilter]
+        this.displacementSprite.scale.x = 2
+        this.displacementSprite.scale.y = 2
 
-      this.stage.addChild(this.displacementSprite)
+        this.displacementFilter.autoFit = true
 
-      this.pixiContainer.appendChild(this.renderer.view)
-      this.stage.addChild(this.slide)
-      const canvas = document.querySelector('#pixi canvas')
-      canvas.style.position = 'absolute'
-      canvas.style.top = '50%'
-      canvas.style.left = '50%'
-      canvas.style.transform = `translate(-50%, -50%) scale(${this.calcScale()})`
-      canvas.style.zIndex = '-1'
+        this.stage.addChild(this.displacementSprite)
 
-      this.ticker = new PIXI.ticker.Ticker()
-      this.ticker.autoStart = true
-      this.ticker.add(delta => {
-        this.displacementSprite.x += 1 * delta
-        this.displacementSprite.y += 3
+        this.pixiContainer.appendChild(this.renderer.view)
+        this.stage.addChild(this.slide)
+        const canvas = document.querySelector('#pixi canvas')
+        canvas.style.position = 'absolute'
+        canvas.style.top = '50%'
+        canvas.style.left = '50%'
+        canvas.style.transform = `translate(-50%, -50%) scale(${this.calcScale()})`
+        canvas.style.zIndex = '-1'
 
-        this.renderer.render(this.stage)
-      })
+        this.ticker = new PIXI.ticker.Ticker()
+        this.ticker.autoStart = true
+        this.ticker.add(delta => {
+          this.displacementSprite.x += 1 * delta
+          this.displacementSprite.y += 3
+
+          this.renderer.render(this.stage)
+        })
+      }
     },
     calcScale() {
       const width = this.pixiContainer.clientWidth
@@ -647,20 +649,20 @@ export default {
         cursor pointer
         overflow hidden
         outline none
-        &:hover
-          .image-pc
-            transform scale(1.05)
         .image
           position absolute
           top 0
           right 0
           bottom 0
           left 0
-          background-image url('../assets/img/Thumbnail.jpg')
+          background-image url('~assets/img/Thumbnail.jpg')
           background-size cover
           z-index 1
           transform scale(1)
           transition transform 300ms ease-in-out, opacity 200ms linear
+        &:hover
+          .image
+            transform scale(1.05)
         .message
           position absolute
           top 0

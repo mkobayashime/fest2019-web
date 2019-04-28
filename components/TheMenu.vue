@@ -12,9 +12,9 @@
               p.en map
               p.jp 近日公開予定
           li
-            .menu-item.disabled.non-exact(to="/timetable/" @click.native="toggleWait")
+            nuxt-link.menu-item.non-exact(to="/timetable/" @click.native="toggleWait")
               p.en timetable
-              p.jp 近日公開予定
+              p.jp タイムテーブル
           li
             nuxt-link.menu-item.non-exact(to="/circles/" @click.native="toggleWait")
               p.en circles
@@ -36,10 +36,10 @@
               p.en blog
               p.jp ブログ
           li
-            nuxt-link(to="/privacy/" @click.native="toggleWait" v-if="$device.isMobileOrTablet").privacy.menu-item Privacy Policy
-      .spacer(v-if="$device.isDesktop")
+            nuxt-link(to="/privacy/" @click.native="toggleWait").privacy.menu-item.isMobileOrTablet Privacy Policy
+      .spacer.isDesktop
       transition(:css="false" @enter="infoEnter" @leave="infoLeave")
-        .info(:class="{opened:opened}" v-if="opened && $device.isDesktop")
+        .info(:class="{opened:opened}" v-if="opened").isDesktop
           p.el 73rd Nada School Festival
           p.el SAIL AWAY
           .spacer.el
@@ -57,8 +57,8 @@
       .bg-dummy.bg-dummy1(:class="{opened:opened}")
       .bg-dummy.bg-dummy2(:class="{opened:opened}")
       .bg-dummy.bg-dummy3(:class="{opened:opened}")
-      .bg-dummy.bg-dummy4(:class="{opened:opened}" v-if="$device.isDesktop")
-      .bg-dummy.bg-dummy5(:class="{opened:opened}" v-if="$device.isDesktop")
+      .bg-dummy.bg-dummy4(:class="{opened:opened}").isDesktop
+      .bg-dummy.bg-dummy5(:class="{opened:opened}").isDesktop
 </template>
 
 <script>
@@ -345,4 +345,11 @@ export default {
         transition-delay (i*100+100)ms
         &.opened
           transition-delay (i*100)ms
+
+  .isDesktop
+    +touch()
+      display none !important
+  .isMobileOrTablet
+    +desktop()
+      display none !important
 </style>

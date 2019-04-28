@@ -14,7 +14,7 @@ thumbnail: /default/thumbnail.jpg
 
 ## 会計担当副会長と文化祭
 
-![1](../../../_nuxt/assets/img/blog/2019-04-27-about-accountant/1.jpg)
+![灘校生徒会組織図](_nuxt/assets/img/blog/2019-04-27-about-accountant/1.jpg)
 
 上図が本校生徒会の組織図です。会計担当副会長は生徒会副会長と会計委員長を兼ねた役職で、文化祭運営を担う文化委員会の幹部ではないですが、生徒会運営に関する財務面を引き受けるという性質上、会計委員会は以下の業務を担当しています。
 
