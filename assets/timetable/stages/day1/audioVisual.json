@@ -1,0 +1,63 @@
+{
+  "name": "視聴覚室ステージ",
+  "place": "東館2階",
+  "class": "audioVisual1",
+  "events": [
+    {
+      "name": [
+        "東北企画"
+      ],
+      "starts": "0905",
+      "ends": "0920",
+      "description": ""
+    },
+    {
+      "name": [
+        "筋肉王"
+      ],
+      "starts": "0930",
+      "ends": "1030",
+      "description": ""
+    },
+    {
+      "name": [
+        "東北企画"
+      ],
+      "starts": "1035",
+      "ends": "1050",
+      "description": ""
+    },
+    {
+      "name": [
+        "Voistar NADA"
+      ],
+      "starts": "1055",
+      "ends": "1155",
+      "description": ""
+    },
+    {
+      "name": [
+        "3択クイズ大会"
+      ],
+      "starts": "1205",
+      "ends": "1305",
+      "description": ""
+    },
+    {
+      "name": [
+        "N-1グランプリ"
+      ],
+      "starts": "1320",
+      "ends": "1450",
+      "description": ""
+    },
+    {
+      "name": [
+        "東北企画"
+      ],
+      "starts": "1500",
+      "ends": "1515",
+      "description": ""
+    }
+  ]
+}

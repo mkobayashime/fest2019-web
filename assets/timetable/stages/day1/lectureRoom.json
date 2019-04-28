@@ -1,0 +1,37 @@
+{
+  "name": "大講義室ステージ",
+  "place": "西ゾーン2階",
+  "class": "lectureRoom1",
+  "events": [
+    {
+      "name": ["灘紅白歌合戦"],
+      "starts": "0945",
+      "ends": "1045",
+      "description": ""
+    },
+    {
+      "name": [
+        "物理研究部",
+        "実験ショー"
+      ],
+      "starts": "1055",
+      "ends": "1125",
+      "description": ""
+    },
+    {
+      "name": ["新中1企画"],
+      "starts": "1135",
+      "ends": "1305",
+      "description": ""
+    },
+    {
+      "name": [
+        "中庭ステージ",
+        "モニタールーム"
+      ],
+      "starts": "1315",
+      "ends": "1520",
+      "description": ""
+    }
+  ]
+}

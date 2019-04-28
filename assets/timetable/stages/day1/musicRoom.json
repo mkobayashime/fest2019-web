@@ -1,0 +1,33 @@
+{
+  "name": "音楽室ステージ",
+  "place": "高校棟1階",
+  "class": "musicRoom1",
+  "events": [
+    {
+      "name": [
+        "クラシック",
+        "コンサート"
+      ],
+      "starts": "0900",
+      "ends": "1225",
+      "description": ""
+    },
+    {
+      "name": [
+        "グリークラブ"
+      ],
+      "starts": "1230",
+      "ends": "1300",
+      "description": ""
+    },
+    {
+      "name": [
+        "クラシック",
+        "コンサート"
+      ],
+      "starts": "1305",
+      "ends": "1520",
+      "description": ""
+    }
+  ]
+}
