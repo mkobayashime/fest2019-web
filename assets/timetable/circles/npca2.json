@@ -1,0 +1,58 @@
+{
+  "name": "パソコン研究部 2日目",
+  "place": "高校1-3",
+  "class": "npca2",
+  "events": [
+    {
+      "name": [
+        "PC解体"
+      ],
+      "starts": "0930",
+      "ends": "0955",
+      "description": []
+    },
+    {
+      "name": [
+        "ハッキング実演"
+      ],
+      "starts": "1000",
+      "ends": "1025",
+      "description": []
+    },
+    {
+      "name": [
+        "LifeWatcher"
+      ],
+      "starts": "1030",
+      "ends": "1055",
+      "description": []
+    },
+    {
+      "name": [
+        "競技プログラ",
+        "ミング実演"
+      ],
+      "starts": "1100",
+      "ends": "1155",
+      "description": []
+    },
+    {
+      "name": [
+        "プレゼンテー",
+        "ション大会"
+      ],
+      "starts": "1200",
+      "ends": "1355",
+      "description": []
+    },
+    {
+      "name": [
+        "ランキング",
+        "上位の企画"
+      ],
+      "starts": "1400",
+      "ends": "1500",
+      "description": []
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "オセロサークル",
+  "place": "高校2-2",
+  "class": "othello",
+  "events": [
+    {
+      "name": [
+        "大盤解説"
+      ],
+      "starts": "1230",
+      "ends": "1300",
+      "description": []
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": "マジック",
+  "place": "中学1-3",
+  "class": "magic",
+  "events": [
+    {
+      "name": [
+        "クロースアップ",
+        "マジック"
+      ],
+      "starts": "0900",
+      "ends": "0955",
+      "description": []
+    },
+    {
+      "name": [
+        "サロンマジック"
+      ],
+      "starts": "1000",
+      "ends": "1025",
+      "description": []
+    },
+    {
+      "name": [
+        "クロースアップ",
+        "マジック"
+      ],
+      "starts": "1030",
+      "ends": "1125",
+      "description": []
+    },
+    {
+      "name": [
+        "サロンマジック"
+      ],
+      "starts": "1130",
+      "ends": "1155",
+      "description": []
+    },
+    {
+      "name": [
+        "クロースアップ",
+        "マジック"
+      ],
+      "starts": "1200",
+      "ends": "1255",
+      "description": []
+    },
+    {
+      "name": [
+        "サロンマジック"
+      ],
+      "starts": "1300",
+      "ends": "1325",
+      "description": []
+    },
+    {
+      "name": [
+        "クロースアップ",
+        "マジック"
+      ],
+      "starts": "1330",
+      "ends": "1425",
+      "description": []
+    },
+    {
+      "name": [
+        "サロンマジック"
+      ],
+      "starts": "1430",
+      "ends": "1500",
+      "description": []
+    }
+  ]
+}

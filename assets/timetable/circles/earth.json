@@ -1,0 +1,31 @@
+{
+  "name": "地学研究部",
+  "place": "中学3-2",
+  "class": "earth",
+  "events": [
+    {
+      "name": [
+        "地研講義"
+      ],
+      "starts": "1000",
+      "ends": "1030",
+      "description": []
+    },
+    {
+      "name": [
+        "地研講義"
+      ],
+      "starts": "1130",
+      "ends": "1200",
+      "description": []
+    },
+    {
+      "name": [
+        "地研講義"
+      ],
+      "starts": "1300",
+      "ends": "1330",
+      "description": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "LEGO同好会",
+  "place": "中学2-4/第2英語教室",
+  "class": "lego",
+  "events": [
+    {
+      "name": [
+        "LEGO講座 第1部"
+      ],
+      "starts": "1100",
+      "ends": "1200",
+      "description": []
+    },
+    {
+      "name": [
+        "LEGO講座 第2部"
+      ],
+      "starts": "1300",
+      "ends": "1400",
+      "description": []
+    }
+  ]
+}

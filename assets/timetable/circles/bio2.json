@@ -1,0 +1,55 @@
+{
+  "name": "生物研究部",
+  "place": "理科講義室",
+  "class": "bio2",
+  "events": [
+    {
+      "name": [
+        "イカの解剖"
+      ],
+      "starts": "0910",
+      "ends": "0940",
+      "description": []
+    },
+    {
+      "name": [
+        "カエルの解剖"
+      ],
+      "starts": "1010",
+      "ends": "1040",
+      "description": []
+    },
+    {
+      "name": [
+        "イカの解剖"
+      ],
+      "starts": "1110",
+      "ends": "1140",
+      "description": []
+    },
+    {
+      "name": [
+        "カエルの解剖"
+      ],
+      "starts": "1210",
+      "ends": "1240",
+      "description": []
+    },
+    {
+      "name": [
+        "カエルの解剖"
+      ],
+      "starts": "1310",
+      "ends": "1340",
+      "description": []
+    },
+    {
+      "name": [
+        "イカの解剖"
+      ],
+      "starts": "1410",
+      "ends": "1440",
+      "description": []
+    }
+  ]
+}

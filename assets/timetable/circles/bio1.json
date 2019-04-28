@@ -1,0 +1,166 @@
+{
+  "name": "生物研究部",
+  "place": "生物教室",
+  "class": "bio",
+  "events": [
+    {
+      "name": [
+        "体験型実験",
+        "生研Lab"
+      ],
+      "starts": "0900",
+      "ends": "0920",
+      "description": []
+    },
+    {
+      "name": [
+        "プレゼン企画\"β\""
+      ],
+      "starts": "0925",
+      "ends": "0935",
+      "description": []
+    },
+    {
+      "name": [
+        "プレゼン企画\"β\""
+      ],
+      "starts": "0945",
+      "ends": "0955",
+      "description": []
+    },
+    {
+      "name": [
+        "体験型実験",
+        "生研Lab"
+      ],
+      "starts": "1000",
+      "ends": "1020",
+      "description": []
+    },
+    {
+      "name": [
+        "プレゼン企画\"β\""
+      ],
+      "starts": "1025",
+      "ends": "1035",
+      "description": []
+    },
+    {
+      "name": [
+        "プレゼン企画\"β\""
+      ],
+      "starts": "1045",
+      "ends": "1055",
+      "description": []
+    },
+    {
+      "name": [
+        "体験型実験",
+        "生研Lab"
+      ],
+      "starts": "1100",
+      "ends": "1120",
+      "description": []
+    },
+    {
+      "name": [
+        "プレゼン企画\"β\""
+      ],
+      "starts": "1125",
+      "ends": "1135",
+      "description": []
+    },
+    {
+      "name": [
+        "プレゼン企画\"β\""
+      ],
+      "starts": "1145",
+      "ends": "1155",
+      "description": []
+    },
+    {
+      "name": [
+        "体験型実験",
+        "生研Lab"
+      ],
+      "starts": "1200",
+      "ends": "1220",
+      "description": []
+    },
+    {
+      "name": [
+        "プレゼン企画\"β\""
+      ],
+      "starts": "1225",
+      "ends": "1235",
+      "description": []
+    },
+    {
+      "name": [
+        "プレゼン企画\"β\""
+      ],
+      "starts": "1245",
+      "ends": "1255",
+      "description": []
+    },
+    {
+      "name": [
+        "体験型実験",
+        "生研Lab"
+      ],
+      "starts": "1300",
+      "ends": "1320",
+      "description": []
+    },
+    {
+      "name": [
+        "プレゼン企画\"β\""
+      ],
+      "starts": "1325",
+      "ends": "1335",
+      "description": []
+    },
+    {
+      "name": [
+        "プレゼン企画\"β\""
+      ],
+      "starts": "1345",
+      "ends": "1355",
+      "description": []
+    },
+    {
+      "name": [
+        "体験型実験",
+        "生研Lab"
+      ],
+      "starts": "1400",
+      "ends": "1420",
+      "description": []
+    },
+    {
+      "name": [
+        "プレゼン企画\"β\""
+      ],
+      "starts": "1425",
+      "ends": "1435",
+      "description": []
+    },
+    {
+      "name": [
+        "プレゼン企画\"β\""
+      ],
+      "starts": "1445",
+      "ends": "1455",
+      "description": []
+    },
+    {
+      "name": [
+        "体験型実験",
+        "生研Lab"
+      ],
+      "starts": "1500",
+      "ends": "1530",
+      "description": []
+    }
+  ]
+}
