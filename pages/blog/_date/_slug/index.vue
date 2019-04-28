@@ -30,7 +30,7 @@ export default {
   },
   head() {
     const title = `${this.title} | 第73回灘校文化祭ブログ`
-    const description = `${this.author}`
+    const description = `${this.author} | ${this.bodyContent}`
     return {
       title: title,
       meta: [
