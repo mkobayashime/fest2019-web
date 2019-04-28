@@ -1,0 +1,34 @@
+{
+  "name": "化学研究部",
+  "place": "化学教室",
+  "class": "chemistry",
+  "events": [
+    {
+      "name": [
+        "化学研究部",
+        "演示実験"
+      ],
+      "starts": "1000",
+      "ends": "1100",
+      "description": []
+    },
+    {
+      "name": [
+        "化学研究部",
+        "演示実験"
+      ],
+      "starts": "1200",
+      "ends": "1300",
+      "description": []
+    },
+    {
+      "name": [
+        "化学研究部",
+        "演示実験"
+      ],
+      "starts": "1400",
+      "ends": "1500",
+      "description": []
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "数学研究部 2日目",
+  "place": "高校3-2/3-3",
+  "class": "math2",
+  "events": [
+    {
+      "name": [
+        "数研講義"
+      ],
+      "starts": "0900",
+      "ends": "0940",
+      "description": []
+    },
+    {
+      "name": [
+        "数研講義"
+      ],
+      "starts": "1030",
+      "ends": "1110",
+      "description": []
+    },
+    {
+      "name": [
+        "数研講義"
+      ],
+      "starts": "1200",
+      "ends": "1240",
+      "description": []
+    },
+    {
+      "name": [
+        "数研講義"
+      ],
+      "starts": "1330",
+      "ends": "1410",
+      "description": []
+    },
+    {
+      "name": [
+        "入試模試・",
+        "和田杯解説"
+      ],
+      "starts": "1430",
+      "ends": "1530",
+      "description": []
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "文化祭からの脱出",
+  "place": "高校1-4",
+  "class": "escape",
+  "events": [
+    {
+      "name": [
+        "文化祭からの脱出6"
+      ],
+      "starts": "0920",
+      "ends": "1010",
+      "description": []
+    },
+    {
+      "name": [
+        "文化祭からの脱出6"
+      ],
+      "starts": "1020",
+      "ends": "1110",
+      "description": []
+    },
+    {
+      "name": [
+        "文化祭からの脱出6"
+      ],
+      "starts": "1120",
+      "ends": "1210",
+      "description": []
+    },
+    {
+      "name": [
+        "文化祭からの脱出6"
+      ],
+      "starts": "1220",
+      "ends": "1310",
+      "description": []
+    },
+    {
+      "name": [
+        "文化祭からの脱出6"
+      ],
+      "starts": "1320",
+      "ends": "1410",
+      "description": []
+    },
+    {
+      "name": [
+        "文化祭からの脱出6"
+      ],
+      "starts": "1420",
+      "ends": "1510",
+      "description": []
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "name": "視聴覚室ステージ",
+  "place": "東館2階",
+  "class": "audioVisual2",
+  "events": [
+    {
+      "name": [
+        "灘紅白歌合戦"
+      ],
+      "starts": "0900",
+      "ends": "1000",
+      "description": ""
+    },
+    {
+      "name": [
+        "東北企画"
+      ],
+      "starts": "1010",
+      "ends": "1025",
+      "description": ""
+    },
+    {
+      "name": [
+        "Voistar NADA"
+      ],
+      "starts": "1035",
+      "ends": "1135",
+      "description": ""
+    },
+    {
+      "name": [
+        "N-1グランプリ"
+      ],
+      "starts": "1145",
+      "ends": "1315",
+      "description": ""
+    },
+    {
+      "name": [
+        "東北企画"
+      ],
+      "starts": "1325",
+      "ends": "1340",
+      "description": ""
+    },
+    {
+      "name": [
+        "3択クイズ大会"
+      ],
+      "starts": "1350",
+      "ends": "1450",
+      "description": ""
+    },
+    {
+      "name": [
+        "東北企画"
+      ],
+      "starts": "1500",
+      "ends": "1515",
+      "description": ""
+    }
+  ]
+}

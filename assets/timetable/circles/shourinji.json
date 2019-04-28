@@ -1,0 +1,15 @@
+{
+  "name": "少林寺拳法同好会",
+  "place": "研修館3階",
+  "class": "shourinji",
+  "events": [
+    {
+      "name": [
+        "演舞発表会"
+      ],
+      "starts": "1430",
+      "ends": "1500",
+      "description": []
+    }
+  ]
+}

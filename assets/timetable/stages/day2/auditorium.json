@@ -1,0 +1,71 @@
+{
+  "name": "大講堂ステージ",
+  "place": "本館2階",
+  "class": "auditorium2",
+  "events": [
+    {
+      "name": [
+        "POP & ROCK Jukebox"
+      ],
+      "starts": "0900",
+      "ends": "0950",
+      "description": ""
+    },
+    {
+      "name": [
+        "UNFORMED BUILDING"
+      ],
+      "starts": "0955",
+      "ends": "1055",
+      "description": ""
+    },
+    {
+      "name": [
+        "SUNAMERI"
+      ],
+      "starts": "1100",
+      "ends": "1150",
+      "description": ""
+    },
+    {
+      "name": [
+        "Geek's Piano World"
+      ],
+      "starts": "1155",
+      "ends": "1220",
+      "description": ""
+    },
+    {
+      "name": [
+        "Club NADA"
+      ],
+      "starts": "1225",
+      "ends": "1315",
+      "description": ""
+    },
+    {
+      "name": [
+        "朝顔"
+      ],
+      "starts": "1325",
+      "ends": "1355",
+      "description": ""
+    },
+    {
+      "name": [
+        "Piano & Vocal Session"
+      ],
+      "starts": "1400",
+      "ends": "1415",
+      "description": ""
+    },
+    {
+      "name": [
+        "部長バンド"
+      ],
+      "starts": "1425",
+      "ends": "1455",
+      "description": ""
+    }
+  ]
+}

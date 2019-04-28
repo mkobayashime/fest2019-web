@@ -1,0 +1,39 @@
+{
+  "name": "数学研究部 1日目",
+  "place": "高校3-2/3-3",
+  "class": "math1",
+  "events": [
+    {
+      "name": [
+        "数研講義"
+      ],
+      "starts": "0900",
+      "ends": "0940",
+      "description": []
+    },
+    {
+      "name": [
+        "数研講義"
+      ],
+      "starts": "1100",
+      "ends": "1140",
+      "description": []
+    },
+    {
+      "name": [
+        "数研講義"
+      ],
+      "starts": "1300",
+      "ends": "1340",
+      "description": []
+    },
+    {
+      "name": [
+        "数研講義"
+      ],
+      "starts": "1430",
+      "ends": "1510",
+      "description": []
+    }
+  ]
+}

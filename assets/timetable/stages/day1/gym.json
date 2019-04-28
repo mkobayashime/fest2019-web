@@ -1,0 +1,63 @@
+{
+  "name": "体育館ステージ",
+  "place": "体育館",
+  "class": "gym1",
+  "events": [
+    {
+      "name": [
+        "琴坂46"
+      ],
+      "starts": "1130",
+      "ends": "1220",
+      "description": ""
+    },
+    {
+      "name": [
+        "4番・ピアニスト"
+      ],
+      "starts": "1230",
+      "ends": "1245",
+      "description": ""
+    },
+    {
+      "name": [
+        "えだまめとうふ"
+      ],
+      "starts": "1255",
+      "ends": "1320",
+      "description": ""
+    },
+    {
+      "name": [
+        "田畑 賢大"
+      ],
+      "starts": "1330",
+      "ends": "1345",
+      "description": ""
+    },
+    {
+      "name": [
+        "Overseas"
+      ],
+      "starts": "1355",
+      "ends": "1420",
+      "description": ""
+    },
+    {
+      "name": [
+        "タクト"
+      ],
+      "starts": "1430",
+      "ends": "1445",
+      "description": ""
+    },
+    {
+      "name": [
+        "Three men"
+      ],
+      "starts": "1455",
+      "ends": "1520",
+      "description": ""
+    }
+  ]
+}
