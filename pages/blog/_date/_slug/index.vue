@@ -47,7 +47,7 @@ export default {
     document.getElementById('scroll-area').scrollTop = 0
     const header = document.getElementById('header')
     const thumbnail = this.thumbnail ? this.thumbnail : 'default/thumbnail.jpg'
-    header.style.background = `url(../../../_nuxt/assets/img/blog/${thumbnail})`
+    header.style.background = `url(_nuxt/assets/img/blog/${thumbnail})`
     header.style.backgroundSize = 'cover'
     header.style.backgroundPosition = 'center center'
   },
