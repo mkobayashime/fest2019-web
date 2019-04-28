@@ -38,7 +38,7 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content:
-          '第73回灘校文化祭は2019年5月2–3日に開催されます 是非お越しください!'
+          '第73回灘校文化祭公式Webサイトです 2019年の灘校文化祭は5/2-3に開催されます ご来場をお待ちしております'
       },
       {
         name: 'google-site-verification',
@@ -113,7 +113,7 @@ module.exports = {
     name: 'SAIL AWAY | 第73回灘校文化祭',
     short_name: '灘校文化祭',
     description:
-      '第73回灘校文化祭は2019年5月2–3日に開催されます 是非お越しください!',
+      '第73回灘校文化祭公式Webサイトです 2019年の灘校文化祭は5/2-3に開催されます ご来場をお待ちしております',
     lang: 'ja',
     theme_color: '#3d81ff',
     background_color: '#fff',
