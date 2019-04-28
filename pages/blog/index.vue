@@ -37,7 +37,17 @@ articlesArray.forEach(el => {
 })
 export default {
   head: {
-    title: 'ブログ | 第73回灘校文化祭'
+    title: 'ブログ | 第73回灘校文化祭',
+    meta: [
+      {
+        property: 'og:title',
+        content: 'ブログ | 第73回灘校文化祭'
+      },
+      {
+        property: 'og:description',
+        content: '文化委員会の役員たちが、文化祭運営の現場をお伝えします'
+      }
+    ]
   },
   data() {
     return {

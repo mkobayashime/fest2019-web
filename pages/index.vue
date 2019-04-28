@@ -105,7 +105,18 @@ import sns from '~/assets/data/sns.json'
 export default {
   components: {},
   head: {
-    title: 'SAIL AWAY | 第73回灘校文化祭'
+    title: 'SAIL AWAY | 第73回灘校文化祭',
+    meta: [
+      {
+        property: 'og:title',
+        content: 'SAIL AWAY | 第73回灘校文化祭'
+      },
+      {
+        property: 'og:description',
+        content:
+          '第73回灘校文化祭公式Webサイトです 2019年の灘校文化祭は5/2-3に開催されます ご来場をお待ちしております'
+      }
+    ]
   },
   data() {
     return {

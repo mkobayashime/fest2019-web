@@ -30,7 +30,18 @@
 import anime from 'animejs'
 export default {
   head: {
-    title: 'プライバシーポリシー | 第73回灘校文化祭'
+    title: 'プライバシーポリシー | 第73回灘校文化祭',
+    meta: [
+      {
+        property: 'og:title',
+        content: 'プライバシーポリシー | 第73回灘校文化祭'
+      },
+      {
+        property: 'og:description',
+        content:
+          '第73回灘校文化祭Webサイトのプライバシーポリシーをご確認いただけます'
+      }
+    ]
   },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0
