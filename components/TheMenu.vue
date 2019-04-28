@@ -12,7 +12,7 @@
               p.en map
               p.jp 近日公開予定
           li
-            nuxt-link.menu-item.non-exact(to="/timetable/" @click.native="toggleWait")
+            .menu-item.disabled.non-exact(to="/timetable/" @click.native="toggleWait")
               p.en timetable
               p.jp タイムテーブル
           li
