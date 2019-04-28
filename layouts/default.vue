@@ -6,7 +6,7 @@
       nuxt
       the-footer
     the-menu
-    the-mouse-follower(v-if="$device.isDesktop")
+    the-mouse-follower
 </template>
 
 <script>

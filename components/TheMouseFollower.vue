@@ -7,41 +7,46 @@
 <script>
 export default {
   mounted() {
-    const primary = document.getElementById('mouse-follower-primary')
-    const secondary = document.getElementById('mouse-follower-secondary')
+    if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android.*Mobile)/i)) {
+      const el = document.getElementById('the-mouse-follower')
+      el.style.display = 'none'
+    } else {
+      const primary = document.getElementById('mouse-follower-primary')
+      const secondary = document.getElementById('mouse-follower-secondary')
 
-    let xmouse, ymouse
-    document.addEventListener('mousemove', e => {
-      xmouse = e.clientX || e.pageX
-      ymouse = e.clientY || e.pageY
+      let xmouse, ymouse
+      document.addEventListener('mousemove', e => {
+        xmouse = e.clientX || e.pageX
+        ymouse = e.clientY || e.pageY
 
-      primary.style.left = `${xmouse}px`
-      primary.style.top = `${ymouse}px`
-    })
+        primary.style.left = `${xmouse}px`
+        primary.style.top = `${ymouse}px`
+      })
 
-    let x, y, dx, dy
-    ;(function moveSecondary() {
-      if (!x || !y) {
-        x = xmouse
-        y = ymouse
-      } else {
-        dx = (xmouse - x) * 0.1
-        dy = (ymouse - y) * 0.1
-
-        if (Math.abs(dx) + Math.abs(dy) < 0.1) {
+      let x, y, dx, dy
+      ;(function moveSecondary() {
+        if (!x || !y) {
           x = xmouse
           y = ymouse
         } else {
-          x += dx
-          y += dy
+          dx = (xmouse - x) * 0.1
+          dy = (ymouse - y) * 0.1
+
+          if (Math.abs(dx) + Math.abs(dy) < 0.1) {
+            x = xmouse
+            y = ymouse
+          } else {
+            x += dx
+            y += dy
+          }
         }
-      }
 
-      secondary.style.left = `${x}px`
-      secondary.style.top = `${y}px`
+        secondary.style.left = `${x}px`
+        secondary.style.top = `${y}px`
 
-      requestAnimationFrame(moveSecondary)
-    })()
+        requestAnimationFrame(moveSecondary)
+      })()
+    }
   }
 }
 </script>

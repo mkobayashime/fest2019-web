@@ -32,8 +32,7 @@
       img.logotype(src="~/assets/logo/white/logotype.svg" alt="文化祭ロゴタイプ")
       .outer
         button.inner(@click="showPv")
-          .image.image-pc(v-if="$device.isDesktop")
-          .image.image-touch(v-if="$device.isMobileOrTablet")
+          .image.
           .message
             img.icon(src="~/assets/icon/fab-youtube.svg" alt="PVを再生")
           youtube#video(:video-id="pvOption.videoId" :fitParent="pvOption.fitParent" ref="youtube")
@@ -650,20 +649,20 @@ export default {
         cursor pointer
         overflow hidden
         outline none
-        &:hover
-          .image-pc
-            transform scale(1.05)
         .image
           position absolute
           top 0
           right 0
           bottom 0
           left 0
-          background-image url('../assets/img/Thumbnail.jpg')
+          background-image url('~assets/img/Thumbnail.jpg')
           background-size cover
           z-index 1
           transform scale(1)
           transition transform 300ms ease-in-out, opacity 200ms linear
+        &:hover
+          .image
+            transform scale(1.05)
         .message
           position absolute
           top 0

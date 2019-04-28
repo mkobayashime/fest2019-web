@@ -1,7 +1,7 @@
 <template lang="pug">
   #the-sidebar
     the-menu-btn
-    .sidebar-items-desktop(v-if="$device.isDesktop")
+    .sidebar-items-desktop.isDesktop
       .items-container
         .items-group
           .links
@@ -20,7 +20,7 @@
             a(:href="sns.fbShare" target="_blank" rel="noopener" aria-label="Share on Facebook")
               img(src="~/assets/icon/fa-facebook.svg")
           p Share On
-    .sidebar-items-tablet(v-if="$device.isTablet")
+    .sidebar-items-tablet.isTablet
       .links
         a(:href="sns.twitter" target="_blank" rel="noopener" aria-label="Twitter")
           img(src="~/assets/icon/fa-twitter.svg")
@@ -123,4 +123,12 @@ export default {
         img
           width 60%
           height 60%
+
+  .isDesktop
+    +touch()
+      display none !important
+  .isTablet
+    display none !important
+    +tablet()
+      display flex !important
 </style>
