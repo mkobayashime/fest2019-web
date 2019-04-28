@@ -19,7 +19,17 @@ import anime from 'animejs'
 import circles from '~/assets/data/circles.json'
 export default {
   head: {
-    title: '参加サークル | 第73回灘校文化祭'
+    title: '参加サークル | 第73回灘校文化祭',
+    meta: [
+      {
+        property: 'og:title',
+        content: '参加サークル | 第73回灘校文化祭'
+      },
+      {
+        property: 'og:description',
+        content: '参加サークルの一覧をご覧いただけます'
+      }
+    ]
   },
   data() {
     return {

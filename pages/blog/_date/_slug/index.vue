@@ -29,9 +29,20 @@ export default {
     )
   },
   head() {
-    const title = `${this.title} | 第73回灘校文化祭`
+    const title = `${this.title} | 第73回灘校文化祭ブログ`
+    const description = `${this.author}`
     return {
-      title: title
+      title: title,
+      meta: [
+        {
+          property: 'og:title',
+          content: title
+        },
+        {
+          property: 'og:description',
+          content: description
+        }
+      ]
     }
   },
   created() {

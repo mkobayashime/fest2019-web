@@ -42,7 +42,7 @@ export default {
     meta: [
       {
         property: 'og:title',
-        content: '文化委員会 | 第73回灘校文化祭'
+        content: '文化委員会について | 第73回灘校文化祭'
       },
       {
         property: 'og:description',
