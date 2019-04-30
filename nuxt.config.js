@@ -38,7 +38,7 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content:
-          '第73回灘校文化祭公式Webサイトです 2019年の灘校文化祭は5/2-3に開催されます ご来場をお待ちしております'
+          '第73回灘校文化祭公式Webサイトです 2019年の灘中学校・高等学校文化祭は5/2-3に開催されます 皆様のご来場をお待ちしております'
       },
       {
         name: 'google-site-verification',
