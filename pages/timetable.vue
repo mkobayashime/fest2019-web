@@ -24,7 +24,17 @@
 import anime from 'animejs'
 export default {
   head: {
-    title: 'タイムテーブル | 第73回灘校文化祭'
+    title: 'タイムテーブル | 第73回灘校文化祭',
+    meta: [
+      {
+        property: 'og:title',
+        content: 'タイムテーブル | 第73回灘校文化祭'
+      },
+      {
+        property: 'og:description',
+        content: 'ステージやサークル企画のタイムテーブルをご覧いただけます'
+      }
+    ]
   },
   components: {
     TimetableStagesDay1: () => import('~/components/TimetableStagesDay1.vue'),
