@@ -161,11 +161,15 @@ export default {
         margin-bottom -5rem
       li
         height 4rem
+        @media screen and (max-height: 700px)
+          height 3.5rem
         +sp()
           height 2.8rem
         +sp()
           &:last-of-type
             height 2rem
+        @media screen and (max-device-height: 650px)
+          height 2.5rem
       .menu-item
         display flex
         flex-direction row
@@ -195,6 +199,8 @@ export default {
           flex-shrink 0
           order 1
           transition all 200ms ease-out
+          @media screen and (max-height: 700px)
+            font-size 2rem
           +sp()
             font-size 1.5rem
             letter-spacing .02em
