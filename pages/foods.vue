@@ -1,7 +1,10 @@
 <template lang="pug">
   #foods
     h1 物品販売
-    p.description 物品販売のメニューをご覧いただけます
+    p.description 物品販売のメニューです
+    p.description 灘校グッズメニューは
+      nuxt-link(to="/goods/") こちら
+      | からご覧いただけます
     section
     section
       h2 お土産
@@ -155,6 +158,22 @@ export default {
     h1SizeWithP()
   .description
     color $gray-6
+    height 2em
+    a
+      position relative
+      &::after
+        position absolute
+        content ''
+        background-color $gray-3
+        width 100%
+        height 2px
+        bottom 1px
+        left 0
+        transition transform 300ms ease-out
+        transform scaleX(1)
+      &:hover
+        &::after
+          transform scaleX(.8)
   section
     margin 3rem 0
     h2

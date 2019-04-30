@@ -20,9 +20,9 @@
               p.en circles
               p.jp 参加サークル
           li
-            .menu-item.disabled.non-exact(to="/goods/" @click.native="toggleWait")
+            nuxt-link.menu-item.non-exact(to="/goods/" @click.native="toggleWait")
               p.en goods
-              p.jp 近日公開予定
+              p.jp 灘校グッズ
           li
             nuxt-link.menu-item.non-exact(to="/about/" @click.native="toggleWait")
               p.en about
@@ -36,10 +36,10 @@
               p.en blog
               p.jp ブログ
           li
-            nuxt-link(to="/privacy/" @click.native="toggleWait").privacy.menu-item.isMobileOrTablet Privacy Policy
-      .spacer.isDesktop
+            nuxt-link(to="/privacy/" @click.native="toggleWait").privacy.menu-item.isNarrow Privacy Policy
+      .spacer.isWide
       transition(:css="false" @enter="infoEnter" @leave="infoLeave")
-        .info(:class="{opened:opened}" v-if="opened").isDesktop
+        .info(:class="{opened:opened}" v-if="opened").isWide
           p.el 73rd Nada School Festival
           p.el SAIL AWAY
           .spacer.el
@@ -278,6 +278,8 @@ export default {
           color #fff
     .spacer
       width 20vw
+      +maxWidth(1200)
+        width 10vw
     .info
       display flex
       flex-direction column
@@ -351,5 +353,11 @@ export default {
       display none !important
   .isMobileOrTablet
     +desktop()
+      display none !important
+  .isWide
+    +maxWidth(1000)
+      display none !important
+  .isNarrow
+    +minWidth(1001)
       display none !important
 </style>
