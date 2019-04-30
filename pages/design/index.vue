@@ -41,7 +41,7 @@ export default {
     }
   },
   mounted() {
-    document.getElementById('scroll-area').scrollTop = 0
+    // document.getElementById('scroll-area').scrollTop = 0
   },
   transition: {
     appear: true,
