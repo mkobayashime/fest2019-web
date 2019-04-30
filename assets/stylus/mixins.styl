@@ -76,6 +76,14 @@ h1Size()
     font-size 2rem
     margin 8rem 0 4rem
 
+h1SizeWithP()
+  h1Size()
+  margin-bottom 1rem
+  +tablet()
+    margin-bottom 1rem
+  +sp()
+    margin-bottom 1rem
+
 // テキストBold指定
 bold()
   font-weight 700
