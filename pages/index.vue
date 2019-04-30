@@ -1,6 +1,7 @@
 <template lang="pug">
   #index
     section.hero
+      .bg-alt
       #pixi
         img.bg-pixi(src="~/assets/img/hero1.jpg" alt="背景画像")
         img.d-pixi(src="~/assets/img/clouds-512.jpg" alt="displacement map")
@@ -289,7 +290,16 @@ export default {
     width 100%
     height 100vh
     position relative
+    .bg-alt
+      position absolute
+      width 100%
+      height 100%
+      z-index -1
+      background-size auto auto
+      background-color rgba(6, 145, 172, 1)
+      background-image repeating-linear-gradient(135deg, transparent, transparent 15px, rgba(2, 168, 183, 1) 15px, rgba(2, 168, 183, 1) 30px )
     #pixi
+      position absolute
       width 100%
       height 100%
       overflow hidden
@@ -300,7 +310,7 @@ export default {
       width 25%
       height 100%
       top 0
-      left 20%
+      left 15%
       display flex
       flex-direction column
       justify-content center
@@ -312,6 +322,7 @@ export default {
         top 60%
         align-items center
       +deskSmall()
+        width 30%
         left 15%
       h1
         width 100%
@@ -329,6 +340,10 @@ export default {
         border solid 2px #fff
         display flex
         outline none
+        +maxWidth(1025)
+          font-size 1.2rem
+        +maxWidth(795)
+          font-size 1rem
         +sp()
           font-size 1.2rem
         &::before
@@ -361,6 +376,8 @@ export default {
           width 50px
           height 2px
           transition all 200ms ease-out
+          +maxWidth(920)
+            margin auto 0 auto 15px
           +touch()
             width 30px
             margin auto 0 auto 15px
