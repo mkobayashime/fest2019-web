@@ -6,28 +6,28 @@
         .items-group
           .links
             a(:href="sns.twitter" target="_blank" rel="noopener" aria-label="Twitter")
-              img(src="~/assets/icon/fa-twitter.svg")
+              img(src="~/assets/icon/fa-twitter.svg" alt="Twitter")
             a(:href="sns.ig" target="_blank" rel="noopener" aria-label="Instagram")
-              img(src="~/assets/icon/fa-instagram.svg")
+              img(src="~/assets/icon/fa-instagram.svg" alt="Instagram")
             a(:href="sns.fb" target="_blank" rel="noopener" aria-label="Facebook")
-              img(src="~/assets/icon/fa-facebook.svg")
+              img(src="~/assets/icon/fa-facebook.svg" alt="Facebook")
           p Follow Us
       .items-container
         .items-group
           .links
             a(:href="sns.twitterShare" target="_blank" rel="noopener" aria-label="Share on Twitter")
-              img(src="~/assets/icon/fa-twitter.svg")
+              img(src="~/assets/icon/fa-twitter.svg" alt="Twitterでシェア")
             a(:href="sns.fbShare" target="_blank" rel="noopener" aria-label="Share on Facebook")
-              img(src="~/assets/icon/fa-facebook.svg")
+              img(src="~/assets/icon/fa-facebook.svg" alt="Twitterでシェア")
           p Share On
     .sidebar-items-tablet.isTablet
       .links
         a(:href="sns.twitter" target="_blank" rel="noopener" aria-label="Twitter")
-          img(src="~/assets/icon/fa-twitter.svg")
+          img(src="~/assets/icon/fa-twitter.svg" alt="Twitter")
         a(:href="sns.ig" target="_blank" rel="noopener" aria-label="Instagram")
-          img(src="~/assets/icon/fa-instagram.svg")
+          img(src="~/assets/icon/fa-instagram.svg" alt="Instagram")
         a(:href="sns.fb" target="_blank" rel="noopener" aria-label="Facebook")
-          img(src="~/assets/icon/fa-facebook.svg")
+          img(src="~/assets/icon/fa-facebook.svg" alt="Facebook")
 </template>
 
 <script>
