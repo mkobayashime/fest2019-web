@@ -5,7 +5,7 @@
     .thumbnail-container
       img.thumbnail(src="~/assets/img/Pamphlet-Front.jpg" alt="パンフレット表紙デザイン")
     .btn-container
-      a(href="/Pamphlet-forWeb.pdf" target="_blank" rel="noopener")
+      a(href="./Pamphlet-forWeb.pdf" target="_blank" rel="noopener")
         img(src="~/assets/icon/fa-download-white.svg" alt="Download")
         .paragraph
           p Download
