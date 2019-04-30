@@ -10,10 +10,10 @@
         p.name {{logo.name}}
         .logo-inner
           .img-container(:class="{vertical: !logo.horizontal}")
-            img(:src="logo.src[2].url")
+            img(:src="logo.src[2].url" :alt="logo.name")
           .btn-container
             a(v-for="src in logo.src" :href="src.url" target="_blank" rel="noopener")
-              img(src="~/assets/icon/fa-download.svg")
+              img(src="~/assets/icon/fa-download.svg" alt="Download")
               p {{src.format}}
 </template>
 
