@@ -19,7 +19,7 @@ jobs:
             v1-yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn run lint
       - run: yarn run blog
-      - run: yarn run generate
+      - run: yarn run generate --no-lock
       - persist_to_workspace:
           root: '.'
           paths:
