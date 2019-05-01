@@ -2,6 +2,7 @@
   #pamphlet
     h1 パンフレット
     p.description データ版パンフレットをダウンロードいただけます
+    p.description ※個人利用・商用を問わず、再配布及び第73回灘校文化祭以外の目的での利用はご遠慮ください
     .thumbnail-container
       img.thumbnail(src="~/assets/img/Pamphlet-Front.jpg" alt="パンフレット表紙デザイン")
     .btn-container
