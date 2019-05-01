@@ -107,6 +107,8 @@ export default {
     .thumbnail
       height 30rem
       box-shadow 0px 10px 20px 0px rgba(0,0,0,0.15)
+      +sp()
+        width 100%
   .btn-container
     height 6rem
     width 100%
