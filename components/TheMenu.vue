@@ -24,6 +24,10 @@
               p.en goods
               p.jp 灘校グッズ
           li
+            nuxt-link.menu-item.non-exact(to="/pamphlet/" @click.native="toggleWait")
+              p.en pamphlet
+              p.jp パンフレット
+          li
             nuxt-link.menu-item.non-exact(to="/about/" @click.native="toggleWait")
               p.en about
               p.jp 文化委員会について
