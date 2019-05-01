@@ -8,9 +8,9 @@
               p.en home
               p.jp ホーム
           li
-            .menu-item.disabled.non-exact(to="/map/" @click.native="toggleWait")
+            nuxt-link.menu-item.non-exact(to="/map/" @click.native="toggleWait")
               p.en map
-              p.jp 近日公開予定
+              p.jp 校内マップ
           li
             nuxt-link.menu-item.non-exact(to="/timetable/" @click.native="toggleWait")
               p.en timetable
