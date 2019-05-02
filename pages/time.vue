@@ -32,7 +32,7 @@ export default {
     document.getElementById('scroll-area').scrollTop = 0
     window.setTimeout(() => {
       window.location.href = 'https://nadaschoolfestvote-yukikari.c9users.io'
-    }, 300)
+    }, 3000)
   },
   transition: {
     appear: true,
