@@ -5,7 +5,7 @@
     p.description 3秒後にリダイレクトされ、以下画面のようなページが開きます
     p.description 下部赤いボタンから待ち時間表示システムをご利用いただけます
     .thumbnail-container
-      img.thumbnail(src="~/assets/img/timeDesc.jpg" alt="パンフレット表紙デザイン")
+      img.thumbnail(src="~/assets/img/timeDesc.jpg" alt="待ち時間表示ページ説明画像")
     .btn-container
       a(href="https://nadaschoolfestvote-yukikari.c9users.io" target="_blank" rel="noopener")
         .paragraph
