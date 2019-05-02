@@ -82,7 +82,7 @@ export default {
     h1SizeWithP()
   .description
     color $gray-6
-    height 2em
+    line-height 2em
     a
       position relative
       &::after
