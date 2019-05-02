@@ -7,7 +7,7 @@
     .thumbnail-container
       img.thumbnail(src="~/assets/img/timeDesc.jpg" alt="パンフレット表紙デザイン")
     .btn-container
-      a(href="./Pamphlet-forWeb.pdf" target="_blank" rel="noopener")
+      a(href="https://nadaschoolfestvote-yukikari.c9users.io" target="_blank" rel="noopener")
         .paragraph
           p アクセスする
 </template>
@@ -32,7 +32,7 @@ export default {
     document.getElementById('scroll-area').scrollTop = 0
     window.setTimeout(() => {
       window.location.href = 'https://nadaschoolfestvote-yukikari.c9users.io'
-    }, 3000)
+    }, 300)
   },
   transition: {
     appear: true,
