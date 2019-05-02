@@ -24,6 +24,10 @@
               p.en goods
               p.jp 灘校グッズ
           li
+            nuxt-link.menu-item.non-exact(to="/time/" @click.native="toggleWait")
+              p.en time
+              p.jp 現在の待ち時間
+          li
             nuxt-link.menu-item.non-exact(to="/pamphlet/" @click.native="toggleWait")
               p.en pamphlet
               p.jp パンフレット
