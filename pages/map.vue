@@ -13,10 +13,10 @@
         span 4階
     .map
       transition(name="fade" mode="out-in")
-        img(src="~/assets/map/1f.svg" v-if="this.floor===1" key="1")
-        img(src="~/assets/map/2f.svg" v-if="this.floor===2" key="2")
-        img(src="~/assets/map/3f.svg" v-if="this.floor===3" key="3")
-        img(src="~/assets/map/4f.svg" v-if="this.floor===4" key="4")
+        img(src="~/assets/map/1F.svg" v-if="this.floor===1" key="1")
+        img(src="~/assets/map/2F.svg" v-if="this.floor===2" key="2")
+        img(src="~/assets/map/3F.svg" v-if="this.floor===3" key="3")
+        img(src="~/assets/map/4F.svg" v-if="this.floor===4" key="4")
 </template>
 
 <script>
@@ -42,10 +42,6 @@ export default {
   },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0
-    require('~/assets/map/1f.svg')
-    require('~/assets/map/2f.svg')
-    require('~/assets/map/3f.svg')
-    require('~/assets/map/4f.svg')
   },
   methods: {
     enter1f() {
