@@ -169,14 +169,13 @@ export default {
         margin-bottom -5rem
       li
         height 4rem
-        @media screen and (max-height: 700px)
-          height 3.5rem
+        @media screen and (max-height: 800px)
+          height 3.3rem
         +sp()
           height 2.8rem
-        +sp()
           &:last-of-type
             height 2rem
-        @media screen and (max-device-height: 650px)
+        @media screen and (max-height: 650px)
           height 2.5rem
       .menu-item
         display flex
@@ -207,13 +206,13 @@ export default {
           flex-shrink 0
           order 1
           transition all 200ms ease-out
-          @media screen and (max-height: 700px)
-            font-size 2rem
+          @media screen and (max-height: 800px)
+            font-size 1.8rem
           +sp()
             font-size 1.5rem
             letter-spacing .02em
           @media screen and (max-device-width: 360px)
-            font-size 1.3rem
+            font-size 1.2rem
         .jp
           margin-left 1rem
           letter-spacing .1em
