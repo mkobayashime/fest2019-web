@@ -30,9 +30,12 @@ export default {
   },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0
-    window.setTimeout(() => {
-      window.location.href = 'https://nadaschoolfestvote-yukikari.c9users.io'
+    this.timeout = window.setTimeout(() => {
+      window.open('https://nadaschoolfestvote-yukikari.c9users.io', '_blank')
     }, 3000)
+  },
+  destroyed() {
+    window.clearTimeout(this.timeout)
   },
   transition: {
     appear: true,
