@@ -2,14 +2,13 @@
   #time
     h1 待ち時間
     p.description 現在の待ち時間をご確認いただけます
-    p.description 3秒後にリダイレクトされ、以下画面のようなページが開きます
     p.description 下部赤いボタンから待ち時間表示システムをご利用いただけます
     .thumbnail-container
       img.thumbnail(src="~/assets/img/timeDesc.jpg" alt="待ち時間表示ページ説明画像")
     .btn-container
-      a(href="https://nadaschoolfestvote-yukikari.c9users.io" target="_blank" rel="noopener")
+      span
         .paragraph
-          p アクセスする
+          p ご利用ありがとうございました
 </template>
 
 <script>
@@ -30,9 +29,9 @@ export default {
   },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0
-    this.timeout = window.setTimeout(() => {
-      window.open('https://nadaschoolfestvote-yukikari.c9users.io', '_blank')
-    }, 3000)
+    // this.timeout = window.setTimeout(() => {
+    //   window.open('https://nadaschoolfestvote-yukikari.c9users.io', '_blank')
+    // }, 3000)
   },
   destroyed() {
     window.clearTimeout(this.timeout)
@@ -116,7 +115,7 @@ export default {
     display flex
     align-items center
     justify-content center
-    a
+    span
       position relative
       width 100%
       height 100%
@@ -129,12 +128,11 @@ export default {
         left 50%
         top 50%
         transform translate(-50%, -50%)
-      .paragraph
         display flex
         flex-direction column
         align-items center
         justify-content space-around
-        padding 1rem 0
+        padding 0 1rem
         opacity 1
         transition all 300ms
         color #fff
@@ -142,8 +140,10 @@ export default {
           &:nth-of-type(1)
             bold()
             font-size 1.3rem
+            +sp()
+              font-size 1rem
     &:hover
-      a
+      span
         background-color $blue-10
         img
           opacity 1
