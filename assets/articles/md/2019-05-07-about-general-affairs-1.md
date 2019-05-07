@@ -3,7 +3,7 @@
 title: 庶務課【前編】
 author: 庶務課長
 images: []
-thumbnail: /default/thumbnail.jpg
+thumbnail: /2019-05-07-about-general-affairs-1/1.jpg
 
 ---
 
@@ -12,6 +12,7 @@ thumbnail: /default/thumbnail.jpg
 1. 印刷班の活動
 2. 広報班の活動
 3. 庶務課長の活動
+
 について書いていきたいと思います！
 
 ## 庶務課ってなにしてるの？
