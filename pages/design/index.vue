@@ -3,8 +3,6 @@
     h1 Design
     h2
       p 各種ロゴ・ロゴタイプをダウンロードいただけます。PNGは背景透過、JPGは白背景です。
-      p ご利用の際にはブランドガイドラインを遵守してください。
-    nuxt-link.guidelines(to="/design/guidelines/") Brand Guidelines
     ul.logos
       li.logo-container(v-for="logo in logos")
         p.name {{logo.name}}
@@ -96,6 +94,7 @@ export default {
       font-size 3rem
       margin 8rem 0 2rem
   h2
+    margin-bottom 5rem
     p
       font-size 1rem
       font-weight 400
