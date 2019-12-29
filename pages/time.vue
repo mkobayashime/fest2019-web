@@ -107,6 +107,7 @@ export default {
       +sp()
         width 100%
   .btn-container
+    margin 5rem auto
     height 6rem
     width 100%
     display flex
