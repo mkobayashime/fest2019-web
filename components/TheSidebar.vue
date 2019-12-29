@@ -94,6 +94,7 @@ export default {
             width 50%
             height 50%
         p
+          height max-content
           opacity 1
           bold()
           writing-mode vertical-rl
