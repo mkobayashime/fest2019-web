@@ -2,9 +2,6 @@
   #time
     h1 待ち時間
     p.description 現在の待ち時間をご確認いただけます
-    p.description 下部赤いボタンから待ち時間表示システムをご利用いただけます
-    .thumbnail-container
-      img.thumbnail(src="~/assets/img/timeDesc.jpg" alt="待ち時間表示ページ説明画像")
     .btn-container
       span
         .paragraph
