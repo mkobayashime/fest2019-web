@@ -29,22 +29,22 @@
 <script>
 import anime from 'animejs'
 export default {
+  mounted() {
+    document.getElementById('scroll-area').scrollTop = 0
+  },
   head: {
     title: 'プライバシーポリシー | 第73回灘校文化祭',
     meta: [
       {
         property: 'og:title',
-        content: 'プライバシーポリシー | 第73回灘校文化祭'
+        content: 'プライバシーポリシー | 第73回灘校文化祭',
       },
       {
         property: 'og:description',
         content:
-          '第73回灘校文化祭Webサイトのプライバシーポリシーをご確認いただけます'
-      }
-    ]
-  },
-  mounted() {
-    document.getElementById('scroll-area').scrollTop = 0
+          '第73回灘校文化祭Webサイトのプライバシーポリシーをご確認いただけます',
+      },
+    ],
   },
   transition: {
     appear: true,
@@ -54,14 +54,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
     },
     leave(el, done) {
@@ -70,17 +70,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
-    }
-  }
+    },
+  },
 }
 </script>
 

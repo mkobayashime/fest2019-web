@@ -23,27 +23,14 @@
 /* eslint no-console: 0 */
 import anime from 'animejs'
 export default {
-  head: {
-    title: 'タイムテーブル | 第73回灘校文化祭',
-    meta: [
-      {
-        property: 'og:title',
-        content: 'タイムテーブル | 第73回灘校文化祭'
-      },
-      {
-        property: 'og:description',
-        content: 'ステージやサークル企画のタイムテーブルをご覧いただけます'
-      }
-    ]
-  },
   components: {
     TimetableStagesDay1: () => import('~/components/TimetableStagesDay1.vue'),
     TimetableStagesDay2: () => import('~/components/TimetableStagesDay2.vue'),
-    TimetableCircles: () => import('~/components/TimetableCircles.vue')
+    TimetableCircles: () => import('~/components/TimetableCircles.vue'),
   },
   data() {
     return {
-      state: 1
+      state: 1,
     }
   },
   mounted() {
@@ -65,7 +52,7 @@ export default {
         targets: document.getElementById(`timetable-stages-day1`),
         opacity: [0, 1],
         duration: 300,
-        easing: 'linear'
+        easing: 'linear',
       })
     },
     leaveAnim() {
@@ -74,9 +61,22 @@ export default {
         targets: document.getElementById(`timetable-stages-day1`),
         opacity: [1, 0],
         duration: 300,
-        easing: 'linear'
+        easing: 'linear',
       })
-    }
+    },
+  },
+  head: {
+    title: 'タイムテーブル | 第73回灘校文化祭',
+    meta: [
+      {
+        property: 'og:title',
+        content: 'タイムテーブル | 第73回灘校文化祭',
+      },
+      {
+        property: 'og:description',
+        content: 'ステージやサークル企画のタイムテーブルをご覧いただけます',
+      },
+    ],
   },
   transition: {
     appear: true,
@@ -86,14 +86,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
     },
     leave(el, done) {
@@ -102,17 +102,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
-    }
-  }
+    },
+  },
 }
 </script>
 

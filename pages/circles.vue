@@ -18,23 +18,10 @@
 import anime from 'animejs'
 import circles from '~/assets/data/circles.json'
 export default {
-  head: {
-    title: '参加サークル | 第73回灘校文化祭',
-    meta: [
-      {
-        property: 'og:title',
-        content: '参加サークル | 第73回灘校文化祭'
-      },
-      {
-        property: 'og:description',
-        content: '参加サークルの一覧をご覧いただけます'
-      }
-    ]
-  },
   data() {
     return {
-      circles: circles,
-      keyword: ''
+      circles,
+      keyword: '',
     }
   },
   mounted() {
@@ -42,7 +29,7 @@ export default {
   },
   methods: {
     filtered(keyword) {
-      const dist = circles.filter(circle => {
+      const dist = circles.filter((circle) => {
         return (
           this.doesContain(circle.name, keyword) ||
           this.doesContain(circle.place, keyword)
@@ -51,11 +38,24 @@ export default {
       return dist
     },
     doesContain(el, keyword) {
-      return el.toLowerCase().indexOf(keyword) !== -1
+      return el.toLowerCase().includes(keyword)
     },
     toggle(circle) {
       circle.opened = !circle.opened
-    }
+    },
+  },
+  head: {
+    title: '参加サークル | 第73回灘校文化祭',
+    meta: [
+      {
+        property: 'og:title',
+        content: '参加サークル | 第73回灘校文化祭',
+      },
+      {
+        property: 'og:description',
+        content: '参加サークルの一覧をご覧いただけます',
+      },
+    ],
   },
   transition: {
     appear: true,
@@ -65,14 +65,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
     },
     leave(el, done) {
@@ -81,17 +81,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
-    }
-  }
+    },
+  },
 }
 </script>
 

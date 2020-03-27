@@ -28,29 +28,12 @@ export default {
       { params }
     )
   },
-  head() {
-    const title = `${this.title} | 第73回灘校文化祭ブログ`
-    const description = `${this.author} | ${this.bodyContent}`
-    return {
-      title: title,
-      meta: [
-        {
-          property: 'og:title',
-          content: title
-        },
-        {
-          property: 'og:description',
-          content: description
-        }
-      ]
-    }
-  },
   created() {
     if (!this.images) this.images = []
     if (!this.thumbnail) {
       this.images.push('default/thumbnail.jpg')
     }
-    this.images.forEach(src => {
+    this.images.forEach((src) => {
       require(`~/assets/img/blog/${src}`)
     })
   },
@@ -65,6 +48,23 @@ export default {
   methods: {
     getDate(sourceDate) {
       return sourceDate.replace(/-/g, ' ')
+    },
+  },
+  head() {
+    const title = `${this.title} | 第73回灘校文化祭ブログ`
+    const description = `${this.author} | ${this.bodyContent}`
+    return {
+      title,
+      meta: [
+        {
+          property: 'og:title',
+          content: title,
+        },
+        {
+          property: 'og:description',
+          content: description,
+        },
+      ],
     }
   },
   transition: {
@@ -75,14 +75,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
     },
     leave(el, done) {
@@ -91,17 +91,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
-    }
-  }
+    },
+  },
 }
 </script>
 

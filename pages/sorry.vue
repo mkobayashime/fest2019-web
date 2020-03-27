@@ -14,14 +14,14 @@
 
 <script>
 export default {
+  components: {
+    TheFooter: () => import('~/components/TheFooter'),
+  },
   head: {
     title: '非対応ブラウザです',
-    titleTemplate: ''
+    titleTemplate: '',
   },
-  components: {
-    TheFooter: () => import('~/components/TheFooter')
-  },
-  layout: 'sorry'
+  layout: 'sorry',
 }
 </script>
 

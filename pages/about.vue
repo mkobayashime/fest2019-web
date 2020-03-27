@@ -37,21 +37,21 @@
 <script>
 import anime from 'animejs'
 export default {
+  mounted() {
+    document.getElementById('scroll-area').scrollTop = 0
+  },
   head: {
     title: '文化委員会について | 第73回灘校文化祭',
     meta: [
       {
         property: 'og:title',
-        content: '文化委員会について | 第73回灘校文化祭'
+        content: '文化委員会について | 第73回灘校文化祭',
       },
       {
         property: 'og:description',
-        content: '文化祭を企画・運営する委員会をご紹介します'
-      }
-    ]
-  },
-  mounted() {
-    document.getElementById('scroll-area').scrollTop = 0
+        content: '文化祭を企画・運営する委員会をご紹介します',
+      },
+    ],
   },
   transition: {
     appear: true,
@@ -61,14 +61,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
     },
     leave(el, done) {
@@ -77,17 +77,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
-    }
-  }
+    },
+  },
 }
 </script>
 

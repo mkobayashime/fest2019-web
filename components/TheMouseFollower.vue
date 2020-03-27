@@ -15,7 +15,7 @@ export default {
       const secondary = document.getElementById('mouse-follower-secondary')
 
       let xmouse, ymouse
-      document.addEventListener('mousemove', e => {
+      document.addEventListener('mousemove', (e) => {
         xmouse = e.clientX || e.pageX
         ymouse = e.clientY || e.pageY
 
@@ -47,7 +47,7 @@ export default {
         requestAnimationFrame(moveSecondary)
       })()
     }
-  }
+  },
 }
 </script>
 
