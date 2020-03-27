@@ -12,8 +12,8 @@ function sourceFileNameToUrl(filepath) {
     .join('-')}/`
 }
 
-const generateDynamicRoutes = callback => {
-  const routes = sourceFileArray.map(sourceFileName => {
+const generateDynamicRoutes = (callback) => {
+  const routes = sourceFileArray.map((sourceFileName) => {
     return sourceFileNameToUrl(sourceFileName)
   })
   callback(null, routes)
@@ -32,34 +32,34 @@ module.exports = {
       {
         name: 'viewport',
         content:
-          'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no'
+          'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no',
       },
       {
         hid: 'description',
         name: 'description',
         content:
-          '第73回灘校文化祭公式Webサイトです 2019年の灘中学校・高等学校文化祭は5/2-3に開催されます 皆様のご来場をお待ちしております'
+          '第73回灘校文化祭公式Webサイトです 2019年の灘中学校・高等学校文化祭は5/2-3に開催されます 皆様のご来場をお待ちしております',
       },
       {
         name: 'google-site-verification',
-        content: 'OngPbsdP5hQtEl6qvBgMLdck8_fElTgN7rB-Dk9C03s'
+        content: 'OngPbsdP5hQtEl6qvBgMLdck8_fElTgN7rB-Dk9C03s',
       },
       {
         name: 'msapplication-TileImage',
-        content: 'https://fest.nada-sc.jp/2019/icon-512x512.png'
+        content: 'https://fest.nada-sc.jp/2019/icon-512x512.png',
       },
       {
         name: 'msapplication-TileColor',
-        content: '#3D81FF'
-      }
+        content: '#3D81FF',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'apple-touch-icon-precomposed',
-        href: 'https://fest.nada-sc.jp/2019/icon-512x512.png'
-      }
-    ]
+        href: 'https://fest.nada-sc.jp/2019/icon-512x512.png',
+      },
+    ],
   },
 
   /*
@@ -81,7 +81,7 @@ module.exports = {
    ** Router config
    */
   router: {
-    base: process.env.NODE_ENV === 'production' ? '/2019/' : '/'
+    base: process.env.NODE_ENV === 'production' ? '/2019/' : '/',
   },
 
   /*
@@ -94,16 +94,16 @@ module.exports = {
       '@nuxtjs/google-gtag',
       {
         id: 'UA-136514592-1',
-        debug: false
-      }
+        debug: false,
+      },
     ],
     [
       'nuxt-stylus-resources-loader',
       [
         resolve(__dirname, 'assets/stylus/mixins.styl'),
-        resolve(__dirname, 'assets/stylus/variables.styl')
-      ]
-    ]
+        resolve(__dirname, 'assets/stylus/variables.styl'),
+      ],
+    ],
   ],
 
   /*
@@ -124,9 +124,9 @@ module.exports = {
       {
         src: 'https://fest.nada-sc.jp/2019/icon-512x512.png',
         sizes: '512x512',
-        type: 'image/png'
-      }
-    ]
+        type: 'image/png',
+      },
+    ],
   },
 
   /*
@@ -139,9 +139,9 @@ module.exports = {
     gzip: false,
     generate: true, // Enable me when using nuxt generate
     filter({ routes }) {
-      return routes.map(route => (route.url = `${route.url}/`))
+      return routes.map((route) => (route.url = `${route.url}/`))
     },
-    routes: generateDynamicRoutes
+    routes: generateDynamicRoutes,
   },
 
   /*
@@ -155,7 +155,7 @@ module.exports = {
       css: () => '[name].js',
       img: () => '[path][name].[ext]',
       font: () => '[path][name].[ext]',
-      video: () => '[path][name].[ext]'
+      video: () => '[path][name].[ext]',
     },
     /*
      ** You can extend webpack config here
@@ -167,13 +167,13 @@ module.exports = {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
         })
       }
-    }
+    },
   },
 
   generate: {
-    routes: generateDynamicRoutes
-  }
+    routes: generateDynamicRoutes,
+  },
 }

@@ -22,22 +22,9 @@
 <script>
 import anime from 'animejs'
 export default {
-  head: {
-    title: '校内マップ | 第73回灘校文化祭',
-    meta: [
-      {
-        property: 'og:title',
-        content: '校内マップ | 第73回灘校文化祭'
-      },
-      {
-        property: 'og:description',
-        content: 'フロアマップをご覧いただけます'
-      }
-    ]
-  },
   data() {
     return {
-      floor: 1
+      floor: 1,
     }
   },
   mounted() {
@@ -55,7 +42,20 @@ export default {
     },
     enter4f() {
       this.floor = 4
-    }
+    },
+  },
+  head: {
+    title: '校内マップ | 第73回灘校文化祭',
+    meta: [
+      {
+        property: 'og:title',
+        content: '校内マップ | 第73回灘校文化祭',
+      },
+      {
+        property: 'og:description',
+        content: 'フロアマップをご覧いただけます',
+      },
+    ],
   },
   transition: {
     appear: true,
@@ -65,14 +65,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
     },
     leave(el, done) {
@@ -81,17 +81,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
-    }
-  }
+    },
+  },
 }
 </script>
 

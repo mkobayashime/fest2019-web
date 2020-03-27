@@ -35,21 +35,22 @@
 <script>
 import anime from 'animejs'
 export default {
+  mounted() {
+    document.getElementById('scroll-area').scrollTop = 0
+  },
   head: {
     title: 'Ms. Nada 投票 | 第73回灘校文化祭',
     meta: [
       {
         property: 'og:title',
-        content: 'Ms. Nada 投票 | 第73回灘校文化祭'
+        content: 'Ms. Nada 投票 | 第73回灘校文化祭',
       },
       {
         property: 'og:description',
-        content: '1日目に実施されるMs. コンテスト予選の投票フォームはこちらです'
-      }
-    ]
-  },
-  mounted() {
-    document.getElementById('scroll-area').scrollTop = 0
+        content:
+          '1日目に実施されるMs. コンテスト予選の投票フォームはこちらです',
+      },
+    ],
   },
   transition: {
     appear: true,
@@ -59,14 +60,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
     },
     leave(el, done) {
@@ -75,17 +76,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
-    }
-  }
+    },
+  },
 }
 </script>
 

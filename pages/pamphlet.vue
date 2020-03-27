@@ -16,26 +16,26 @@
 <script>
 import anime from 'animejs'
 export default {
+  data() {
+    return {
+      normal: [],
+    }
+  },
+  mounted() {
+    document.getElementById('scroll-area').scrollTop = 0
+  },
   head: {
     title: 'パンフレット | 第73回灘校文化祭',
     meta: [
       {
         property: 'og:title',
-        content: 'パンフレット | 第73回灘校文化祭'
+        content: 'パンフレット | 第73回灘校文化祭',
       },
       {
         property: 'og:description',
-        content: 'データ版パンフレットをダウンロードいただけます'
-      }
-    ]
-  },
-  data() {
-    return {
-      normal: []
-    }
-  },
-  mounted() {
-    document.getElementById('scroll-area').scrollTop = 0
+        content: 'データ版パンフレットをダウンロードいただけます',
+      },
+    ],
   },
   transition: {
     appear: true,
@@ -45,14 +45,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
     },
     leave(el, done) {
@@ -61,17 +61,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
-    }
-  }
+    },
+  },
 }
 </script>
 

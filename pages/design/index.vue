@@ -20,26 +20,26 @@ import anime from 'animejs'
 import designDist from '~/assets/data/design-dist.json'
 require('~/assets/data/design-require.js')
 export default {
+  data() {
+    return {
+      logos: designDist,
+    }
+  },
+  mounted() {
+    document.getElementById('scroll-area').scrollTop = 0
+  },
   head: {
     title: 'Design | 第73回灘校文化祭',
     meta: [
       {
         property: 'og:title',
-        content: 'Design | 第73回灘校文化祭'
+        content: 'Design | 第73回灘校文化祭',
       },
       {
         property: 'og:description',
-        content: 'ロゴキットやブランドガイドラインを配布しています'
-      }
-    ]
-  },
-  data() {
-    return {
-      logos: designDist
-    }
-  },
-  mounted() {
-    document.getElementById('scroll-area').scrollTop = 0
+        content: 'ロゴキットやブランドガイドラインを配布しています',
+      },
+    ],
   },
   transition: {
     appear: true,
@@ -49,14 +49,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
     },
     leave(el, done) {
@@ -65,17 +65,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done
+        complete: done,
       })
-    }
-  }
+    },
+  },
 }
 </script>
 
