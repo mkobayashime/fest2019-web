@@ -22,9 +22,9 @@ import sns from '~/assets/data/sns.json'
 export default {
   data() {
     return {
-      sns,
+      sns
     }
-  },
+  }
 }
 </script>
 

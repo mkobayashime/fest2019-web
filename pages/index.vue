@@ -110,14 +110,14 @@ export default {
       sns,
       pvOption: {
         fitParent: true,
-        videoId: 'MDf4mm3C4ww',
-      },
+        videoId: 'MDf4mm3C4ww'
+      }
     }
   },
   computed: {
     player() {
       return this.$refs.youtube.player
-    },
+    }
   },
   mounted() {
     document.getElementById('scroll-area').scrollTop = 0
@@ -142,7 +142,7 @@ export default {
         targets: document.getElementById('scroll-area'),
         scrollTop: height,
         duration: 500,
-        easing: 'easeOutQuint',
+        easing: 'easeOutQuint'
       })
     },
     goToDetail() {
@@ -153,7 +153,7 @@ export default {
         targets: document.getElementById('scroll-area'),
         scrollTop: height,
         duration: 800,
-        easing: 'easeOutQuint',
+        easing: 'easeOutQuint'
       })
     },
     showPv() {
@@ -167,7 +167,7 @@ export default {
         PIXI.utils.skipHello()
 
         this.renderer = new PIXI.autoDetectRenderer(1280, 720, {
-          transparent: true,
+          transparent: true
         })
         this.stage = new PIXI.Container()
         this.slide = new PIXI.Container()
@@ -208,13 +208,20 @@ export default {
         canvas.style.transform = `translate(-50%, -50%) scale(${this.calcScale()})`
         canvas.style.zIndex = '-1'
 
+        let isEvenFrame = true
         this.ticker = new PIXI.ticker.Ticker()
         this.ticker.autoStart = true
-        this.ticker.add((delta) => {
-          this.displacementSprite.x += 1 * delta
-          this.displacementSprite.y += 3
+        this.ticker.add(delta => {
+          if (isEvenFrame) {
+            this.displacementSprite.x += 2 * delta
+            this.displacementSprite.y += 5
 
-          this.renderer.render(this.stage)
+            this.renderer.render(this.stage)
+
+            isEvenFrame = false
+          } else {
+            isEvenFrame = true
+          }
         })
       }
     },
@@ -228,21 +235,21 @@ export default {
       } else {
         return heightRatio * 1.2
       }
-    },
+    }
   },
   head: {
     title: 'SAIL AWAY | 第73回灘校文化祭',
     meta: [
       {
         property: 'og:title',
-        content: 'SAIL AWAY | 第73回灘校文化祭',
+        content: 'SAIL AWAY | 第73回灘校文化祭'
       },
       {
         property: 'og:description',
         content:
-          '第73回灘校文化祭公式Webサイトです 2019年の灘校文化祭は5/2-3に開催されます ご来場をお待ちしております',
-      },
-    ],
+          '第73回灘校文化祭公式Webサイトです 2019年の灘校文化祭は5/2-3に開催されます ご来場をお待ちしております'
+      }
+    ]
   },
   transition: {
     appear: true,
@@ -252,14 +259,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
     },
     leave(el, done) {
@@ -268,17 +275,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
-    },
-  },
+    }
+  }
 }
 </script>
 

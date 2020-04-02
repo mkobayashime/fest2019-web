@@ -22,7 +22,7 @@ require('~/assets/data/design-require.js')
 export default {
   data() {
     return {
-      logos: designDist,
+      logos: designDist
     }
   },
   mounted() {
@@ -33,13 +33,13 @@ export default {
     meta: [
       {
         property: 'og:title',
-        content: 'Design | 第73回灘校文化祭',
+        content: 'Design | 第73回灘校文化祭'
       },
       {
         property: 'og:description',
-        content: 'ロゴキットやブランドガイドラインを配布しています',
-      },
-    ],
+        content: 'ロゴキットやブランドガイドラインを配布しています'
+      }
+    ]
   },
   transition: {
     appear: true,
@@ -49,14 +49,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
     },
     leave(el, done) {
@@ -65,17 +65,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
-    },
-  },
+    }
+  }
 }
 </script>
 

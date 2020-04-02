@@ -48,10 +48,10 @@ export default {
         return {
           name: 'Name',
           place: 'Place',
-          events: [],
+          events: []
         }
-      },
-    },
+      }
+    }
   },
   mounted() {
     const els = document.querySelectorAll(`.${this.stage.class} .event`)
@@ -70,8 +70,8 @@ export default {
   methods: {
     getTempleteRow(m, h) {
       return (h - 9) * 12 + m / 5 + 1
-    },
-  },
+    }
+  }
 }
 </script>
 

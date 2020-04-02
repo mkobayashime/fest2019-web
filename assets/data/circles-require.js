@@ -25,5 +25,5 @@ export {
   earth,
   npca1,
   npca2,
-  escape6,
+  escape6
 }

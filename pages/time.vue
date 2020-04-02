@@ -25,13 +25,13 @@ export default {
     meta: [
       {
         property: 'og:title',
-        content: '待ち時間 | 第73回灘校文化祭',
+        content: '待ち時間 | 第73回灘校文化祭'
       },
       {
         property: 'og:description',
-        content: '現在の待ち時間をご確認いただけます',
-      },
-    ],
+        content: '現在の待ち時間をご確認いただけます'
+      }
+    ]
   },
   transition: {
     appear: true,
@@ -41,14 +41,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
     },
     leave(el, done) {
@@ -57,17 +57,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
-    },
-  },
+    }
+  }
 }
 </script>
 

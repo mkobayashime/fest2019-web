@@ -15,13 +15,13 @@
 <script>
 export default {
   components: {
-    TheFooter: () => import('~/components/TheFooter'),
+    TheFooter: () => import('~/components/TheFooter')
   },
   head: {
     title: '非対応ブラウザです',
-    titleTemplate: '',
+    titleTemplate: ''
   },
-  layout: 'sorry',
+  layout: 'sorry'
 }
 </script>
 
