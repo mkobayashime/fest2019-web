@@ -21,7 +21,7 @@ export default {
   data() {
     return {
       circles,
-      keyword: '',
+      keyword: ''
     }
   },
   mounted() {
@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     filtered(keyword) {
-      const dist = circles.filter((circle) => {
+      const dist = circles.filter(circle => {
         return (
           this.doesContain(circle.name, keyword) ||
           this.doesContain(circle.place, keyword)
@@ -42,20 +42,20 @@ export default {
     },
     toggle(circle) {
       circle.opened = !circle.opened
-    },
+    }
   },
   head: {
     title: '参加サークル | 第73回灘校文化祭',
     meta: [
       {
         property: 'og:title',
-        content: '参加サークル | 第73回灘校文化祭',
+        content: '参加サークル | 第73回灘校文化祭'
       },
       {
         property: 'og:description',
-        content: '参加サークルの一覧をご覧いただけます',
-      },
-    ],
+        content: '参加サークルの一覧をご覧いただけます'
+      }
+    ]
   },
   transition: {
     appear: true,
@@ -65,14 +65,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
     },
     leave(el, done) {
@@ -81,17 +81,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
-    },
-  },
+    }
+  }
 }
 </script>
 

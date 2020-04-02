@@ -39,7 +39,7 @@ export default {
         [['クリアファイル A4'], '100'],
         [['灘校てぬぐい'], '300'],
         [['灘ベア', '(Sサイズ 9cm)'], '900'],
-        [['灘校 校是 京扇子'], '1,500'],
+        [['灘校 校是 京扇子'], '1,500']
       ],
       design: [
         [['デザインマグカップ'], '800'],
@@ -49,8 +49,8 @@ export default {
         [['デザインクリアファイル A4'], '250'],
         [['デザインクリアファイル', 'A5(2枚セット)'], '380'],
         [['デザイントートバッグ'], '800'],
-        [['デザインTシャツ'], '1,500'],
-      ],
+        [['デザインTシャツ'], '1,500']
+      ]
     }
   },
   mounted() {
@@ -61,13 +61,13 @@ export default {
     meta: [
       {
         property: 'og:title',
-        content: '灘校グッズ | 第73回灘校文化祭',
+        content: '灘校グッズ | 第73回灘校文化祭'
       },
       {
         property: 'og:description',
-        content: '灘校グッズのメニューをご覧いただけます',
-      },
-    ],
+        content: '灘校グッズのメニューをご覧いただけます'
+      }
+    ]
   },
   transition: {
     appear: true,
@@ -77,14 +77,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
     },
     leave(el, done) {
@@ -93,17 +93,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
-    },
-  },
+    }
+  }
 }
 </script>
 

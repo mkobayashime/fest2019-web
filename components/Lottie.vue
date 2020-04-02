@@ -8,10 +8,10 @@ export default {
   props: {
     options: {
       type: Object,
-      required: true,
+      required: true
     },
     height: { type: Number, default: null },
-    width: { type: Number, default: null },
+    width: { type: Number, default: null }
   },
   data() {
     return {
@@ -19,8 +19,8 @@ export default {
         width: this.width ? `${this.width}px` : '100%',
         height: this.height ? `${this.height}px` : '100%',
         overflow: 'hidden',
-        margin: '0 auto',
-      },
+        margin: '0 auto'
+      }
     }
   },
   mounted() {
@@ -30,9 +30,9 @@ export default {
       loop: this.options.loop !== false,
       autoplay: this.options.autoplay !== false,
       animationData: this.options.animationData.default,
-      rendererSettings: this.options.rendererSettings,
+      rendererSettings: this.options.rendererSettings
     })
     this.$emit('animCreated', this.anim)
-  },
+  }
 }
 </script>

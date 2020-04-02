@@ -1,13 +1,13 @@
 export const state = () => ({
-  opened: false,
+  opened: false
 })
 
 export const getters = {
-  opened: (state) => state.opened,
+  opened: state => state.opened
 }
 
 export const mutations = {
   toggle(state) {
     state.opened = !state.opened
-  },
+  }
 }

@@ -11,14 +11,14 @@ import { mapGetters, mapMutations } from 'vuex'
 export default {
   computed: {
     ...mapGetters({
-      opened: 'menu/opened',
-    }),
+      opened: 'menu/opened'
+    })
   },
   methods: {
     ...mapMutations({
-      toggle: 'menu/toggle',
-    }),
-  },
+      toggle: 'menu/toggle'
+    })
+  }
 }
 </script>
 

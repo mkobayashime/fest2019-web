@@ -23,7 +23,7 @@ import * as circles from '~/assets/data/circles-require.js'
 export default {
   components: {
     TimetableColumn: () => import('~/components/TimetableColumn.vue'),
-    TimetableTime: () => import('~/components/TimetableTime.vue'),
+    TimetableTime: () => import('~/components/TimetableTime.vue')
   },
   data() {
     return {}
@@ -67,7 +67,7 @@ export default {
     },
     escape6() {
       return circles.escape6
-    },
+    }
   },
   transition: {
     appear: true,
@@ -77,7 +77,7 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        compelete: done,
+        compelete: done
       })
     },
     leave(el, done) {
@@ -86,10 +86,10 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        compelete: done,
+        compelete: done
       })
-    },
-  },
+    }
+  }
 }
 </script>
 

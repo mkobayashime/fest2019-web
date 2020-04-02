@@ -31,14 +31,14 @@ articlesArray.sort((a, b) => {
   if (combinedA < combinedB) return 1
   return 0
 })
-articlesArray.forEach((el) => {
+articlesArray.forEach(el => {
   // サムネイルが指定されていない記事にデフォルトサムネイルを指定
   el.thumbnail = el.thumbnail ? el.thumbnail : 'default/thumbnail.jpg'
 })
 export default {
   data() {
     return {
-      articles: articlesArray,
+      articles: articlesArray
     }
   },
   mounted() {
@@ -52,7 +52,9 @@ export default {
         .join('-')}/`
     },
     getThumbnailStyle(article) {
-      return `background: url(_nuxt/assets/img/blog/${article.thumbnail}) center center / cover;`
+      return `background: url(_nuxt/assets/img/blog/${
+        article.thumbnail
+      }) center center / cover;`
     },
     getDate(base) {
       const splitArray = base.split('-')
@@ -61,20 +63,20 @@ export default {
     getDatetime(base) {
       const splitArray = base.split('-')
       return `${splitArray[0]}-${splitArray[1]}-${splitArray[2]}`
-    },
+    }
   },
   head: {
     title: 'ブログ | 第73回灘校文化祭',
     meta: [
       {
         property: 'og:title',
-        content: 'ブログ | 第73回灘校文化祭',
+        content: 'ブログ | 第73回灘校文化祭'
       },
       {
         property: 'og:description',
-        content: '文化委員会の役員たちが、文化祭運営の現場をお伝えします',
-      },
-    ],
+        content: '文化委員会の役員たちが、文化祭運営の現場をお伝えします'
+      }
+    ]
   },
   transition: {
     appear: true,
@@ -84,14 +86,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
     },
     leave(el, done) {
@@ -100,17 +102,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
-    },
-  },
+    }
+  }
 }
 </script>
 

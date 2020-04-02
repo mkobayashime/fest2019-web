@@ -67,7 +67,7 @@ export default {
         [['凮月堂 灘校煎餅'], '700'],
         [['OKINA 灘洋菓子'], '1,400'],
         [['TAOCA COFFEE', '灘コーヒー'], '800'],
-        [['神戸紅茶 灘紅茶'], '800'],
+        [['神戸紅茶 灘紅茶'], '800']
       ],
       lunchBox: [
         [['灘校重箱弁当'], '1,600'],
@@ -78,23 +78,23 @@ export default {
         [['灘校祈願弁当'], '800'],
         [['助六弁当'], '500'],
         [['ミニサンド'], '300'],
-        [['おにぎり'], '150'],
+        [['おにぎり'], '150']
       ],
       bread: [[['パン各種'], '80~230']],
       coffee: [
         [['コーヒー(ホット)・', '紅茶(ホット)'], '200'],
         [['アイスコーヒー・', 'アイスティー'], '250'],
-        [['クッキー', '(飲み物とセット販売)'], '200'],
+        [['クッキー', '(飲み物とセット販売)'], '200']
       ],
       japaneseSweets: [
         [['住吉団子'], '100'],
         [['桜餅'], '150'],
         [['柏餅'], '150'],
         [['あん団子'], '150'],
-        [['大福'], '150'],
+        [['大福'], '150']
       ],
       friedChicken: [[['灘から丸'], '180']],
-      beverage: [[['ペットボトル飲料各種'], '100']],
+      beverage: [[['ペットボトル飲料各種'], '100']]
     }
   },
   mounted() {
@@ -105,13 +105,13 @@ export default {
     meta: [
       {
         property: 'og:title',
-        content: '物品販売 | 第73回灘校文化祭',
+        content: '物品販売 | 第73回灘校文化祭'
       },
       {
         property: 'og:description',
-        content: '物品販売のメニューをご覧いただけます',
-      },
-    ],
+        content: '物品販売のメニューをご覧いただけます'
+      }
+    ]
   },
   transition: {
     appear: true,
@@ -121,14 +121,14 @@ export default {
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [0, 1],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
     },
     leave(el, done) {
@@ -137,17 +137,17 @@ export default {
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
       anime({
         targets: document.getElementById('the-footer'),
         opacity: [1, 0],
         duration: 300,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
-    },
-  },
+    }
+  }
 }
 </script>
 

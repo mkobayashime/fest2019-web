@@ -34,13 +34,13 @@
 import sns from '~/assets/data/sns.json'
 export default {
   components: {
-    TheMenuBtn: () => import('~/components/TheMenuBtn.vue'),
+    TheMenuBtn: () => import('~/components/TheMenuBtn.vue')
   },
   data() {
     return {
-      sns,
+      sns
     }
-  },
+  }
 }
 </script>
 

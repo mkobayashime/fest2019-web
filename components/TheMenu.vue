@@ -76,17 +76,17 @@ import sns from '~/assets/data/sns.json'
 export default {
   data() {
     return {
-      sns,
+      sns
     }
   },
   computed: {
     ...mapGetters({
-      opened: 'menu/opened',
-    }),
+      opened: 'menu/opened'
+    })
   },
   methods: {
     ...mapMutations({
-      toggle: 'menu/toggle',
+      toggle: 'menu/toggle'
     }),
     toggleWait() {
       window.setTimeout(() => {
@@ -101,7 +101,7 @@ export default {
         delay: anime.stagger(50, { start: 400 }),
         duration: 1000,
         easing: 'easeOutQuint',
-        complete: done,
+        complete: done
       })
     },
     infoEnter: (el, done) => {
@@ -111,7 +111,7 @@ export default {
         delay: anime.stagger(50, { start: 600 }),
         duration: 500,
         easing: 'linear',
-        complete: done,
+        complete: done
       })
     },
     itemsLeave: (el, done) => {
@@ -122,7 +122,7 @@ export default {
         delay: anime.stagger(50),
         duration: 300,
         easing: 'easeInSine',
-        complete: done,
+        complete: done
       })
     },
     infoLeave: (el, done) => {
@@ -132,10 +132,10 @@ export default {
         delay: anime.stagger(20),
         duration: 1000,
         easing: 'easeOutQuint',
-        complete: done,
+        complete: done
       })
-    },
-  },
+    }
+  }
 }
 </script>
 
