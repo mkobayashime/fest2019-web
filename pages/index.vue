@@ -208,13 +208,20 @@ export default {
         canvas.style.transform = `translate(-50%, -50%) scale(${this.calcScale()})`
         canvas.style.zIndex = '-1'
 
+        let isEvenFrame = true
         this.ticker = new PIXI.ticker.Ticker()
         this.ticker.autoStart = true
         this.ticker.add(delta => {
-          this.displacementSprite.x += 1 * delta
-          this.displacementSprite.y += 3
+          if (isEvenFrame) {
+            this.displacementSprite.x += 2 * delta
+            this.displacementSprite.y += 5
 
-          this.renderer.render(this.stage)
+            this.renderer.render(this.stage)
+
+            isEvenFrame = false
+          } else {
+            isEvenFrame = true
+          }
         })
       }
     },
