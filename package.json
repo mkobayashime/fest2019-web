@@ -6,10 +6,10 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "yarn blog && nuxt build",
     "analyze": "nuxt build --analyze",
     "start": "nuxt start",
-    "generate": "cross-env NODE_ENV=production nuxt generate --analyze",
+    "generate": "yarn blog && cross-env NODE_ENV=production nuxt generate --analyze",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
     "precommit": "npm run lint",
     "blog": "processmd ./assets/articles/md/*.md --stdout --outputDir ./assets/articles/json > ./assets/articles/summary.json"
