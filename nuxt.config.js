@@ -12,8 +12,8 @@ function sourceFileNameToUrl(filepath) {
     .join('-')}/`
 }
 
-const generateDynamicRoutes = callback => {
-  const routes = sourceFileArray.map(sourceFileName => {
+const generateDynamicRoutes = (callback) => {
+  const routes = sourceFileArray.map((sourceFileName) => {
     return sourceFileNameToUrl(sourceFileName)
   })
   callback(null, routes)
@@ -139,7 +139,7 @@ module.exports = {
     gzip: false,
     generate: true, // Enable me when using nuxt generate
     filter({ routes }) {
-      return routes.map(route => (route.url = `${route.url}/`))
+      return routes.map((route) => (route.url = `${route.url}/`))
     },
     routes: generateDynamicRoutes
   },

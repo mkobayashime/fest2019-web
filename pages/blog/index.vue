@@ -31,7 +31,7 @@ articlesArray.sort((a, b) => {
   if (combinedA < combinedB) return 1
   return 0
 })
-articlesArray.forEach(el => {
+articlesArray.forEach((el) => {
   // サムネイルが指定されていない記事にデフォルトサムネイルを指定
   el.thumbnail = el.thumbnail ? el.thumbnail : 'default/thumbnail.jpg'
 })
@@ -52,9 +52,7 @@ export default {
         .join('-')}/`
     },
     getThumbnailStyle(article) {
-      return `background: url(_nuxt/assets/img/blog/${
-        article.thumbnail
-      }) center center / cover;`
+      return `background: url(_nuxt/assets/img/blog/${article.thumbnail}) center center / cover;`
     },
     getDate(base) {
       const splitArray = base.split('-')

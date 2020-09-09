@@ -211,7 +211,7 @@ export default {
         let isEvenFrame = true
         this.ticker = new PIXI.ticker.Ticker()
         this.ticker.autoStart = true
-        this.ticker.add(delta => {
+        this.ticker.add((delta) => {
           if (isEvenFrame) {
             this.displacementSprite.x += 2 * delta
             this.displacementSprite.y += 5

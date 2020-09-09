@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     filtered(keyword) {
-      const dist = circles.filter(circle => {
+      const dist = circles.filter((circle) => {
         return (
           this.doesContain(circle.name, keyword) ||
           this.doesContain(circle.place, keyword)

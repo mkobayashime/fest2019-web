@@ -33,7 +33,7 @@ export default {
     if (!this.thumbnail) {
       this.images.push('default/thumbnail.jpg')
     }
-    this.images.forEach(src => {
+    this.images.forEach((src) => {
       require(`~/assets/img/blog/${src}`)
     })
   },

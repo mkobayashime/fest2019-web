@@ -3,7 +3,7 @@ export const state = () => ({
 })
 
 export const getters = {
-  opened: state => state.opened
+  opened: (state) => state.opened
 }
 
 export const mutations = {
