@@ -154,14 +154,14 @@ module.exports = {
    */
   build: {
     vendor: [['~/assets/data/sns.json'], ['pixi.js']],
-    filenames: {
-      app: () => '[name].js',
-      chunk: () => '[name].js',
-      css: () => '[name].js',
-      img: () => '[path][name].[ext]',
-      font: () => '[path][name].[ext]',
-      video: () => '[path][name].[ext]'
-    },
+    // filenames: {
+    //   app: () => '[name].js',
+    //   chunk: () => '[name].js',
+    //   css: () => '[name].js',
+    //   img: () => '[path][name].[ext]',
+    //   font: () => '[path][name].[ext]',
+    //   video: () => '[path][name].[ext]'
+    // },
     /*
      ** You can extend webpack config here
      */
