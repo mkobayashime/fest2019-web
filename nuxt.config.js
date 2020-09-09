@@ -56,6 +56,11 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Hind:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap'
+      },
+      {
         rel: 'apple-touch-icon-precomposed',
         href: 'https://fest.nada-sc.jp/2019/icon-512x512.png'
       }
